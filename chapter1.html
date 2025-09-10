@@ -1,0 +1,1137 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Part I Introduction to Coding Concepts Using Python &#8212; EK125</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter1';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter 2 Building Blocks for Programs" href="chapter2.html" />
+    <link rel="prev" title="Introduction to this jupyter book" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EK125</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction to this jupyter book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Part I Introduction to Coding Concepts Using Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">Chapter 2 Building Blocks for Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">Chapter 3 Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4.html">Chapter 4 Loops</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/chapter1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Part I Introduction to Coding Concepts Using Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-1-using-python-interactively">Chapter 1 Using Python Interactively</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-and-assignment-statements">1.1 Variables and Assignment Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-functions">1.2 Built-in Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-and-operators">1.3 Types and Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers">1.3.1 Numbers</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean">1.3.2 Boolean</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#precedence-table">1.3.3 Precedence Table</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-sequences">1.3.4 Introduction to Sequences</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">1.3.4.1 Strings</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">1.3.4.2 Lists</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-casting">1.3.5 Type Casting</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modules">1.4 Modules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objects-and-methods">1.5 Objects and Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-numbers">1.6 Random Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#help-utility">1.7 Help Utility</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="part-i-introduction-to-coding-concepts-using-python">
+<h1>Part I Introduction to Coding Concepts Using Python<a class="headerlink" href="#part-i-introduction-to-coding-concepts-using-python" title="Link to this heading">#</a></h1>
+<section id="chapter-1-using-python-interactively">
+<h2>Chapter 1 Using Python Interactively<a class="headerlink" href="#chapter-1-using-python-interactively" title="Link to this heading">#</a></h2>
+<p>Python is a very versatile language that includes a lot of built-in functionality, as well as many  add-ons. Python code is interpreted, which means that it is executed one line at a time. There  are several environments in which Python can be used. The main ones are the Python  interpreters, creation of scripts, and Jupyter notebooks.</p>
+<ul class="simple">
+<li><p>The Python interpreters allow you to enter and execute code one line at a time. • Scripts allow you to save multiple lines of code in a file and then execute them  sequentially, which gives the results all at once rather than executing and getting the  results one line at a time. To create a script, use an editor and save a file with an  extension of .py on the filename.</p></li>
+<li><p>Jupyter notebooks allow combinations of text that can be formatted and executable  code (and the results) in one document; the code is entered in cells.</p></li>
+</ul>
+<p>The details of installation and implementation will not be covered in this book, but it is  assumed that the reader will have access to some form of Python and will be able to follow  along and test the code. This book uses Python 3, which is quite different from Python 2.</p>
+<p>Since Python is interpreted, it is possible to use Python interactively. This means that you (the  user) enter an expression, and then Python responds with the result. What this looks like  depends on the environment in which you are using Python.
+In some cases, such as using the Python interpreter, you will see a prompt, which is generally  three greater than signs in a row, e.g.,</p>
+<p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code></p>
+<p>When you see this prompt, you can enter an expression, e.g. 3 + 5, and then hit the Return key.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p>The Python interpreter responds with the result (in this case, 8), and then displays another  prompt so that you can enter another expression. Note that this is the prompt for a one-line  expression. When code takes multiple lines, the &gt;&gt;&gt; is the first or primary prompt. This is  followed by lines starting with an ellipsis, which is 3 dots in a row (…), which is called the  secondary prompt.</p>
+<p>In some cases, such as in Jupyter notebooks or ipython, the prompt will be the word “In” and  then an integer in square brackets followed by a colon, and the response will consist of the  word “Out” and then the same integer in square brackets with a colon, e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">8</span>
+</pre></div>
+</div>
+<p>The integers increase sequentially as you enter and execute expressions.</p>
+<p>Some environments, such as Jupyter notebooks, allow more than one expression to be entered  into a cell, and then executed sequentially together.</p>
+<p>In this text, although the actual prompt looks different in different environments, the prompt(s)  will be shown as &gt;&gt;&gt;. The prompt and the user input will be shown in a code font in italics, and  the Python response will not have italics, e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="go">8</span>
+</pre></div>
+</div>
+<p>In order to be concise, the prompt that would appear after the result will not be shown.</p>
+<p>Note that the prompt will be shown for short, simple codes. Longer code will instead be shown  in boxes.</p>
+<p>All expressions (for now) should begin in the first column; they should not be indented. Spacing  and indentation is important in Python; following this rule will avoid some errors.
+Longer expressions can be extended to another line by either putting a <code class="docutils literal notranslate"><span class="pre">\</span></code> at the end of the first  line, or putting the expression in parentheses. This can be extended to multiple lines, also.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> \
+<span class="go">...4 + 5</span>
+<span class="go">15</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="go">...+ 4 + 5)</span>
+<span class="go">15</span>
+</pre></div>
+</div>
+<p>Using parentheses is generally preferred. In these examples, the addition operator (+) can be at  the end of one line, or at the beginning of the next, as shown. Also, note the primary prompt  &gt;&gt;&gt; on the first line, and the secondary prompt … on the second line of these examples.</p>
+<section id="variables-and-assignment-statements">
+<h3>1.1 Variables and Assignment Statements<a class="headerlink" href="#variables-and-assignment-statements" title="Link to this heading">#</a></h3>
+<p>If it is desired to store a value for subsequent use, a variable can be used. Values can be stored  in variables using an assignment statement. The general form of an assignment statement is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span> <span class="o">=</span> <span class="n">expression</span>
+</pre></div>
+</div>
+<p>where the name of the variable is on the left, the assignment operator is the single equal sign,  and the expression is on the right. For simplicity we can assume that the way it works is that  first the expression is evaluated, and then the value of the expression is assigned to the  variable. For example, the statement</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mynumber</span> <span class="o">=</span> <span class="mi">29</span> <span class="o">+</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<p>stores the number 33 in the variable called <code class="docutils literal notranslate"><span class="pre">mynumber</span></code>. This result is not displayed by default.  However, just typing the name of a variable at the prompt will display the value, e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mynumber</span>
+<span class="go">33</span>
+</pre></div>
+</div>
+<p>The terminology is that the assignment binds the variable name <code class="docutils literal notranslate"><span class="pre">mynumber</span></code> to the value 33. The  33 is stored in a location, and the variable <code class="docutils literal notranslate"><span class="pre">mynumber</span></code> references that location.</p>
+<p>As we will see later, what we are calling variables here are actually objects. While a variable  simply stores a value, an object has both attributes such as the data stored in it, as well as  functions that can operate on the data (these are called methods). For now, however, we will  keep it simple and refer to them as variables.</p>
+<p>Values of some types of variables can change. Types that can change are called mutable, and  types that cannot change are immutable. Number variables are immutable types. When the  variable <code class="docutils literal notranslate"><span class="pre">mynumber</span></code> is used or displayed, it refers to the value that is stored in it. The following  will take the current value of the variable <code class="docutils literal notranslate"><span class="pre">mynumber</span></code> (which is 33), subtract 2 from it, to result  in the number 31, which is stored in a new location. The assignment binds the variable <code class="docutils literal notranslate"><span class="pre">mynumber</span></code> to this new location. It appears as though the value of <code class="docutils literal notranslate"><span class="pre">mynumber</span></code> has changed, and  it is easiest to think of it that way. In reality, <code class="docutils literal notranslate"><span class="pre">mynumber</span></code> now refers to a new location in which  31 is stored.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mynumber</span> <span class="o">=</span> <span class="n">mynumber</span> <span class="err">–</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mynumber</span>
+<span class="go">31</span>
+</pre></div>
+</div>
+<p>This demonstrates that the order of operations in an assignment statement is important: first  the expression on the right is evaluated, and then the result is stored in a location that is bound  to the variable on the left (which may or may not be the same variable). This means that the  equal sign, which is the assignment operator, does NOT mean equality! One way to read this  out loud, instead of using the word “equals”, is to say “<code class="docutils literal notranslate"><span class="pre">mynumber</span></code> gets the value of <code class="docutils literal notranslate"><span class="pre">mynumber</span></code> minus 2”.</p>
+<p>Adding a value to a variable is called incrementing the variable, and subtracting from it is called  decrementing.</p>
+<p>There are rules for variable names: they must start with a letter of the alphabet or the  underscore character (_), and then can have any combination of letters, digits, and the  underscore character. Spaces may not be used in variable names. It is common to use all lower  case letters. Variable names should be mnemonic, which means that the name should help to  explain what is stored in the variable. For example, to store the radius of a circle in a variable,  the variable name radius would be mnemonic; a variable called x would not be descriptive.</p>
+<p>Python also has a default variable, which is just the underscore character. Whenever an  expression is entered interactively, and the result is not stored in a variable, Python stores it in  the default variable _. This variable is reused every time just an expression is entered. For  example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="go">12</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">24</span>
+</pre></div>
+</div>
+<p>It is best practice, however, to avoid using this default variable.</p>
+<p>Multiple assignments can be made in one statement, e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">33</span>
+</pre></div>
+</div>
+<p>This will assign the value of 5 to the variable a and the value of 33 to the variable b. It is easier  to read code in which every assignment is on a separate line, however, so this usage is generally  discouraged. An exception might be assigning 0’s to several variables at once, and we will see  later that there are some interesting applications for this simultaneous assignment.
+The word ‘variable’ means something that can change, and that is how variables are used in  coding. Constants are values that cannot change during the execution of the code. Some  languages provide a way to define constants, but Python does not. Instead, a value that is  meant to be a constant in Python code is by convention stored in a variable named with all  upper-case letters. For example, a tax rate might be defined in an assignment statement as  follows.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TAX_RATE</span> <span class="o">=</span> <span class="mf">0.05</span>
+</pre></div>
+</div>
+<p>To delete any variable that has been created, use the del statement:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">mynumber</span>
+</pre></div>
+</div>
+</section>
+<section id="built-in-functions">
+<h3>1.2 Built-in Functions<a class="headerlink" href="#built-in-functions" title="Link to this heading">#</a></h3>
+<p>Python has many built-in functions that can be used. As an example of a built-in function, we  will first examine the round function. An example of using it is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="mf">7.6</span><span class="p">)</span>
+<span class="go">8</span>
+</pre></div>
+</div>
+<p>This rounds the real number 7.6 up to the integer 8.</p>
+<p>The terminology when using a function is that the function is called; the function call includes  the name of the function and argument(s) that are passed to it in parentheses. If there are multiple arguments, they are separated by commas. In this example, the argument 7.6 was  passed to the function named round. Most functions return a result; in this case, the rounded  result of 8 is returned.</p>
+<p>Another, different type of function is the print function. For example, the value stored in a  variable can be displayed using the print function, as in:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+<p>Of course, the value of the variable can also be displayed by just typing the name of the  variable. The print function, however, can be used to display more than one result, e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">10 6</span>
+</pre></div>
+</div>
+<p>Note that a space is automatically printed between the two values.</p>
+<p>With the print function, the values of the expression arguments are displayed, and it might not  seem like any result is returned. The print function, however, actually returns the special value  None, since it does not really need to return anything. Normally this value is not seen or used,  but can be displayed by assigning the result of calling the print function to a variable (which is  not something that would typically be done!). We will see that all Python functions return  something (even if it is just None, as with print).</p>
+<p>Names of functions should never be used as variable names. Although it is technically possible  to do this, it would eliminate the use of the function itself (at least temporarily, until the  variable is deleted). For example, if the word ‘print’ is used as a variable, it could not then be  used to print anything. The second statement here would create an error message because  print is now a variable, not a function that can be called.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="mi">8</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">TypeError: &#39;int&#39; object is not callable</span>
+</pre></div>
+</div>
+<p>Note that the actual error message may be different in the various Python programming  environments.</p>
+<p>Deleting the print variable would, however, restore the use of the print function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="nb">print</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="mi">8</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+</section>
+<section id="types-and-operators">
+<h3>1.3 Types and Operators<a class="headerlink" href="#types-and-operators" title="Link to this heading">#</a></h3>
+<p>There are several built-in types for expressions and variables. Each type has different operators  and functions that can be used with expressions of that type.</p>
+<p>Variables in Python are actually objects, which are created from classes. We will see more on  objects and object oriented programming (OOP) in a later chapter.</p>
+<section id="numbers">
+<h4>1.3.1 Numbers<a class="headerlink" href="#numbers" title="Link to this heading">#</a></h4>
+<p>Simple numbers can be integers (whole numbers, with no decimal point), or real numbers  (which have a decimal point). Integers are of the type int in Python, and real numbers are of the type float. There are also complex numbers, which are of the type complex (and are in the  form a + bj or a+bJ). The type of an expression can be determined using the type function. For  example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">3</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="mf">5.2</span><span class="p">))</span>
+<span class="go">&lt;class &#39;int&#39;&gt; &lt;class &#39;float&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Python shows that the type (or class) of the first expression is int, whereas the type of 5.2 is  float.</p>
+<p>Numbers can be written in scientific notation using “e”, as in 2e3, which is equivalent to 2*103.  The result is always a float.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">2e3</span>
+<span class="go">2000.0</span>
+</pre></div>
+</div>
+<p>There are operators and functions that work with numbers.</p>
+<p>We have seen some basic math operators, which include:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Addition</span> <span class="o">+</span>
+<span class="n">Subtraction</span> <span class="o">-</span>
+<span class="n">Multiplication</span> <span class="o">*</span>
+<span class="n">Negation</span> <span class="o">-</span>
+</pre></div>
+</div>
+<p>The addition, subtraction, and multiplication operators are called binary operators, as they  operate on two operands. Negation is a unary operator, as it operates on only one operand.
+When using these operators, if the operand(s) are integers, the result will be an integer (type  int). If anything in the expression is a float, however, the result will be a float.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mf">5.2</span> <span class="err">–</span> <span class="mf">3.2</span>
+<span class="go">2.0</span>
+</pre></div>
+</div>
+<p>Other operators include:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Exponentiation</span> <span class="o">**</span>
+<span class="n">Float</span> <span class="n">division</span> <span class="o">/</span>
+<span class="n">Integer</span> <span class="n">division</span> <span class="o">//</span>
+<span class="n">Remainder</span> <span class="n">division</span> <span class="o">%</span>
+</pre></div>
+</div>
+<p>Exponentiation, or raising one number to a power, is accomplished using the ** operator. For  example, 5 ** 2 is 52, which is 5 raised to the second power, or 5 squared, or 25.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="go">25</span>
+</pre></div>
+</div>
+<p>There are several division operators.</p>
+<p>The / division operator always results in a float, regardless of the types of the operands. For  example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">5.2</span><span class="o">/</span><span class="mi">2</span>
+<span class="go">2.6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span><span class="o">/</span><span class="mi">3</span>
+<span class="go">2.0</span>
+</pre></div>
+</div>
+<p>The // division operator always results in an integer (conceptually, anyway!), regardless of the  types of the operands. The // operator results in the whole number part of the division, and is  sometimes called floor division since it gets rid of the fractional part. The following examples  show that 2 divides into 7 three times, 4 divides into 7 once, and 3 divides into 7.5 two times.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span><span class="o">//</span><span class="mi">2</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span><span class="o">//</span><span class="mi">4</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mf">7.5</span><span class="o">//</span><span class="mi">3</span>
+<span class="go">2.0</span>
+</pre></div>
+</div>
+<p>Notice the types of the results. With the expression 7.5//3, the result that is returned is  conceptually the integer 2, but it is stored as a float and not the type int since the expression  contains a float.</p>
+<p>The % operator will show the remainder (or modulus) of these divisions, e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">7.5</span><span class="o">%</span><span class="mi">3</span>
+<span class="go">1.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span><span class="o">%</span><span class="mi">4</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<p>So, 3 goes into 7.5 two times, with a remainder of 1.5 (7.5-3*2), and 4 goes into 7 one time with  a remainder of 3. Again, notice the types of the results.</p>
+<p>In addition to the built-in operators, there are math functions that are in core Python. These  include rounding functions such as round, which we have already seen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="mf">7.5</span><span class="p">)</span>
+<span class="go">8</span>
+</pre></div>
+</div>
+<p>The round function can also round floats to a specified number of decimal places. For example,  we can round 8/3 to 2 decimal places. To do this, a second argument is passed to the round function, which is the number of decimal places.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">8</span><span class="o">/</span><span class="mi">3</span>
+<span class="go">2.6666666666666665</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="mi">8</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">2.67</span>
+</pre></div>
+</div>
+</section>
+<section id="boolean">
+<h4>1.3.2 Boolean<a class="headerlink" href="#boolean" title="Link to this heading">#</a></h4>
+<p>Boolean, or relational, expressions are expressions that conceptually result in the values true  or false. The type for these expressions is bool. There are built-in values True and False (note  that these are capitalized). Expressions that result in True are equivalent to the integer 1, and  expressions that result in False are equivalent to the integer 0. The binary relational operators
+that can be used in these expressions include:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span> <span class="n">less</span> <span class="n">than</span>
+<span class="o">&gt;</span> <span class="n">greater</span> <span class="n">than</span>
+<span class="o">&lt;=</span> <span class="n">less</span> <span class="n">than</span> <span class="ow">or</span> <span class="n">equals</span>
+<span class="o">&gt;=</span> <span class="n">greater</span> <span class="n">than</span> <span class="ow">or</span> <span class="n">equals</span>
+<span class="o">==</span> <span class="n">equality</span>
+<span class="o">!=</span> <span class="n">inequality</span>
+</pre></div>
+</div>
+<p>Boolean expressions return the value of True or False.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">4</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span> <span class="o">==</span> <span class="mi">5</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>Using the integer remainder division, we can write an expression to test whether an integer is  even or odd. If an integer is even, it will be divisible by 2, so the remainder division operator  would return 0. For example, 8%2 is 0, so 8%2 == 0 would be True. For a variable var, the  expression var%2==0 would be True if the variable is even, or False if it is odd.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">var</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>Math can be done on the result of Boolean expressions, since True is the same as 1 and False is  the same as 0.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myval</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myval</span> <span class="o">+</span> <span class="mi">7</span>
+<span class="go">8</span>
+</pre></div>
+</div>
+<p>The logical operators operate on Boolean expressions; they are not, and, and or. The not operator is unary; it results in the opposite of the Boolean expression. For example, not True is False, and not False is True. The and and or operators are binary. The or operator returns True
+if either or both operands are True. The and operator only returns True if both operands are  True.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">7</span> <span class="ow">or</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">7</span> <span class="ow">and</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">7</span> <span class="ow">and</span> <span class="mi">2</span> <span class="o">==</span> <span class="p">(</span><span class="mi">3</span> <span class="err">–</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Representing the concepts of true and false is somewhat different. For numbers, 0 represents  the concept of false, but anything that is not 0 can be used to represent the concept of true.  We will see examples and applications of this in later sections and chapters.</p>
+</section>
+<section id="precedence-table">
+<h4>1.3.3 Precedence Table<a class="headerlink" href="#precedence-table" title="Link to this heading">#</a></h4>
+<p>Expressions in parentheses take precedence, or priority, over the operators. There are also  precedence rules for the operators themselves, e.g., multiplication takes precedence over  addition.</p>
+<p>For the math and Boolean operators that have been covered so far, the following shows the  operator precedence rules. Operators on each line have priority over the operators below them  in the table.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Parentheses</span> <span class="p">(</span> <span class="p">)</span>
+<span class="n">Exponentiation</span> <span class="o">**</span>
+<span class="n">Negation</span> <span class="o">-</span>
+<span class="n">Multiplication</span> <span class="ow">and</span> <span class="n">Division</span> <span class="o">*</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="o">//</span><span class="p">,</span> <span class="o">%</span>
+<span class="n">Addition</span> <span class="ow">and</span> <span class="n">Subtraction</span> <span class="o">+</span><span class="p">,</span> <span class="o">-</span>
+<span class="n">Relational</span> <span class="o">&lt;</span><span class="p">,</span> <span class="o">&lt;=</span><span class="p">,</span> <span class="o">&gt;</span><span class="p">,</span> <span class="o">&gt;=</span><span class="p">,</span> <span class="o">==</span><span class="p">,</span> <span class="o">!=</span> <span class="ow">not</span> <span class="ow">not</span>
+<span class="ow">and</span> <span class="ow">and</span>
+<span class="ow">or</span> <span class="ow">or</span>
+</pre></div>
+</div>
+<p>When operators have the same precedence, they are evaluated from left to right. This is called  the associativity.</p>
+</section>
+<section id="introduction-to-sequences">
+<h4>1.3.4 Introduction to Sequences<a class="headerlink" href="#introduction-to-sequences" title="Link to this heading">#</a></h4>
+<p>Numbers and Boolean expressions are simple types that only store one value. Data structures are structured variables that store more than one value. In this section, we will briefly introduce  two types of data structures, strings and lists. Both of these are particular kinds of data  structures called sequences. With sequences, the values are put in an order and can be indexed  using integer indices. Much more information on strings and lists will be covered in Chapters 5  and 7.</p>
+<section id="strings">
+<h5>1.3.4.1 Strings<a class="headerlink" href="#strings" title="Link to this heading">#</a></h5>
+<p>Strings in Python are text, and can be stored in either single quotes (‘Hello’) or double quotes  (“Hi!”). A string is a sequence of characters. For example, the following code stores strings in  variables and then prints them.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stringone</span> <span class="o">=</span> <span class="s1">&#39;Hello there&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">string2</span> <span class="o">=</span> <span class="s2">&quot;!!!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">stringone</span><span class="p">,</span> <span class="n">string2</span><span class="p">)</span>
+<span class="go">Hello there !!!</span>
+</pre></div>
+</div>
+<p>Printing strings using the print function will not show the quotes. However, displaying the value  of a string variable will. Note that although the variable string2 is created using double quotes,  the default is to display the value of a string with single quotes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">string2</span>
+<span class="go">&#39;!!!&#39;</span>
+</pre></div>
+</div>
+<p>The type name for strings is str.</p>
+<p>In some languages there is a distinction between a single character and a string of characters,  but in Python they are all strings. A single character is just a string that has only one character in  it.</p>
+<p>Strings are composed of individual characters. The individual characters are numbered with  integers beginning with 0. These numbers are called subscripts or indices. For example, for the  variable stringone, the 11 characters have indices from 0 through 10. In the diagram, the  indices are shown above the characters in the string.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span>
+<span class="n">H</span> <span class="n">e</span> <span class="n">l</span> <span class="n">l</span> <span class="n">o</span> <span class="n">t</span> <span class="n">h</span> <span class="n">e</span> <span class="n">r</span> <span class="n">e</span>
+</pre></div>
+</div>
+<p>An individual character can be obtained by putting the index in square brackets after the string  variable name. This is called indexing into the string. For example, the following will print the  first two characters in the string variable stringone.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">stringone</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">stringone</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="go">H e</span>
+</pre></div>
+</div>
+<p>The len function will return the length of the string, which is the number of characters in a  string, e.g.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">stringone</span><span class="p">)</span>
+<span class="go">11</span>
+</pre></div>
+</div>
+<p>With a length of 11, the string has indices from 0 through 10.</p>
+<p>For strings, indexing returns the individual characters in the string.</p>
+<p>The empty string is a string that contains zero characters. An empty string can be created using  quotes with nothing inside, e.g. using single quotes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>The in operator will determine whether or not a string is in another string, and return True if it  is or False if it is not. The not in operator will return the opposite.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;x&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abcde&#39;</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;x&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;abcde&#39;</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Strings are immutable, which means that they cannot be modified. Any attempt to change  character(s) in a string will result in an error message.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+<span class="go">TypeError: &#39;str&#39; object does not support item assignment</span>
+</pre></div>
+</div>
+<p>There are operators for strings. To concatenate, or join strings together, the ‘+’ operator is  used.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;b&#39;</span> <span class="o">+</span> <span class="s1">&#39;cde&#39;</span>
+<span class="go">&#39;bcde&#39;</span>
+</pre></div>
+</div>
+<p>Note that there are no spaces in between the concatenated characters.</p>
+<p>Strings can be compared using the relational operators. String comparisons are based on the  character encoding. Two common encoding sequences are ASCII and Unicode. Basically,  characters are put into a sequence and given equivalent integer values. In most encoding  sequences the letters of the alphabet are ordered sequentially, so it is true that ‘a’ is less than  ‘c’ because ‘a’ comes before ‘c’ in the encoding sequence.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;a&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;c&#39;</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>If one string is shorter than another, but they start with the same characters, the longer string is  greater than the shorter string.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;ab&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;abc&#39;</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>The print function can print combinations of strings and numbers, e.g.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">string2</span> <span class="o">=</span> <span class="s2">&quot;!!!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is&quot;</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="n">string2</span><span class="p">)</span>
+<span class="go">The number is 33 !!!</span>
+</pre></div>
+</div>
+<p>Note that blanks are automatically inserted in between the text and numbers that are printed.  As we have seen, by default the contents of the strings are printed without quotes around  them.
+To print a string variable with quotes around it, the function repr can be used. This function  returns the string representation of the variable (again, always in single quotes).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;Monty&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
+<span class="go">Monty &#39;Monty&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="lists">
+<h5>1.3.4.2 Lists<a class="headerlink" href="#lists" title="Link to this heading">#</a></h5>
+<p>Lists are sequences of values. Simple lists are created by putting values in square brackets,  separated by commas.</p>
+<p>The values in lists can be different types, although it is more common for them to be the same  type.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">numlist</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">numlist</span><span class="p">))</span>
+<span class="go">[4, 52, 33, 11, -3] &lt;class &#39;list&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mixedlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mixedlist</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">mixedlist</span><span class="p">))</span>
+<span class="go">[22, &#39;hello&#39;, False] &lt;class &#39;list&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Notice that the type of any list is list. Note also that the result of the expression 4&gt;6, False, is  stored in the list.</p>
+<p>Since lists are a sequence type, they can be indexed using integers.. However, unlike strings,  lists are a mutable type, which means that they can be modified. The values stored in lists are  called items or sometimes elements. The following creates a list and then indexes into the list  to get the first value (which is in element 0).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>Since lists are mutable, items can be modified by indexing and assigning a new value.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">numlist</span><span class="p">)</span>
+<span class="go">[4, 99, 33, 11, -3]</span>
+</pre></div>
+</div>
+<p>Lists can contain other sequence types, for example, strings.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">strlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;ciao&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">strlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;howdy&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">strlist</span><span class="p">)</span>
+<span class="go">[&#39;howdy&#39;, &#39;hello&#39;, &#39;ciao&#39;]</span>
+</pre></div>
+</div>
+<p>The len function will return the number of elements in a list. There are 3 items in the variable  strlist. The third item in the list (strlist[2]) is a string that has 4 elements, or characters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">strlist</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">strlist</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>The in operator will determine whether a value is in a list or not.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="ow">in</span> <span class="n">numlist</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;hello&#39;</span> <span class="ow">in</span> <span class="n">strlist</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;e&#39;</span> <span class="ow">in</span> <span class="n">strlist</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>The character ‘e’ is not one of the elements of strlist, although it is in strlist[1].</p>
+</section>
+</section>
+<section id="type-casting">
+<h4>1.3.5 Type Casting<a class="headerlink" href="#type-casting" title="Link to this heading">#</a></h4>
+<p>Type casting means converting an expression from one type to another. The type names in  Python can be used as function names to accomplish this. For example, to convert x to a float,  use float(x), e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">float</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">4.0</span>
+</pre></div>
+</div>
+<p>Note that in the following, the // operator still returns the result of the integer whole number  division; the integer result of 3 is then converted to the type float:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">float</span><span class="p">(</span><span class="mi">7</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">3.0</span>
+</pre></div>
+</div>
+<p>Converting a float to an int will truncate the decimal places.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="mf">5.7</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>A string variable that contains a number can be converted to a number type, e.g.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">strnum</span> <span class="o">=</span> <span class="s1">&#39;123&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">actualnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">strnum</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">actualnum</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">actualnum</span><span class="p">))</span>
+<span class="go">123 &lt;class &#39;int&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Conversely, a number can be converted to a string. For example, if we wanted to know how  many digits in a number, we could convert the number to a string and then use the len function  (which does not work on numbers) to get the number of digits:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mynum</span> <span class="o">=</span> <span class="mi">1234</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">strnum</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">mynum</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">strnum</span><span class="p">))</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>Using the bool function to cast numbers to the type bool, we can see that numbers that are not  0 can be used to represent the concept of true.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">33</span><span class="p">),</span> <span class="nb">bool</span><span class="p">(</span><span class="mf">4.2</span><span class="p">))</span>
+<span class="go">False True True True</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="modules">
+<h3>1.4 Modules<a class="headerlink" href="#modules" title="Link to this heading">#</a></h3>
+<p>We have seen that Python has built-in functions. Many other functions are stored in modules.  Modules in Python can be used to store groups of related functions (and sometimes other  definitions). Modules are separate from the core Python, and must be imported before the  functions contained in them can be used. A module is imported using the import statement,  and then functions contained in the module can be referenced using the dot operator.  Modules are stored in files that have a .py extension on the filename.</p>
+<p>There are modules that are built into Python’s standard library, and you can also define your  own modules. Some useful standard modules include the math module, the random module,  and the statistics module. There are also external library modules that have been developed  and are widely distributed. Some of these, such as numpy, pandas, and scipy, contain functions
+that are useful in data science applications. The matplotlib module has functions that help to  visualize data. These modules will be introduced in Part II of this book.</p>
+<p>The math module contains math functions, as well as some built-in constants. Unlike variables,  constants cannot change. The constants in the math module include:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="mf">3.14159</span>
+<span class="n">e</span> <span class="mf">2.71828</span>
+<span class="n">tau</span> <span class="mf">6.28318</span>
+<span class="n">inf</span> <span class="n">infinity</span>
+<span class="n">nan</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">number</span>
+</pre></div>
+</div>
+<p>Notice that the constant tau is equivalent to 2*pi. The constant e, called Euler’s number, is the  base for natural logarithms. Do not confuse the constant e here with the e used in scientific  notation!</p>
+<p>Although by convention user-defined constants are variables that are named using upper case  letters, the constants that are in the math module are named using lower case letters.  Unfortunately, they are not true constants in that their values can be modified.
+To use one of them, to calculate π*radius2, for example, we might enter the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">radius</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
+<span class="go">28.274333882308138</span>
+</pre></div>
+</div>
+<p>The import statement imports the math module and then the dot operator is used as math.pi  to refer to the constant pi.</p>
+<p>The round function could be used here to reduce the displayed number of decimal places.
+Note that to use the constant pi, it is necessary to give the name of the module, the dot  operator, and then the name of the constant. In order to make this simpler, and avoid the use  of the dot operator, certain or all constants and functions from a module can be imported using  the from statement. For example, to just import pi:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span>
+</pre></div>
+</div>
+<p>After importing pi, just the name pi can be used without first specifying math and the dot  operator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">radius</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="n">radius</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">28.27</span>
+</pre></div>
+</div>
+<p>To import both pi and e:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">e</span>
+</pre></div>
+</div>
+<p>To import everything:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>The * is sometimes called a wildcard and in this case means everything. Importing everything  from a module is not generally recommended since you probably do not know the names of  everything that will be imported, and some names could interfere with names that you already  have (variable names, for example).</p>
+<p>Once the math module has been imported, all of the constants and functions can be seen using  the help function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The math module contains many useful math functions. These include trig functions such as  sin, cos, and tan. Another function that is used a lot is the square root function, sqrt. There is  also a function exp, which returns the constant e raised to a specified power.</p>
+<p>To read about a particular function, use the dot operator. For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">)</span>
+<span class="go">Help on built-in function sqrt in module math:</span>
+<span class="go">sqrt(x, /)</span>
+<span class="go">Return the square root of x.</span>
+</pre></div>
+</div>
+</section>
+<section id="objects-and-methods">
+<h3>1.5 Objects and Methods<a class="headerlink" href="#objects-and-methods" title="Link to this heading">#</a></h3>
+<p>Python is based on objects. Objects have special functions, called methods, that are associated  with every type. Methods are different from functions in that, instead of explicitly passing an  expression to them in parentheses, they are called implicitly with an expression using the dot  operator.</p>
+<p>For example, for strings there is a method called upper, which will convert all letters of the  alphabet in a string to upper case.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mychars</span> <span class="o">=</span> <span class="s1">&#39;Hello123&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mychars</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="go">&#39;HELLO123&#39;</span>
+</pre></div>
+</div>
+<p>This displays the letters in the string in upper case, but it does not change the variable mychars.  (Recall that string variables are immutable; they cannot be changed.) The string variable  mychars is not passed explicitly to the upper method, but rather is passed implicitly by using  the dot operator. In this case, there is no need to pass any arguments so the parentheses after  the method name are empty. It is necessary, however, to have the empty parentheses. Note  that any non-alphabetical characters are not changed.</p>
+<p>If it is desired to change the variable, the result of the expression must be assigned back to the  variable.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mychars</span> <span class="o">=</span> <span class="s1">&#39;Hello123&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mychars</span> <span class="o">=</span> <span class="n">mychars</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mychars</span>
+<span class="go">&#39;HELLO123&#39;</span>
+</pre></div>
+</div>
+<p>Similarly, there is a method called lower that will convert letters in a string to lower case.
+In the previous example, a variable was used as the calling expression, but that is not necessary.  The calling expression in this case can be just a string.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Hello123&#39;</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="go">&#39;hello123&#39;</span>
+</pre></div>
+</div>
+<p>Another method for strings is index, which returns the index of the first occurrence of a  specified character, or the beginning of a specified substring. Recall that the indices begin at 0.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">urname</span> <span class="o">=</span> <span class="s1">&#39;monty python&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">urname</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">urname</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;py&#39;</span><span class="p">)</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+<p>Note that with the index method, the string is passed implicitly using the dot operator, and the  substring is passed explicitly in parentheses. The call to the method urname.index(‘y’) is asking  for the location of the string ‘y’ in the variable urname.</p>
+<p>Sometimes it is not known whether the letters in a string are lower or upper case, so they can  be converted to all lower (or upper) before finding an index.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">urname</span> <span class="o">=</span> <span class="s1">&#39;Monty Python&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">urname</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;py&#39;</span><span class="p">)</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+<p>Notice the use of the dot operator twice here. First, the lower method was used to convert the  string to lower case, and then the index method was used to find the location of ‘py’.</p>
+<p>There are some methods that return True or False. For example, there are “is” methods that  ask a question and return either True or False. The islower method will test to see whether or  not all letters of the alphabet in a string are lower case.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mychars</span> <span class="o">=</span> <span class="s1">&#39;Hello123&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mychars</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mychars</span> <span class="o">=</span> <span class="s1">&#39;hello123&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mychars</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Similarly, the isupper method will test to see whether or not all letters of the alphabet in a  string are upper case.</p>
+<p>Another method that can be used with strings is startswith, which determines whether or not a  string starts with a particular character or string, and returns True if it does or False if it does  not.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;Monty&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Mo&#39;</span><span class="p">),</span> <span class="n">word</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">))</span> <span class="kc">True</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>In this case the startswith method is called with the string variable word, and a string is passed  as an argument to test to see whether or not the variable begins with that string (of one or  more characters). Similarly, there is a method endswith.</p>
+<p>More string methods will be covered in Chapter 7.</p>
+<p>There are methods for all variable types in Python, not just strings. For float numbers, for  example, the method is_integer will return True if the value stored is actually an integer or  False if it is not.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">num</span> <span class="o">=</span> <span class="mf">33.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+<span class="go">&lt;class &#39;float&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num</span><span class="o">.</span><span class="n">is_integer</span><span class="p">()</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>There are many methods that can be used with lists. The index method can be used with lists as  well as strings. For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+</section>
+<section id="random-numbers">
+<h3>1.6 Random Numbers<a class="headerlink" href="#random-numbers" title="Link to this heading">#</a></h3>
+<p>It is often useful to be able to generate random numbers. The random module has several  functions that facilitate this.</p>
+<p>The randint function will return a random integer. Called as randint(a,b), it will return a random  integer in the inclusive range from a to b. For example, the following prints a random integer in  the inclusive range from 2 to 10.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>The random function returns a random real number in the range from 0 to 1, not including 1.  No arguments are passed to it, so when calling it the parentheses are empty.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">random</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rf</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rf</span>
+<span class="go">0.6405322431584719</span>
+</pre></div>
+</div>
+<p>Another function in the random module is the choice function, which chooses and returns a  random item from a sequence. For example, the choice function can choose a random  character from a string.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">choice</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mystring</span> <span class="o">=</span> <span class="s1">&#39;abc*&amp;def&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">choice</span><span class="p">(</span><span class="n">mystring</span><span class="p">)</span>
+<span class="go">&#39;c&#39;</span>
+</pre></div>
+</div>
+<p>We will see examples using other sequence types in later chapters.</p>
+</section>
+<section id="help-utility">
+<h3>1.7 Help Utility<a class="headerlink" href="#help-utility" title="Link to this heading">#</a></h3>
+<p>We have seen that the help function can be used to show the functions in a given module. For  example, help(math) will display information about the math module once the math module  has been imported. To find out about a particular function in a module, use the dot operator,  e.g., help(math.sqrt).</p>
+<p>The help function can also be used to display information about a particular function that is in  core Python, e.g., help(round) will explain the usages of the round function.
+To find out what methods can be used with expressions and variables of a particular type, pass  the name of the type to the help function. For example, help(str) will display a list of the  methods that can be used with strings. To find out about a particular method, use the dot  operator. For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">islower</span><span class="p">)</span>
+<span class="go">Help on method_descriptor:</span>
+<span class="go">islower(self, /)</span>
+<span class="go">Return True if the string is a lowercase string, False otherwise.</span>
+<span class="go">A string is lowercase if all cased characters in the string  are lowercase and there is at least one cased character in  the string.</span>
+</pre></div>
+</div>
+<p>A slightly more readable version can sometimes be obtained using a variable that has been  created:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;Monty&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">islower</span><span class="p">)</span>
+<span class="go">Help on built-in function islower:</span>
+<span class="go">islower() method of builtins.str instance</span>
+<span class="go">Return True if the string is a lowercase string, False otherwise.</span>
+<span class="go">A string is lowercase if all cased characters in the string  are lowercase and there is at least one cased character in  the string.</span>
+</pre></div>
+</div>
+<p>Typing just help(), without any arguments, brings up a help utility, which has a special prompt  of help&gt;. At this prompt, the following can be entered:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">modules</span> <span class="n">shows</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">available</span> <span class="n">modules</span>
+<span class="n">keywords</span> <span class="n">shows</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">keywords</span>
+<span class="n">symbols</span> <span class="n">shows</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">symbols</span> <span class="n">that</span> <span class="n">are</span> <span class="n">used</span> <span class="k">as</span> <span class="n">operators</span>
+<span class="n">topics</span> <span class="n">shows</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">documentation</span> <span class="n">topics</span>
+<span class="n">quit</span> <span class="n">exits</span> <span class="n">the</span> <span class="n">help</span> <span class="n">utility</span>
+</pre></div>
+</div>
+<p>Keywords (also called reserved words) are words that are built in to Python and can never be  used as variable names. These include commands such as import.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction to this jupyter book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 2 Building Blocks for Programs</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-1-using-python-interactively">Chapter 1 Using Python Interactively</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-and-assignment-statements">1.1 Variables and Assignment Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-functions">1.2 Built-in Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-and-operators">1.3 Types and Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers">1.3.1 Numbers</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean">1.3.2 Boolean</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#precedence-table">1.3.3 Precedence Table</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-sequences">1.3.4 Introduction to Sequences</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">1.3.4.1 Strings</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">1.3.4.2 Lists</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-casting">1.3.5 Type Casting</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modules">1.4 Modules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objects-and-methods">1.5 Objects and Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-numbers">1.6 Random Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#help-utility">1.7 Help Utility</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stormy Attaway (translated by Christine Mulvey and Brian DePasquale)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

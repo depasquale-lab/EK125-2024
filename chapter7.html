@@ -1,0 +1,947 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>do something with the line &#8212; EK125</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter7';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EK125</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction to this jupyter book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">Part I Introduction to Coding Concepts Using Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">Chapter 2 Building Blocks for Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">Chapter 3 Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4.html">Chapter 4 Loops</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/chapter7.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>do something with the line</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">do something with the line</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">do something with the line</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-process-file">code to process file</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Chapter 7 Text Processing</p>
+<p>We have seen data structures such as strings, lists, and tuples.  We have also seen that every data type has associated with it special functions called methods.</p>
+<p>In this chapter, we will cover more methods that can be used with strings, and also the string module. Additionally, we will introduce reading from and writing to files, using text files.</p>
+<p>7.1 String Processing Methods</p>
+<p>Text processing can be accomplished in Python using string variables, and the operators and methods associated with the type str.  We have seen that strings can be indexed and sliced using the colon operator, and concatenated using the plus operator.  Additionally, we have seen some of the string methods, including methods that manipulate strings such as upper, and methods that determine characteristics of strings, such as isupper.  Since strings are a sequence type, the methods index and count can be used for strings. Additionally, there are many more methods that can be used to manipulate strings, and to determine the nature of strings.  Since strings are an immutable type, methods that modify strings always return a new string; strings cannot be modified in place.</p>
+<p>Case conversion methods</p>
+<p>We have seen the upper method, which converts all letters of the alphabet in a string to upper case, and the lower method, which converts all letters of the alphabet in a string to lower case.</p>
+<p>The capitalize method capitalizes just the first word in a string (so just the first word in a sentence, for example).</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>question = “how are you?”
+question.capitalize()
+‘How are you?’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The value of the variable question has not been changed, however. To actually change the string variable, the result from the capitalize method would have to be assigned to question.  This will create a new string that the variable question will now point to.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>question = question.capitalize()</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Another useful method, title, will capitalize all of the words in a string.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>urname = ‘monty python’
+urname.title()
+‘Monty Python’
+The swapcase method converts upper to lower case, and lower to upper case.</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>wacky = ‘hI tHERE’
+wacky.swapcase()
+‘Hi There’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Spacing methods</p>
+<p>There are methods that will delete extra spaces from strings. The strip method deletes both leading and trailing blanks from strings (but not from the middle of the string).</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>mystr = “   hello   there  “
+len(mystr)
+18</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>newstr = mystr.strip()
+newstr
+‘hello   there’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The lstrip method deletes only leading blanks, and the rstrip method deletes only trailing blanks (the “l” and “r” in the method names stand for left and right).</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>newstr = mystr.lstrip()
+newstr
+‘hello   there  ‘</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>newstr = mystr.rstrip()
+newstr</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>‘   hello   there’</p>
+<p>There are several methods that will pad strings with extra leading and/or trailing fill characters, in order to center, left justify, or right justify the string within a specified width. These are named center, ljust, and rjust, respectively. By default, the fill character is a blank space. If the number of fill characters needed to center a string is odd, there will be one more trailing character than leading.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>firstname = ‘monty’
+firstname.center(8)
+‘ monty  ‘</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The fill character can be specified, e.g.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>firstname.rjust(8,’<span class="math notranslate nohighlight">\(')
+'\)</span>$$monty’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The zfill method pads a string with leading zero (‘0’) characters in order to fill a specified width.  This will, of course, make the most sense if the string contains a number.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>‘123.45’.zfill(10)
+‘0000123.45’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Recall that an f-string can be used to fill in decimal places with 0’s.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>mymoney = 123.45
+fmym = f’{mymoney:.3f}’
+fmym
+‘123.450’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>fmym.zfill(10)
+‘000123.450’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Methods for Combining and Splitting Strings</p>
+<p>The join method can be used to concatenate together all of the strings in an iterable (for example, a list). The method is called using a string which is used as the separator between the strings. In this example, the join method is called using a single space so each word is separated by a single space.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>strlist = [‘hello’,’hi’,’ciao’]
+sepstr = ‘ ‘.join(strlist)
+sepstr
+‘hello hi ciao’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The split method will take a string of words, and will split it into separate words and return a list of those words. The string to be used as the delimiter (the string between the words) can be passed to the method; otherwise, the default is whitespace. It is also possible to specify how many splits to do using the maxsplit argument; if this is omitted, all possible splits are made. If the delimiter is the space, all spaces will be ignored.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>sent = “How are   you”
+snwords = sent.split()
+snwords
+[‘How’, ‘are’, ‘you’]</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>sent = “How are   you”
+snwords = sent.split(maxsplit=1)
+snwords
+[‘How’, ‘are   you’]</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>If the delimiter is not whitespace, it is assumed that consecutive delimiters in the string are there to signify empty strings.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>sent = “How_are___you” # one underscore, then three
+snwords = sent.split(‘_’)
+snwords
+[‘How’, ‘are’, ‘’, ‘’, ‘you’]</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The rsplit method works exactly like the split method, except that it splits from the right, not the left.  This is important only if the maxsplit argument is specified.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>sent = “How are   you  doing”
+snrspl = sent.rsplit(maxsplit=2)
+snrspl
+[‘How are’, ‘you’, ‘doing’]</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The splitlines method will split lines in a string, using the newline character as the delimiter, and return a list consisting of the individual lines as strings. Note that the \n is not included in the resulting strings.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>longstr = “Welcome!\nHow are you?\nI am fine, thank you.”
+linelist = longstr.splitlines()
+linelist
+[‘Welcome!’, ‘How are you?’, ‘I am fine, thank you.’]</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The partition method splits a string at the first occurrence of a specified separator and returns 3 values as a tuple: the part of the string to the left of the separator, the separator, and the part of the string to the right of the separator. The separator must be passed; there is no default for it.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>sent = “How are  you”
+left, sep, right = sent.partition(’ ‘)
+print(repr(left), repr(sep), repr(right))
+‘How’ ‘ ‘ ‘are  you’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The rpartition method also splits a string into a tuple of 3 values, but it splits the string at the last occurrence of the specified separator, rather than the first.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>sent = “How are  you”
+left, sep, right = sent.rpartition(’ ‘)
+print(repr(left), repr(sep), repr(right))
+‘How are ‘ ‘ ‘ ‘you’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Methods for Finding and Replacing</p>
+<p>We have seen the index method, which returns the index of the first occurrence of the beginning of a substring within a string.  If the substring is not found, the index method throws an error message. To protect from this, the in operator can be used in an if-else statement to check to see whether or not the substring is in the string.</p>
+<p>urname = ‘monty python’
+if ‘x’ in urname:
+where = urname.index(‘x’)
+else:
+print(‘x is not in the string’)</p>
+<p>The find method also returns the index of the first occurrence of the beginning of a substring within a string, but if the substring is not found, it returns -1.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>urname = ‘monty python’
+urname.find(‘x’)
+-1</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>There are similar methods, rindex and rfind, that return the index of the last occurrence of the beginning of a substring within a string. If the substring is not found, rindex throws an error message, whereas rfind returns -1.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>urname = ‘monty python’
+urname.rfind(‘o’)
+10</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>urname = ‘monty python’
+urname.rfind(‘x’)
+-1</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The replace method finds occurrences of a substring within a string, and replaces them with another substring.  By default, all occurrences are replaced, but it is also possible to pass to the replace method a count of the number of occurrences to replace.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>origstr = ‘xxHelloxxxtherex’
+newstr = origstr.replace(‘x’,’ ‘)
+newstr
+‘  Hello   there ‘</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>origstr = ‘xxHelloxxxtherex’
+newstr = origstr.replace(‘x’,’ ‘,3)
+newstr
+‘  Hello xxtherex’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Boolean Methods</p>
+<p>There are methods that ask questions about strings, and return True/False answers. We have seen the start startswith method, which determines whether or not a string begins with a substring, and the endswith method, which determines whether or not a string ends with a substring.  We have also seen the isupper method, which determines whether or not all letters of the alphabet in a string are upper case, and the islower method, which determines whether or not all letters of the alphabet in a string are lower case.  There are quite a few other “is” methods that ask questions and return True/False answers.</p>
+<p>The isalpha method returns True if all of the characters in a non-empty string are alphabetic, or False if not.  If the string is empty, it returns False.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>testalnum = ‘abcde123’
+testalnum.isalpha()
+False</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>testal = ‘xyz’
+testal.isalpha()
+True</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>‘’.isalpha()
+False</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The isalnum method returns True if all characters in a non-empty string are alphanumeric (alphabetic or numeric), or False if not.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>testalnum.isalnum()
+True</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>‘abc12!?’.isalnum()
+False</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The isdigit method returns True if all of the characters in a non-empty string are digits, or False if not.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>‘45.67’.isdigit()
+False</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>‘45678’.isdigit()
+True</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>String Module</p>
+<p>There is a string module that contains several useful string constants.  The constant ascii_lowercase is a string with all of the lower case letters of the alphabet, in sequence.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>import string
+string.ascii_lowercase
+‘abcdefghijklmnopqrstuvwxyz’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Similarly, the constant ascii_uppercase is a string containing all of the upper case letters of the alphabet, and ascii_letters is a string constant that contains all of the letters, first lower and then upper case.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>string.ascii_letters
+‘abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The constant digits contains all of the digits.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>from string import digits
+digits
+‘0123456789’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The following example checks each character in a string to determine whether it is a letter of the alphabet, a digit, or something else.</p>
+<p>import string
+mychars = “Hi, 33!”
+for onechar in mychars:
+if onechar in string.ascii_letters:
+print(onechar, ‘is a letter!’)
+elif onechar in string.digits:
+print(onechar, ‘is a digit!’)
+else:
+print(onechar, ‘is something else.’)
+H is a letter!
+i is a letter!
+, is something else.
+is something else.
+3 is a digit!
+3 is a digit!
+! is something else.</p>
+<p>7.2 Text Files</p>
+<p>So far, our codes have had input from the user, and the output has been displayed. It is also possible to read data from a file, and it is possible to write results to a file.</p>
+<p>When working with files, there are three basic steps:
+Open the file
+Use the file
+Close the file</p>
+<p>A file can be opened to read from it, write to it (which means from the beginning of the file), or append to it (which means writing to it from the end; adding to an existing file). Writing, reading, and appending are called modes. The function that opens a file is called open. The general form of calling it is:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>f = open(“filename”, mode)</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>where the file to be opened is in the correct folder so that the open function can locate it. The mode is indicated by a string:
+‘r’ for reading (which is the default)
+‘w’ for writing
+‘a’ for appending
+‘r+’ to both read from and write to a file</p>
+<p>Files that have been opened and used must be closed using the close method:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>f.close()</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>7.2.1 Writing to a file</p>
+<p>To write to a file, there are two options: writing to a file, and appending to a file. If the file is opened for writing using the mode ‘w’, lines are written to the file from the beginning. If the file already existed, the contents of the file are erased.  If the mode ‘a’ is specified, that assumes that the file already exists, and the writing will begin at the end of the file.  There are two main methods that can be used:
+write(s) to write a string s to the file
+writelines(ls) to write a list ls to the file</p>
+<p>The writelines method writes an entire list of strings to a file, one string per line in the file.</p>
+<p>The more practical method to use is write, which writes one string to a file.  Since the write method only writes one string to a file, it is generally in a loop (either a while loop or a for loop). Note that the newline character will usually be at the end of each string, so that every string is written to a separate line in the file.  For example, the following opens a file for writing,  creates a file with 3 lines in it, and then closes the file.</p>
+<p>f = open(“tryit.txt”, ‘w’)
+for i in range(3):
+f.write(“Hello\n”)</p>
+<p>f.close()</p>
+<p>7.2.2 Reading from a file</p>
+<p>To read from a file once it has been opened, there are three main methods that can be used:
+read to read in the entire file as one string
+readlines to read all of the lines from the file (into a list of strings)
+readline to read one line from the file as a string</p>
+<p>Since files can be very large, it is generally impractical to use read or readlines. The readline method is normally used. However, with the short file we created in the previous section, we will demonstrate all of these methods.  The read method reads in all characters, including the newline characters into a string. Below we print just the first 8 characters in the string, which includes a ‘\n’. (Note: the newline character ‘\n’ is a single character).</p>
+<p>f = open(“tryit.txt”)
+onestr = f.read()
+print(onestr[0:8])
+f.close()</p>
+<p>Hello
+He</p>
+<p>The read method returns an empty string if the end of file has been reached.</p>
+<p>f = open(“tryit.txt”)
+onestr = f.read()
+print(onestr)
+onestr = f.read()
+print(repr(onestr))</p>
+<p>Hello
+Hello
+Hello</p>
+<p>‘’</p>
+<p>The readlines method reads all lines from the file into a list of strings.</p>
+<p>f = open(“tryit.txt”)
+allstrs = f.readlines()
+allstrs</p>
+<p>[‘Hello\n’, ‘Hello\n’, ‘Hello\n’]</p>
+<p>The readlines method returns an empty list if the end of file has been reached.</p>
+<p>The readline method reads one line at a time into a string. Since we know that our file has 3 lines in it, we will loop to use readline 4 times.</p>
+<p>f = open(“tryit.txt”)
+for i in range(4):
+oneline = f.readline()
+print(repr(oneline))</p>
+<p>‘Hello\n’
+‘Hello\n’
+‘Hello\n’
+‘’</p>
+<p>As can be seen from the output, the readline method returns an empty string if the end of file has been reached.</p>
+<p>In general, when reading from a file, the procedure is to read one line at a time and process it until the end of the file has been reached.  The general form that accomplishes this using a while loop is:</p>
+<p>f = open(“filename”)
+aline = f.readline()
+while aline:</p>
+<section class="tex2jax_ignore mathjax_ignore" id="do-something-with-the-line">
+<h1>do something with the line<a class="headerlink" href="#do-something-with-the-line" title="Link to this heading">#</a></h1>
+<p>aline = f.readline()
+f.close()</p>
+<p>Note that the mode ‘r’ does not need to be specified since reading is the default. Also, since an empty string is a way of representing False, this loops until the readline method returns an empty string, meaning that the end of the file has been reached.</p>
+<p>In Python, this can also be accomplished using a for loop that iterates through the lines in a file object.
+f = open(“filename”)
+for aline in f:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>do something with the line<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>f.close()</p>
+<p>Whether reading or writing, files that have been opened should always be closed after the file processing has been completed. It is easy to forget to do that, however!  An alternative is to use the with statement, which automatically closes the file.  The general form is:</p>
+<p>with open(filename) as f:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="code-to-process-file">
+<h1>code to process file<a class="headerlink" href="#code-to-process-file" title="Link to this heading">#</a></h1>
+<p>The following example uses with for both writing to a file and reading from a file.</p>
+<p>with open(“greets.txt”, ‘w’) as f:
+f.write(“Hello\n”)
+f.write(“Hi\n”)
+f.write(“Ciao\n”)</p>
+<p>with open(“greets.txt”) as f:
+for aline in f:
+print(aline.rstrip())</p>
+<p>Hello
+Hi
+Ciao</p>
+<p>The rstrip method was used to strip the ‘\n’ from the end of each string before printing it; otherwise, there would be blank lines between each in the output.</p>
+<p>Part II Data Science Libraries</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">do something with the line</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">do something with the line</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-process-file">code to process file</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stormy Attaway (translated by Christine Mulvey and Brian DePasquale)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1259 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; EK125</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2024/F24 Class 22/Class_22_GPP_SOLUTIONS';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EK125</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction to this jupyter book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../chapter1.html">Part I Introduction to Coding Concepts Using Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter2.html">Chapter 2 Building Blocks for Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter3.html">Chapter 3 Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter4.html">Chapter 4 Loops</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/2024/F24 Class 22/Class_22_GPP_SOLUTIONS.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Class 22: Group Practice Problems
+These will not be handed in, but please take them seriously and do not use generative AI. These exercises are designed to familiarize you with how code works in Python and will help you learn how to generate your own in the future. Please work in a group of three. Don’t hesitate to ask for help if you need it. Your instructor and TAs will be circulating. Flag us down!</p>
+<p>Name:</p>
+<p>Partners:</p>
+<p>Today we will investigate python dictionaries and the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> module. Pandas is a data manipulation library that is built on NumPy.</p>
+<p>Dictionaries are key-value stores where each key is unique. You will explore various operations on dictionaries, including creation, modification, and iteration.</p>
+<ol class="arabic simple">
+<li><p>Create a dictionary named <code class="docutils literal notranslate"><span class="pre">hurricane</span></code> with the following key-value pairs:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">'name':</span> <span class="pre">'Sandy'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'year':</span> <span class="pre">2012</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'category':</span> <span class="pre">3</span></code></p></li>
+</ul>
+</li>
+<li><p>Print the value associated with the key <code class="docutils literal notranslate"><span class="pre">'year'</span></code>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#1</span>
+<span class="n">hurricane</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Sandy&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="mi">2012</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hurricane</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2012
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple">
+<li><p>Add a new key-value pair to the <code class="docutils literal notranslate"><span class="pre">hurricane</span></code> dictionary: <code class="docutils literal notranslate"><span class="pre">'pressure':</span> <span class="pre">940</span></code>.</p></li>
+<li><p>Change the <code class="docutils literal notranslate"><span class="pre">'category'</span></code> value to <code class="docutils literal notranslate"><span class="pre">4</span></code>.</p></li>
+<li><p>Print the updated dictionary.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#2</span>
+<span class="n">hurricane</span><span class="p">[</span><span class="s1">&#39;pressure&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">940</span>
+<span class="n">hurricane</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hurricane</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Sandy&#39;, &#39;year&#39;: 2012, &#39;category&#39;: 4, &#39;pressure&#39;: 940}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use a loop to print all keys and values from the <code class="docutils literal notranslate"><span class="pre">hurricane</span></code> dictionary in the format: <code class="docutils literal notranslate"><span class="pre">Key:</span> <span class="pre">Value</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#3</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">hurricane</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name: Sandy
+year: 2012
+category: 4
+pressure: 940
+</pre></div>
+</div>
+</div>
+</div>
+<p>You are tasked with storing information about a book in a dictionary. Perform the following steps:</p>
+<ol class="arabic simple">
+<li><p>Create a dictionary named <code class="docutils literal notranslate"><span class="pre">book</span></code> with the following key-value pairs:</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">'title':</span> <span class="pre">'To</span> <span class="pre">Kill</span> <span class="pre">a</span> <span class="pre">Mockingbird'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'author':</span> <span class="pre">'Harper</span> <span class="pre">Lee'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'year_published':</span> <span class="pre">1960</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'genre':</span> <span class="pre">'Fiction'</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Print the value associated with the key <code class="docutils literal notranslate"><span class="pre">'author'</span></code>.</p></li>
+<li><p>Check if the key <code class="docutils literal notranslate"><span class="pre">'pages'</span></code> exists in the dictionary and print the result.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function to determine the number of key-value pairs in the dictionary and print it.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#4</span>
+<span class="c1"># Step 1: Create the dictionary</span>
+<span class="n">book</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;To Kill a Mockingbird&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;author&#39;</span><span class="p">:</span> <span class="s1">&#39;Harper Lee&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;year_published&#39;</span><span class="p">:</span> <span class="mi">1960</span><span class="p">,</span>
+    <span class="s1">&#39;genre&#39;</span><span class="p">:</span> <span class="s1">&#39;Fiction&#39;</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 2: Print the value for the key &#39;author&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Author:&quot;</span><span class="p">,</span> <span class="n">book</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">])</span>  <span class="c1"># Output: Harper Lee</span>
+
+<span class="c1"># Step 3: Check if &#39;pages&#39; exists in the dictionary</span>
+<span class="n">has_pages</span> <span class="o">=</span> <span class="s1">&#39;pages&#39;</span> <span class="ow">in</span> <span class="n">book</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Does the &#39;pages&#39; key exist?&quot;</span><span class="p">,</span> <span class="n">has_pages</span><span class="p">)</span>  <span class="c1"># Output: False</span>
+
+<span class="c1"># Step 4: Determine and print the number of key-value pairs</span>
+<span class="n">num_pairs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of key-value pairs:&quot;</span><span class="p">,</span> <span class="n">num_pairs</span><span class="p">)</span>  <span class="c1"># Output: 4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Author: Harper Lee
+Does the &#39;pages&#39; key exist? False
+Number of key-value pairs: 4
+</pre></div>
+</div>
+</div>
+</div>
+<p>You are given a dictionary representing a smartphone:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">smartphone</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;brand&#39;</span><span class="p">:</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;model&#39;</span><span class="p">:</span> <span class="s1">&#39;iPhone 13&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;year_released&#39;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+    <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="mi">799</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">get</span></code> method to retrieve the value for the key <code class="docutils literal notranslate"><span class="pre">'price'</span></code>.</p></li>
+<li><p>Add a new key-value pair: <code class="docutils literal notranslate"><span class="pre">'storage':</span> <span class="pre">'128GB'</span></code>.</p></li>
+<li><p>Update the <code class="docutils literal notranslate"><span class="pre">'price'</span></code> to <code class="docutils literal notranslate"><span class="pre">749</span></code>.</p></li>
+<li><p>Remove the <code class="docutils literal notranslate"><span class="pre">'year_released'</span></code> key using the <code class="docutils literal notranslate"><span class="pre">pop()</span></code> method.</p></li>
+<li><p>Print the updated dictionary.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#5</span>
+<span class="c1"># Step 1: Define the dictionary</span>
+<span class="n">smartphone</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;brand&#39;</span><span class="p">:</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;model&#39;</span><span class="p">:</span> <span class="s1">&#39;iPhone 13&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;year_released&#39;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+    <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="mi">799</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 2: Use the get method to retrieve the price</span>
+<span class="n">price</span> <span class="o">=</span> <span class="n">smartphone</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;price&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Price:&quot;</span><span class="p">,</span> <span class="n">price</span><span class="p">)</span>  <span class="c1"># Output: 799</span>
+
+<span class="c1"># Step 3: Add a new key-value pair</span>
+<span class="n">smartphone</span><span class="p">[</span><span class="s1">&#39;storage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;128GB&#39;</span>
+
+<span class="c1"># Step 4: Update the price</span>
+<span class="n">smartphone</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">749</span>
+
+<span class="c1"># Step 5: Remove the &#39;year_released&#39; key</span>
+<span class="n">smartphone</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;year_released&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Step 6: Print the updated dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Updated Dictionary:&quot;</span><span class="p">,</span> <span class="n">smartphone</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Price: 799
+
+Updated Dictionary: {&#39;brand&#39;: &#39;Apple&#39;, &#39;model&#39;: &#39;iPhone 13&#39;, &#39;price&#39;: 749, &#39;storage&#39;: &#39;128GB&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>You are managing a dictionary that tracks items in a shopping cart:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_cart</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;apple&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">&#39;banana&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s1">&#39;milk&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s1">&#39;bread&#39;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Print the current contents of the shopping_cart.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">clear()</span></code> method to remove all items from the dictionary.</p></li>
+<li><p>Print the dictionary again to confirm it is empty.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#6</span>
+<span class="c1"># Step 1: Define the dictionary</span>
+<span class="n">shopping_cart</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;apple&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">&#39;banana&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s1">&#39;milk&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s1">&#39;bread&#39;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 2: Print the current contents of the shopping cart</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shopping Cart Contents:&quot;</span><span class="p">,</span> <span class="n">shopping_cart</span><span class="p">)</span>
+<span class="c1"># Output: {&#39;apple&#39;: 4, &#39;banana&#39;: 6, &#39;milk&#39;: 2, &#39;bread&#39;: 1}</span>
+
+<span class="c1"># Step 3: Clear the shopping cart</span>
+<span class="n">shopping_cart</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+<span class="c1"># Step 4: Print the dictionary to confirm it is empty</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shopping Cart after clear():&quot;</span><span class="p">,</span> <span class="n">shopping_cart</span><span class="p">)</span>
+<span class="c1"># Output: {}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shopping Cart Contents: {&#39;apple&#39;: 4, &#39;banana&#39;: 6, &#39;milk&#39;: 2, &#39;bread&#39;: 1}
+Shopping Cart after clear(): {}
+</pre></div>
+</div>
+</div>
+</div>
+<p>You are given a dictionary representing the stock of items in a grocery store:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">store_stock</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;apples&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="s1">&#39;bananas&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s1">&#39;milk&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s1">&#39;bread&#39;</span><span class="p">:</span> <span class="mi">15</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Use a loop to print each item and its stock in the format: <code class="docutils literal notranslate"><span class="pre">&quot;Item:</span> <span class="pre">&lt;item&gt;,</span> <span class="pre">Stock:</span> <span class="pre">&lt;stock&gt;&quot;</span></code>.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">.keys()</span></code> method to print a list of all items in the store.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">.values()</span></code> method to calculate and print the total stock of all items.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">.items()</span></code> method to print each item and its stock as tuples.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#7</span>
+<span class="c1"># Step 1: Define the dictionary</span>
+<span class="n">store_stock</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;apples&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="s1">&#39;bananas&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s1">&#39;milk&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s1">&#39;bread&#39;</span><span class="p">:</span> <span class="mi">15</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 2: Loop to print each item and its stock</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stock details:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span><span class="p">,</span> <span class="n">stock</span> <span class="ow">in</span> <span class="n">store_stock</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Item: </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">, Stock: </span><span class="si">{</span><span class="n">stock</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step 3: Use .keys() to print all items</span>
+<span class="n">items</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">store_stock</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Items in store:&quot;</span><span class="p">,</span> <span class="n">items</span><span class="p">)</span>
+
+<span class="c1"># Step 4: Use .values() to calculate total stock</span>
+<span class="n">total_stock</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">store_stock</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Total stock:&quot;</span><span class="p">,</span> <span class="n">total_stock</span><span class="p">)</span>
+
+<span class="c1"># Step 5: Use .items() to print item-stock tuples</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Item-stock tuples:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">item_tuple</span> <span class="ow">in</span> <span class="n">store_stock</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item_tuple</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Stock details:
+Item: apples, Stock: 50
+Item: bananas, Stock: 30
+Item: milk, Stock: 20
+Item: bread, Stock: 15
+
+Items in store: [&#39;apples&#39;, &#39;bananas&#39;, &#39;milk&#39;, &#39;bread&#39;]
+
+Total stock: 115
+
+Item-stock tuples:
+(&#39;apples&#39;, 50)
+(&#39;bananas&#39;, 30)
+(&#39;milk&#39;, 20)
+(&#39;bread&#39;, 15)
+</pre></div>
+</div>
+</div>
+</div>
+<p>You are managing data about students and their test scores. The data is stored in a dictionary where each key is a student’s name, and the value is another dictionary containing the student’s scores for Math, Science, and English.</p>
+<p>Here is the data:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">students_scores</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Alice&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Math&#39;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">:</span> <span class="mi">88</span><span class="p">},</span>
+    <span class="s1">&#39;Bob&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Math&#39;</span><span class="p">:</span> <span class="mi">78</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">:</span> <span class="mi">82</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">:</span> <span class="mi">84</span><span class="p">},</span>
+    <span class="s1">&#39;Charlie&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Math&#39;</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">:</span> <span class="mi">88</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">:</span> <span class="mi">91</span><span class="p">},</span>
+    <span class="s1">&#39;Dana&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Math&#39;</span><span class="p">:</span> <span class="mi">89</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">:</span> <span class="mi">94</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">:</span> <span class="mi">87</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Print the scores for <code class="docutils literal notranslate"><span class="pre">'Alice'</span></code>.</p></li>
+<li><p>Retrieve and print the Science score for <code class="docutils literal notranslate"><span class="pre">'Charlie'</span></code>.</p></li>
+<li><p>Add a new student, <code class="docutils literal notranslate"><span class="pre">'Eve'</span></code>, with the following scores:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Math: 88</p></li>
+<li><p>Science: 86</p></li>
+<li><p>English: 89</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Calculate and print the average Math score for all students.</p></li>
+<li><p>Use a loop to print each student’s name and their average score in the format: <code class="docutils literal notranslate"><span class="pre">&quot;Student:</span> <span class="pre">&lt;name&gt;,</span> <span class="pre">Average</span> <span class="pre">Score:</span> <span class="pre">&lt;average&gt;&quot;</span></code>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#8</span>
+<span class="c1"># Step 1: Define the dictionary</span>
+<span class="n">students_scores</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Alice&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Math&#39;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">:</span> <span class="mi">88</span><span class="p">},</span>
+    <span class="s1">&#39;Bob&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Math&#39;</span><span class="p">:</span> <span class="mi">78</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">:</span> <span class="mi">82</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">:</span> <span class="mi">84</span><span class="p">},</span>
+    <span class="s1">&#39;Charlie&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Math&#39;</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">:</span> <span class="mi">88</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">:</span> <span class="mi">91</span><span class="p">},</span>
+    <span class="s1">&#39;Dana&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Math&#39;</span><span class="p">:</span> <span class="mi">89</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">:</span> <span class="mi">94</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">:</span> <span class="mi">87</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 2: Print the scores for &#39;Alice&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Alice&#39;s Scores:&quot;</span><span class="p">,</span> <span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">])</span>
+
+<span class="c1"># Step 3: Retrieve and print the Science score for &#39;Charlie&#39;</span>
+<span class="n">charlie_science</span> <span class="o">=</span> <span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Charlie&#39;</span><span class="p">][</span><span class="s1">&#39;Science&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Charlie&#39;s Science Score:&quot;</span><span class="p">,</span> <span class="n">charlie_science</span><span class="p">)</span>
+
+<span class="c1"># Step 4: Add a new student, &#39;Eve&#39;</span>
+<span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Eve&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Math&#39;</span><span class="p">:</span> <span class="mi">88</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">:</span> <span class="mi">86</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">:</span> <span class="mi">89</span><span class="p">}</span>
+
+<span class="c1"># Step 5: Calculate the average Math score</span>
+<span class="n">math_scores</span> <span class="o">=</span> <span class="p">[</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;Math&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">scores</span> <span class="ow">in</span> <span class="n">students_scores</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+<span class="n">average_math_score</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">math_scores</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">math_scores</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Average Math Score:&quot;</span><span class="p">,</span> <span class="n">average_math_score</span><span class="p">)</span>
+
+<span class="c1"># Step 6: Loop to print each student&#39;s name and average score</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Student Average Scores:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">student</span><span class="p">,</span> <span class="n">scores</span> <span class="ow">in</span> <span class="n">students_scores</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">average_score</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Student: </span><span class="si">{</span><span class="n">student</span><span class="si">}</span><span class="s2">, Average Score: </span><span class="si">{</span><span class="n">average_score</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Alice&#39;s Scores: {&#39;Math&#39;: 85, &#39;Science&#39;: 90, &#39;English&#39;: 88}
+
+Charlie&#39;s Science Score: 88
+
+Average Math Score: 86.4
+
+Student Average Scores:
+Student: Alice, Average Score: 87.67
+Student: Bob, Average Score: 81.33
+Student: Charlie, Average Score: 90.33
+Student: Dana, Average Score: 90.00
+Student: Eve, Average Score: 87.67
+</pre></div>
+</div>
+</div>
+</div>
+<p>You are given a list of exam scores and a list of corresponding student names. Follow these steps to work with Pandas:</p>
+<ol class="arabic simple">
+<li><p>Import Pandas using the alias <code class="docutils literal notranslate"><span class="pre">pd</span></code>.</p></li>
+<li><p>Create a Pandas Series named <code class="docutils literal notranslate"><span class="pre">exam_scores</span></code> with the following data:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Scores: <code class="docutils literal notranslate"><span class="pre">[85,</span> <span class="pre">90,</span> <span class="pre">78,</span> <span class="pre">92,</span> <span class="pre">88]</span></code></p></li>
+<li><p>Indices (Student Names): <code class="docutils literal notranslate"><span class="pre">['Alice',</span> <span class="pre">'Bob',</span> <span class="pre">'Charlie',</span> <span class="pre">'Dana',</span> <span class="pre">'Eve']</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Print the entire Series.</p></li>
+<li><p>Retrieve and print the score for <code class="docutils literal notranslate"><span class="pre">'Dana'</span></code>.</p></li>
+<li><p>Calculate and print the average score from the Series.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#9</span>
+<span class="c1"># Step 1: Import Pandas</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Step 2: Create the Pandas Series</span>
+<span class="n">exam_scores</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">88</span><span class="p">],</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Charlie&#39;</span><span class="p">,</span> <span class="s1">&#39;Dana&#39;</span><span class="p">,</span> <span class="s1">&#39;Eve&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="c1"># Step 3: Print the entire Series</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exam Scores Series:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">exam_scores</span><span class="p">)</span>
+
+<span class="c1"># Step 4: Retrieve and print the score for &#39;Dana&#39;</span>
+<span class="n">dana_score</span> <span class="o">=</span> <span class="n">exam_scores</span><span class="p">[</span><span class="s1">&#39;Dana&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Dana&#39;s Score:&quot;</span><span class="p">,</span> <span class="n">dana_score</span><span class="p">)</span>
+
+<span class="c1"># Step 5: Calculate and print the average score</span>
+<span class="n">average_score</span> <span class="o">=</span> <span class="n">exam_scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Average Score:&quot;</span><span class="p">,</span> <span class="n">average_score</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exam Scores Series:
+Alice      85
+Bob        90
+Charlie    78
+Dana       92
+Eve        88
+dtype: int64
+
+Dana&#39;s Score: 92
+
+Average Score: 86.6
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">exam_scores</span></code> Series from the previous question, complete the following tasks:</p>
+<ol class="arabic simple">
+<li><p>Retrieve and print the scores for <code class="docutils literal notranslate"><span class="pre">'Bob'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Charlie'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'Dana'</span></code> using slicing.</p></li>
+<li><p>Retrieve and print the scores for the first three students in the Series using slicing.</p></li>
+<li><p>Retrieve and print the scores for the last two students in the Series using slicing.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#10</span>
+<span class="c1"># Step 2: Slice to get scores for &#39;Bob&#39;, &#39;Charlie&#39;, and &#39;Dana&#39;</span>
+<span class="n">selected_scores</span> <span class="o">=</span> <span class="n">exam_scores</span><span class="p">[</span><span class="s1">&#39;Bob&#39;</span><span class="p">:</span><span class="s1">&#39;Dana&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scores for Bob, Charlie, and Dana:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">selected_scores</span><span class="p">)</span>
+
+<span class="c1"># Step 3: Slice to get the first three students</span>
+<span class="n">first_three_scores</span> <span class="o">=</span> <span class="n">exam_scores</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Scores for the first three students:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">first_three_scores</span><span class="p">)</span>
+
+<span class="c1"># Step 4: Slice to get the last two students</span>
+<span class="n">last_two_scores</span> <span class="o">=</span> <span class="n">exam_scores</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Scores for the last two students:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">last_two_scores</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scores for Bob, Charlie, and Dana:
+Bob        90
+Charlie    78
+Dana       92
+dtype: int64
+
+Scores for the first three students:
+Alice      85
+Bob        90
+Charlie    78
+dtype: int64
+
+Scores for the last two students:
+Dana    92
+Eve     88
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">exam_scores</span></code> Series from the previous question, complete the following tasks:</p>
+<ol class="arabic simple">
+<li><p>Create a dictionary of the above scores.</p></li>
+<li><p>Create a Pandas Series named <code class="docutils literal notranslate"><span class="pre">exam_scores</span></code> using the dictionary.</p></li>
+<li><p>Print the entire Series.</p></li>
+<li><p>Retrieve and print the score for <code class="docutils literal notranslate"><span class="pre">'Charlie'</span></code>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#11</span>
+<span class="c1"># Step 2: Define the dictionary</span>
+<span class="n">scores_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Alice&#39;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span>
+    <span class="s1">&#39;Bob&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="s1">&#39;Charlie&#39;</span><span class="p">:</span> <span class="mi">78</span><span class="p">,</span>
+    <span class="s1">&#39;Dana&#39;</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span>
+    <span class="s1">&#39;Eve&#39;</span><span class="p">:</span> <span class="mi">88</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 3: Create the Pandas Series</span>
+<span class="n">exam_scores</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">scores_dict</span><span class="p">)</span>
+
+<span class="c1"># Step 4: Print the entire Series</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exam Scores Series:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">exam_scores</span><span class="p">)</span>
+
+<span class="c1"># Step 5: Retrieve and print the score for &#39;Charlie&#39;</span>
+<span class="n">charlie_score</span> <span class="o">=</span> <span class="n">exam_scores</span><span class="p">[</span><span class="s1">&#39;Charlie&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Charlie&#39;s Score:&quot;</span><span class="p">,</span> <span class="n">charlie_score</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exam Scores Series:
+Alice      85
+Bob        90
+Charlie    78
+Dana       92
+Eve        88
+dtype: int64
+
+Charlie&#39;s Score: 78
+</pre></div>
+</div>
+</div>
+</div>
+<p>You are tasked with creating a DataFrame to store information about students and their scores in Math, Science, and English.</p>
+<ol class="arabic simple">
+<li><p>Create a DataFrame named <code class="docutils literal notranslate"><span class="pre">students_scores</span></code> using the following data:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Name: <code class="docutils literal notranslate"><span class="pre">['Alice',</span> <span class="pre">'Bob',</span> <span class="pre">'Charlie',</span> <span class="pre">'Dana',</span> <span class="pre">'Eve']</span></code></p></li>
+<li><p>Math: <code class="docutils literal notranslate"><span class="pre">[85,</span> <span class="pre">90,</span> <span class="pre">78,</span> <span class="pre">92,</span> <span class="pre">88]</span></code></p></li>
+<li><p>Science: <code class="docutils literal notranslate"><span class="pre">[88,</span> <span class="pre">76,</span> <span class="pre">85,</span> <span class="pre">95,</span> <span class="pre">89]</span></code></p></li>
+<li><p>English: <code class="docutils literal notranslate"><span class="pre">[92,</span> <span class="pre">85,</span> <span class="pre">89,</span> <span class="pre">94,</span> <span class="pre">90]</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Print the entire DataFrame.</p></li>
+<li><p>Print only the <code class="docutils literal notranslate"><span class="pre">Math</span></code> column.</p></li>
+<li><p>Retrieve and print the scores for <code class="docutils literal notranslate"><span class="pre">'Dana'</span></code> across all subjects.</p></li>
+<li><p>Add a new column named <code class="docutils literal notranslate"><span class="pre">'Total'</span></code> that contains the total score for each student.</p></li>
+<li><p>Print the updated DataFrame.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#12</span>
+<span class="c1"># Step 2: Create the DataFrame</span>
+<span class="n">students_scores</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Charlie&#39;</span><span class="p">,</span> <span class="s1">&#39;Dana&#39;</span><span class="p">,</span> <span class="s1">&#39;Eve&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Math&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">88</span><span class="p">],</span>
+    <span class="s1">&#39;Science&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">89</span><span class="p">],</span>
+    <span class="s1">&#39;English&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">92</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Step 3: Print the entire DataFrame</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Students Scores DataFrame:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="p">)</span>
+
+<span class="c1"># Step 4: Print the Math column</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Math Scores:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Math&#39;</span><span class="p">])</span>
+
+<span class="c1"># Step 5: Retrieve and print scores for &#39;Dana&#39;</span>
+<span class="n">dana_scores</span> <span class="o">=</span> <span class="n">students_scores</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Dana&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Dana&#39;s Scores:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dana_scores</span><span class="p">)</span>
+
+<span class="c1"># Step 6: Add a Total column</span>
+<span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Math&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Science&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;English&#39;</span><span class="p">]</span>
+
+<span class="c1"># Step 7: Print the updated DataFrame</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Updated DataFrame with Total Scores:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Students Scores DataFrame:
+      Name  Math  Science  English
+0    Alice    85       88       92
+1      Bob    90       76       85
+2  Charlie    78       85       89
+3     Dana    92       95       94
+4      Eve    88       89       90
+
+Math Scores:
+0    85
+1    90
+2    78
+3    92
+4    88
+Name: Math, dtype: int64
+
+Dana&#39;s Scores:
+   Name  Math  Science  English
+3  Dana    92       95       94
+
+Updated DataFrame with Total Scores:
+      Name  Math  Science  English  Total
+0    Alice    85       88       92    265
+1      Bob    90       76       85    251
+2  Charlie    78       85       89    252
+3     Dana    92       95       94    281
+4      Eve    88       89       90    267
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using the above dataframe</p>
+<ol class="arabic simple">
+<li><p>Access and print the scores (all subjects) for <code class="docutils literal notranslate"><span class="pre">'Charlie'</span></code> using the <code class="docutils literal notranslate"><span class="pre">loc</span></code> method.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">iloc</span></code> method to access and print the second row of the DataFrame.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#13</span>
+<span class="c1"># Step 2: Access and print the scores for &#39;Charlie&#39;</span>
+<span class="n">charlie_scores</span> <span class="o">=</span> <span class="n">students_scores</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Charlie&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Charlie&#39;s Scores:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">charlie_scores</span><span class="p">)</span>
+
+<span class="c1"># Step 3: Use iloc to access and print the second row</span>
+<span class="n">second_row</span> <span class="o">=</span> <span class="n">students_scores</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Second Row of the DataFrame:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">second_row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Charlie&#39;s Scores:
+      Name  Math  Science  English  Total
+2  Charlie    78       85       89    252
+
+Second Row of the DataFrame:
+Name       Bob
+Math        90
+Science     76
+English     85
+Total      251
+Name: 1, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using the above dataframe, perform the following tasks:</p>
+<ol class="arabic simple">
+<li><p>Retrieve and print the index of the DataFrame.</p></li>
+<li><p>Retrieve and print the column names of the DataFrame.</p></li>
+<li><p>Retrieve and print the values of the DataFrame as a 2D array.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">.values</span></code> attribute to calculate and print the average Math score from the DataFrame.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#14</span>
+<span class="c1"># Step 2: Retrieve and print the index</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Index of the DataFrame:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="c1"># Step 3: Retrieve and print the column names</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Column Names of the DataFrame:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="c1"># Step 4: Retrieve and print the values as a 2D array</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Values of the DataFrame:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+<span class="c1"># Step 5: Calculate the average Math score using .values</span>
+<span class="n">math_scores</span> <span class="o">=</span> <span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Math&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">average_math_score</span> <span class="o">=</span> <span class="n">math_scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Average Math Score:&quot;</span><span class="p">,</span> <span class="n">average_math_score</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index of the DataFrame:
+RangeIndex(start=0, stop=5, step=1)
+
+Column Names of the DataFrame:
+Index([&#39;Name&#39;, &#39;Math&#39;, &#39;Science&#39;, &#39;English&#39;, &#39;Total&#39;], dtype=&#39;object&#39;)
+
+Values of the DataFrame:
+[[&#39;Alice&#39; 85 88 92 265]
+ [&#39;Bob&#39; 90 76 85 251]
+ [&#39;Charlie&#39; 78 85 89 252]
+ [&#39;Dana&#39; 92 95 94 281]
+ [&#39;Eve&#39; 88 89 90 267]]
+
+Average Math Score: 86.6
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Add a new column <code class="docutils literal notranslate"><span class="pre">'Participation'</span></code> to the DataFrame with values <code class="docutils literal notranslate"><span class="pre">[8,</span> <span class="pre">9,</span> <span class="pre">7,</span> <span class="pre">10,</span> <span class="pre">8]</span></code>.</p></li>
+<li><p>Remove the <code class="docutils literal notranslate"><span class="pre">'Science'</span></code> column from the DataFrame.</p></li>
+<li><p>Print the updated DataFrame.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#15</span>
+<span class="c1"># Step 2: Add the &#39;Participation&#39; column</span>
+<span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Participation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="c1"># Step 3: Remove the &#39;Science&#39; column</span>
+<span class="n">students_scores</span> <span class="o">=</span> <span class="n">students_scores</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Science&#39;</span><span class="p">])</span>
+
+<span class="c1"># Step 4: Print the updated DataFrame</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Updated DataFrame:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Updated DataFrame:
+      Name  Math  English  Total  Participation
+0    Alice    85       92    265              8
+1      Bob    90       85    251              9
+2  Charlie    78       89    252              7
+3     Dana    92       94    281             10
+4      Eve    88       90    267              8
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple">
+<li><p>Add back the <code class="docutils literal notranslate"><span class="pre">'Science'</span></code> column with the original values <code class="docutils literal notranslate"><span class="pre">[88,</span> <span class="pre">76,</span> <span class="pre">85,</span> <span class="pre">95,</span> <span class="pre">89]</span></code>.</p></li>
+<li><p>Print the updated DataFrame.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#16</span>
+<span class="c1"># Step 2: Add back the &#39;Science&#39; column</span>
+<span class="n">students_scores</span><span class="p">[</span><span class="s1">&#39;Science&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
+
+<span class="c1"># Step 3: Print the updated DataFrame</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Updated DataFrame:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Updated DataFrame:
+      Name  Math  English  Total  Participation  Science
+0    Alice    85       92    265              8       88
+1      Bob    90       85    251              9       76
+2  Charlie    78       89    252              7       85
+3     Dana    92       94    281             10       95
+4      Eve    88       90    267              8       89
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calculate and print the following statistics for each subject:</p>
+<ul class="simple">
+<li><p>Mean score</p></li>
+<li><p>Highest score</p></li>
+<li><p>Lowest score</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#17</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean Scores:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="p">[[</span><span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;Participation&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Highest Scores:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="p">[[</span><span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;Participation&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Lowest Scores:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="p">[[</span><span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;Participation&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Scores:
+Math             86.6
+Participation     8.4
+English          90.0
+Science          86.6
+dtype: float64
+
+Highest Scores:
+Math             92
+Participation    10
+English          94
+Science          95
+dtype: int64
+
+Lowest Scores:
+Math             78
+Participation     7
+English          85
+Science          76
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using the dataframe above, perform the following tasks:</p>
+<ol class="arabic simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">.shape</span></code> attribute to print the number of rows and columns in the DataFrame.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">.head(</span></code>) method to display the first three rows of the DataFrame.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">.tail()</span></code> method to display the last two rows of the DataFrame.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#18</span>
+<span class="c1"># Step 2: Print the shape of the DataFrame</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shape of the DataFrame:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># Step 3: Display the first three rows using head()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">First Three Rows:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="c1"># Step 4: Display the last two rows using tail()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Last Two Rows:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students_scores</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shape of the DataFrame:
+(5, 6)
+
+First Three Rows:
+      Name  Math  English  Total  Participation  Science
+0    Alice    85       92    265              8       88
+1      Bob    90       85    251              9       76
+2  Charlie    78       89    252              7       85
+
+Last Two Rows:
+   Name  Math  English  Total  Participation  Science
+3  Dana    92       94    281             10       95
+4   Eve    88       90    267              8       89
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now do your thing!! Write some creative problems and post them on the Creative Problems chat for Class 22. Write some quiz problems for Friday. Quiz each other!</p>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./2024/F24 Class 22"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stormy Attaway (translated by Christine Mulvey and Brian DePasquale)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

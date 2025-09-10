@@ -1,0 +1,1234 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; EK125</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2024/F24 Class 10/Lab_10_WS_Solution';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EK125</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction to this jupyter book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../chapter1.html">Part I Introduction to Coding Concepts Using Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter2.html">Chapter 2 Building Blocks for Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter3.html">Chapter 3 Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter4.html">Chapter 4 Loops</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/2024/F24 Class 10/Lab_10_WS_Solution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Lab 10 Worksheet. You will be responsible for the statistics functions covered in this WS.</p>
+<p>Write code that will prompt the user, with one input statement, for their name and favorite integer (separated by a space). Print them back in a sentence format.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1</span>
+<span class="n">urans</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter your name and favorite integer, separated by a space: &#39;</span><span class="p">)</span>
+<span class="n">wherespace</span> <span class="o">=</span> <span class="n">urans</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">urans</span><span class="p">[:</span><span class="n">wherespace</span><span class="p">]</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">urans</span><span class="p">[</span><span class="n">wherespace</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Your name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1"> and your favorite integer is </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enter your name and favorite integer, separated by a space: Sandy 11
+Your name is Sandy and your favorite integer is 11.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a list of numbers, and use the min, max, and sum functions on your list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2</span>
+<span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mf">11.11</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">numlist</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">numlist</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numlist</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-5 23 49.11
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a nested list of numbers. Find the overall minimum.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3</span>
+<span class="n">numslist</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">99</span><span class="p">,</span> <span class="mi">52</span><span class="p">]]</span>
+<span class="n">minsofar</span> <span class="o">=</span> <span class="n">numslist</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">onelist</span> <span class="ow">in</span> <span class="n">numslist</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">min</span><span class="p">(</span><span class="n">onelist</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">minsofar</span><span class="p">:</span>
+        <span class="n">minsofar</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">onelist</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The overall minimum is&#39;</span><span class="p">,</span> <span class="n">minsofar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The overall minimum is -99
+</pre></div>
+</div>
+</div>
+</div>
+<p>Import the statistics module and then use help(statistics) to see the functions in it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span>
+<span class="n">help</span><span class="p">(</span><span class="n">statistics</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on module statistics:
+
+NAME
+    statistics - Basic statistics module.
+
+MODULE REFERENCE
+    https://docs.python.org/3.10/library/statistics.html
+    
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+DESCRIPTION
+    This module provides functions for calculating statistics of data, including
+    averages, variance, and standard deviation.
+    
+    Calculating averages
+    --------------------
+    
+    ==================  ==================================================
+    Function            Description
+    ==================  ==================================================
+    mean                Arithmetic mean (average) of data.
+    fmean               Fast, floating point arithmetic mean.
+    geometric_mean      Geometric mean of data.
+    harmonic_mean       Harmonic mean of data.
+    median              Median (middle value) of data.
+    median_low          Low median of data.
+    median_high         High median of data.
+    median_grouped      Median, or 50th percentile, of grouped data.
+    mode                Mode (most common value) of data.
+    multimode           List of modes (most common values of data).
+    quantiles           Divide data into intervals with equal probability.
+    ==================  ==================================================
+    
+    Calculate the arithmetic mean (&quot;the average&quot;) of data:
+    
+    &gt;&gt;&gt; mean([-1.0, 2.5, 3.25, 5.75])
+    2.625
+    
+    
+    Calculate the standard median of discrete data:
+    
+    &gt;&gt;&gt; median([2, 3, 4, 5])
+    3.5
+    
+    
+    Calculate the median, or 50th percentile, of data grouped into class intervals
+    centred on the data values provided. E.g. if your data points are rounded to
+    the nearest whole number:
+    
+    &gt;&gt;&gt; median_grouped([2, 2, 3, 3, 3, 4])  #doctest: +ELLIPSIS
+    2.8333333333...
+    
+    This should be interpreted in this way: you have two data points in the class
+    interval 1.5-2.5, three data points in the class interval 2.5-3.5, and one in
+    the class interval 3.5-4.5. The median of these data points is 2.8333...
+    
+    
+    Calculating variability or spread
+    ---------------------------------
+    
+    ==================  =============================================
+    Function            Description
+    ==================  =============================================
+    pvariance           Population variance of data.
+    variance            Sample variance of data.
+    pstdev              Population standard deviation of data.
+    stdev               Sample standard deviation of data.
+    ==================  =============================================
+    
+    Calculate the standard deviation of sample data:
+    
+    &gt;&gt;&gt; stdev([2.5, 3.25, 5.5, 11.25, 11.75])  #doctest: +ELLIPSIS
+    4.38961843444...
+    
+    If you have previously calculated the mean, you can pass it as the optional
+    second argument to the four &quot;spread&quot; functions to avoid recalculating it:
+    
+    &gt;&gt;&gt; data = [1, 2, 2, 4, 4, 4, 5, 6]
+    &gt;&gt;&gt; mu = mean(data)
+    &gt;&gt;&gt; pvariance(data, mu)
+    2.5
+    
+    
+    Statistics for relations between two inputs
+    -------------------------------------------
+    
+    ==================  ====================================================
+    Function            Description
+    ==================  ====================================================
+    covariance          Sample covariance for two variables.
+    correlation         Pearson&#39;s correlation coefficient for two variables.
+    linear_regression   Intercept and slope for simple linear regression.
+    ==================  ====================================================
+    
+    Calculate covariance, Pearson&#39;s correlation, and simple linear regression
+    for two inputs:
+    
+    &gt;&gt;&gt; x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    &gt;&gt;&gt; y = [1, 2, 3, 1, 2, 3, 1, 2, 3]
+    &gt;&gt;&gt; covariance(x, y)
+    0.75
+    &gt;&gt;&gt; correlation(x, y)  #doctest: +ELLIPSIS
+    0.31622776601...
+    &gt;&gt;&gt; linear_regression(x, y)  #doctest:
+    LinearRegression(slope=0.1, intercept=1.5)
+    
+    
+    Exceptions
+    ----------
+    
+    A single exception is defined: StatisticsError is a subclass of ValueError.
+
+CLASSES
+    builtins.ValueError(builtins.Exception)
+        StatisticsError
+    builtins.object
+        NormalDist
+    
+    class NormalDist(builtins.object)
+     |  NormalDist(mu=0.0, sigma=1.0)
+     |  
+     |  Normal distribution of a random variable
+     |  
+     |  Methods defined here:
+     |  
+     |  __add__(x1, x2)
+     |      Add a constant or another NormalDist instance.
+     |      
+     |      If *other* is a constant, translate mu by the constant,
+     |      leaving sigma unchanged.
+     |      
+     |      If *other* is a NormalDist, add both the means and the variances.
+     |      Mathematically, this works only if the two distributions are
+     |      independent or if they are jointly normally distributed.
+     |  
+     |  __eq__(x1, x2)
+     |      Two NormalDist objects are equal if their mu and sigma are both equal.
+     |  
+     |  __getstate__(self)
+     |  
+     |  __hash__(self)
+     |      NormalDist objects hash equal if their mu and sigma are both equal.
+     |  
+     |  __init__(self, mu=0.0, sigma=1.0)
+     |      NormalDist where mu is the mean and sigma is the standard deviation.
+     |  
+     |  __mul__(x1, x2)
+     |      Multiply both mu and sigma by a constant.
+     |      
+     |      Used for rescaling, perhaps to change measurement units.
+     |      Sigma is scaled with the absolute value of the constant.
+     |  
+     |  __neg__(x1)
+     |      Negates mu while keeping sigma the same.
+     |  
+     |  __pos__(x1)
+     |      Return a copy of the instance.
+     |  
+     |  __radd__ = __add__(x1, x2)
+     |  
+     |  __repr__(self)
+     |      Return repr(self).
+     |  
+     |  __rmul__ = __mul__(x1, x2)
+     |  
+     |  __rsub__(x1, x2)
+     |      Subtract a NormalDist from a constant or another NormalDist.
+     |  
+     |  __setstate__(self, state)
+     |  
+     |  __sub__(x1, x2)
+     |      Subtract a constant or another NormalDist instance.
+     |      
+     |      If *other* is a constant, translate by the constant mu,
+     |      leaving sigma unchanged.
+     |      
+     |      If *other* is a NormalDist, subtract the means and add the variances.
+     |      Mathematically, this works only if the two distributions are
+     |      independent or if they are jointly normally distributed.
+     |  
+     |  __truediv__(x1, x2)
+     |      Divide both mu and sigma by a constant.
+     |      
+     |      Used for rescaling, perhaps to change measurement units.
+     |      Sigma is scaled with the absolute value of the constant.
+     |  
+     |  cdf(self, x)
+     |      Cumulative distribution function.  P(X &lt;= x)
+     |  
+     |  inv_cdf(self, p)
+     |      Inverse cumulative distribution function.  x : P(X &lt;= x) = p
+     |      
+     |      Finds the value of the random variable such that the probability of
+     |      the variable being less than or equal to that value equals the given
+     |      probability.
+     |      
+     |      This function is also called the percent point function or quantile
+     |      function.
+     |  
+     |  overlap(self, other)
+     |      Compute the overlapping coefficient (OVL) between two normal distributions.
+     |      
+     |      Measures the agreement between two normal probability distributions.
+     |      Returns a value between 0.0 and 1.0 giving the overlapping area in
+     |      the two underlying probability density functions.
+     |      
+     |          &gt;&gt;&gt; N1 = NormalDist(2.4, 1.6)
+     |          &gt;&gt;&gt; N2 = NormalDist(3.2, 2.0)
+     |          &gt;&gt;&gt; N1.overlap(N2)
+     |          0.8035050657330205
+     |  
+     |  pdf(self, x)
+     |      Probability density function.  P(x &lt;= X &lt; x+dx) / dx
+     |  
+     |  quantiles(self, n=4)
+     |      Divide into *n* continuous intervals with equal probability.
+     |      
+     |      Returns a list of (n - 1) cut points separating the intervals.
+     |      
+     |      Set *n* to 4 for quartiles (the default).  Set *n* to 10 for deciles.
+     |      Set *n* to 100 for percentiles which gives the 99 cuts points that
+     |      separate the normal distribution in to 100 equal sized groups.
+     |  
+     |  samples(self, n, *, seed=None)
+     |      Generate *n* samples for a given mean and standard deviation.
+     |  
+     |  zscore(self, x)
+     |      Compute the Standard Score.  (x - mean) / stdev
+     |      
+     |      Describes *x* in terms of the number of standard deviations
+     |      above or below the mean of the normal distribution.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods defined here:
+     |  
+     |  from_samples(data) from builtins.type
+     |      Make a normal distribution instance from sample data.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Readonly properties defined here:
+     |  
+     |  mean
+     |      Arithmetic mean of the normal distribution.
+     |  
+     |  median
+     |      Return the median of the normal distribution
+     |  
+     |  mode
+     |      Return the mode of the normal distribution
+     |      
+     |      The mode is the value x where which the probability density
+     |      function (pdf) takes its maximum value.
+     |  
+     |  stdev
+     |      Standard deviation of the normal distribution.
+     |  
+     |  variance
+     |      Square of the standard deviation.
+    
+    class StatisticsError(builtins.ValueError)
+     |  Method resolution order:
+     |      StatisticsError
+     |      builtins.ValueError
+     |      builtins.Exception
+     |      builtins.BaseException
+     |      builtins.object
+     |  
+     |  Data descriptors defined here:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.ValueError:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from builtins.ValueError:
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.BaseException:
+     |  
+     |  __delattr__(self, name, /)
+     |      Implement delattr(self, name).
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __reduce__(...)
+     |      Helper for pickle.
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __setattr__(self, name, value, /)
+     |      Implement setattr(self, name, value).
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  with_traceback(...)
+     |      Exception.with_traceback(tb) --
+     |      set self.__traceback__ to tb and return self.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from builtins.BaseException:
+     |  
+     |  __cause__
+     |      exception cause
+     |  
+     |  __context__
+     |      exception context
+     |  
+     |  __dict__
+     |  
+     |  __suppress_context__
+     |  
+     |  __traceback__
+     |  
+     |  args
+
+FUNCTIONS
+    correlation(x, y, /)
+        Pearson&#39;s correlation coefficient
+        
+        Return the Pearson&#39;s correlation coefficient for two inputs. Pearson&#39;s
+        correlation coefficient *r* takes values between -1 and +1. It measures the
+        strength and direction of the linear relationship, where +1 means very
+        strong, positive linear relationship, -1 very strong, negative linear
+        relationship, and 0 no linear relationship.
+        
+        &gt;&gt;&gt; x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        &gt;&gt;&gt; y = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+        &gt;&gt;&gt; correlation(x, x)
+        1.0
+        &gt;&gt;&gt; correlation(x, y)
+        -1.0
+    
+    covariance(x, y, /)
+        Covariance
+        
+        Return the sample covariance of two inputs *x* and *y*. Covariance
+        is a measure of the joint variability of two inputs.
+        
+        &gt;&gt;&gt; x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        &gt;&gt;&gt; y = [1, 2, 3, 1, 2, 3, 1, 2, 3]
+        &gt;&gt;&gt; covariance(x, y)
+        0.75
+        &gt;&gt;&gt; z = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+        &gt;&gt;&gt; covariance(x, z)
+        -7.5
+        &gt;&gt;&gt; covariance(z, x)
+        -7.5
+    
+    fmean(data)
+        Convert data to floats and compute the arithmetic mean.
+        
+        This runs faster than the mean() function and it always returns a float.
+        If the input dataset is empty, it raises a StatisticsError.
+        
+        &gt;&gt;&gt; fmean([3.5, 4.0, 5.25])
+        4.25
+    
+    geometric_mean(data)
+        Convert data to floats and compute the geometric mean.
+        
+        Raises a StatisticsError if the input dataset is empty,
+        if it contains a zero, or if it contains a negative value.
+        
+        No special efforts are made to achieve exact results.
+        (However, this may change in the future.)
+        
+        &gt;&gt;&gt; round(geometric_mean([54, 24, 36]), 9)
+        36.0
+    
+    harmonic_mean(data, weights=None)
+        Return the harmonic mean of data.
+        
+        The harmonic mean is the reciprocal of the arithmetic mean of the
+        reciprocals of the data.  It can be used for averaging ratios or
+        rates, for example speeds.
+        
+        Suppose a car travels 40 km/hr for 5 km and then speeds-up to
+        60 km/hr for another 5 km. What is the average speed?
+        
+            &gt;&gt;&gt; harmonic_mean([40, 60])
+            48.0
+        
+        Suppose a car travels 40 km/hr for 5 km, and when traffic clears,
+        speeds-up to 60 km/hr for the remaining 30 km of the journey. What
+        is the average speed?
+        
+            &gt;&gt;&gt; harmonic_mean([40, 60], weights=[5, 30])
+            56.0
+        
+        If ``data`` is empty, or any element is less than zero,
+        ``harmonic_mean`` will raise ``StatisticsError``.
+    
+    linear_regression(x, y, /)
+        Slope and intercept for simple linear regression.
+        
+        Return the slope and intercept of simple linear regression
+        parameters estimated using ordinary least squares. Simple linear
+        regression describes relationship between an independent variable
+        *x* and a dependent variable *y* in terms of linear function:
+        
+            y = slope * x + intercept + noise
+        
+        where *slope* and *intercept* are the regression parameters that are
+        estimated, and noise represents the variability of the data that was
+        not explained by the linear regression (it is equal to the
+        difference between predicted and actual values of the dependent
+        variable).
+        
+        The parameters are returned as a named tuple.
+        
+        &gt;&gt;&gt; x = [1, 2, 3, 4, 5]
+        &gt;&gt;&gt; noise = NormalDist().samples(5, seed=42)
+        &gt;&gt;&gt; y = [3 * x[i] + 2 + noise[i] for i in range(5)]
+        &gt;&gt;&gt; linear_regression(x, y)  #doctest: +ELLIPSIS
+        LinearRegression(slope=3.09078914170..., intercept=1.75684970486...)
+    
+    mean(data)
+        Return the sample arithmetic mean of data.
+        
+        &gt;&gt;&gt; mean([1, 2, 3, 4, 4])
+        2.8
+        
+        &gt;&gt;&gt; from fractions import Fraction as F
+        &gt;&gt;&gt; mean([F(3, 7), F(1, 21), F(5, 3), F(1, 3)])
+        Fraction(13, 21)
+        
+        &gt;&gt;&gt; from decimal import Decimal as D
+        &gt;&gt;&gt; mean([D(&quot;0.5&quot;), D(&quot;0.75&quot;), D(&quot;0.625&quot;), D(&quot;0.375&quot;)])
+        Decimal(&#39;0.5625&#39;)
+        
+        If ``data`` is empty, StatisticsError will be raised.
+    
+    median(data)
+        Return the median (middle value) of numeric data.
+        
+        When the number of data points is odd, return the middle data point.
+        When the number of data points is even, the median is interpolated by
+        taking the average of the two middle values:
+        
+        &gt;&gt;&gt; median([1, 3, 5])
+        3
+        &gt;&gt;&gt; median([1, 3, 5, 7])
+        4.0
+    
+    median_grouped(data, interval=1)
+        Return the 50th percentile (median) of grouped continuous data.
+        
+        &gt;&gt;&gt; median_grouped([1, 2, 2, 3, 4, 4, 4, 4, 4, 5])
+        3.7
+        &gt;&gt;&gt; median_grouped([52, 52, 53, 54])
+        52.5
+        
+        This calculates the median as the 50th percentile, and should be
+        used when your data is continuous and grouped. In the above example,
+        the values 1, 2, 3, etc. actually represent the midpoint of classes
+        0.5-1.5, 1.5-2.5, 2.5-3.5, etc. The middle value falls somewhere in
+        class 3.5-4.5, and interpolation is used to estimate it.
+        
+        Optional argument ``interval`` represents the class interval, and
+        defaults to 1. Changing the class interval naturally will change the
+        interpolated 50th percentile value:
+        
+        &gt;&gt;&gt; median_grouped([1, 3, 3, 5, 7], interval=1)
+        3.25
+        &gt;&gt;&gt; median_grouped([1, 3, 3, 5, 7], interval=2)
+        3.5
+        
+        This function does not check whether the data points are at least
+        ``interval`` apart.
+    
+    median_high(data)
+        Return the high median of data.
+        
+        When the number of data points is odd, the middle value is returned.
+        When it is even, the larger of the two middle values is returned.
+        
+        &gt;&gt;&gt; median_high([1, 3, 5])
+        3
+        &gt;&gt;&gt; median_high([1, 3, 5, 7])
+        5
+    
+    median_low(data)
+        Return the low median of numeric data.
+        
+        When the number of data points is odd, the middle value is returned.
+        When it is even, the smaller of the two middle values is returned.
+        
+        &gt;&gt;&gt; median_low([1, 3, 5])
+        3
+        &gt;&gt;&gt; median_low([1, 3, 5, 7])
+        3
+    
+    mode(data)
+        Return the most common data point from discrete or nominal data.
+        
+        ``mode`` assumes discrete data, and returns a single value. This is the
+        standard treatment of the mode as commonly taught in schools:
+        
+            &gt;&gt;&gt; mode([1, 1, 2, 3, 3, 3, 3, 4])
+            3
+        
+        This also works with nominal (non-numeric) data:
+        
+            &gt;&gt;&gt; mode([&quot;red&quot;, &quot;blue&quot;, &quot;blue&quot;, &quot;red&quot;, &quot;green&quot;, &quot;red&quot;, &quot;red&quot;])
+            &#39;red&#39;
+        
+        If there are multiple modes with same frequency, return the first one
+        encountered:
+        
+            &gt;&gt;&gt; mode([&#39;red&#39;, &#39;red&#39;, &#39;green&#39;, &#39;blue&#39;, &#39;blue&#39;])
+            &#39;red&#39;
+        
+        If *data* is empty, ``mode``, raises StatisticsError.
+    
+    multimode(data)
+        Return a list of the most frequently occurring values.
+        
+        Will return more than one result if there are multiple modes
+        or an empty list if *data* is empty.
+        
+        &gt;&gt;&gt; multimode(&#39;aabbbbbbbbcc&#39;)
+        [&#39;b&#39;]
+        &gt;&gt;&gt; multimode(&#39;aabbbbccddddeeffffgg&#39;)
+        [&#39;b&#39;, &#39;d&#39;, &#39;f&#39;]
+        &gt;&gt;&gt; multimode(&#39;&#39;)
+        []
+    
+    pstdev(data, mu=None)
+        Return the square root of the population variance.
+        
+        See ``pvariance`` for arguments and other details.
+        
+        &gt;&gt;&gt; pstdev([1.5, 2.5, 2.5, 2.75, 3.25, 4.75])
+        0.986893273527251
+    
+    pvariance(data, mu=None)
+        Return the population variance of ``data``.
+        
+        data should be a sequence or iterable of Real-valued numbers, with at least one
+        value. The optional argument mu, if given, should be the mean of
+        the data. If it is missing or None, the mean is automatically calculated.
+        
+        Use this function to calculate the variance from the entire population.
+        To estimate the variance from a sample, the ``variance`` function is
+        usually a better choice.
+        
+        Examples:
+        
+        &gt;&gt;&gt; data = [0.0, 0.25, 0.25, 1.25, 1.5, 1.75, 2.75, 3.25]
+        &gt;&gt;&gt; pvariance(data)
+        1.25
+        
+        If you have already calculated the mean of the data, you can pass it as
+        the optional second argument to avoid recalculating it:
+        
+        &gt;&gt;&gt; mu = mean(data)
+        &gt;&gt;&gt; pvariance(data, mu)
+        1.25
+        
+        Decimals and Fractions are supported:
+        
+        &gt;&gt;&gt; from decimal import Decimal as D
+        &gt;&gt;&gt; pvariance([D(&quot;27.5&quot;), D(&quot;30.25&quot;), D(&quot;30.25&quot;), D(&quot;34.5&quot;), D(&quot;41.75&quot;)])
+        Decimal(&#39;24.815&#39;)
+        
+        &gt;&gt;&gt; from fractions import Fraction as F
+        &gt;&gt;&gt; pvariance([F(1, 4), F(5, 4), F(1, 2)])
+        Fraction(13, 72)
+    
+    quantiles(data, *, n=4, method=&#39;exclusive&#39;)
+        Divide *data* into *n* continuous intervals with equal probability.
+        
+        Returns a list of (n - 1) cut points separating the intervals.
+        
+        Set *n* to 4 for quartiles (the default).  Set *n* to 10 for deciles.
+        Set *n* to 100 for percentiles which gives the 99 cuts points that
+        separate *data* in to 100 equal sized groups.
+        
+        The *data* can be any iterable containing sample.
+        The cut points are linearly interpolated between data points.
+        
+        If *method* is set to *inclusive*, *data* is treated as population
+        data.  The minimum value is treated as the 0th percentile and the
+        maximum value is treated as the 100th percentile.
+    
+    stdev(data, xbar=None)
+        Return the square root of the sample variance.
+        
+        See ``variance`` for arguments and other details.
+        
+        &gt;&gt;&gt; stdev([1.5, 2.5, 2.5, 2.75, 3.25, 4.75])
+        1.0810874155219827
+    
+    variance(data, xbar=None)
+        Return the sample variance of data.
+        
+        data should be an iterable of Real-valued numbers, with at least two
+        values. The optional argument xbar, if given, should be the mean of
+        the data. If it is missing or None, the mean is automatically calculated.
+        
+        Use this function when your data is a sample from a population. To
+        calculate the variance from the entire population, see ``pvariance``.
+        
+        Examples:
+        
+        &gt;&gt;&gt; data = [2.75, 1.75, 1.25, 0.25, 0.5, 1.25, 3.5]
+        &gt;&gt;&gt; variance(data)
+        1.3720238095238095
+        
+        If you have already calculated the mean of your data, you can pass it as
+        the optional second argument ``xbar`` to avoid recalculating it:
+        
+        &gt;&gt;&gt; m = mean(data)
+        &gt;&gt;&gt; variance(data, m)
+        1.3720238095238095
+        
+        This function does not check that ``xbar`` is actually the mean of
+        ``data``. Giving arbitrary values for ``xbar`` may lead to invalid or
+        impossible results.
+        
+        Decimals and Fractions are supported:
+        
+        &gt;&gt;&gt; from decimal import Decimal as D
+        &gt;&gt;&gt; variance([D(&quot;27.5&quot;), D(&quot;30.25&quot;), D(&quot;30.25&quot;), D(&quot;34.5&quot;), D(&quot;41.75&quot;)])
+        Decimal(&#39;31.01875&#39;)
+        
+        &gt;&gt;&gt; from fractions import Fraction as F
+        &gt;&gt;&gt; variance([F(1, 6), F(1, 2), F(5, 3)])
+        Fraction(67, 108)
+
+DATA
+    __all__ = [&#39;NormalDist&#39;, &#39;StatisticsError&#39;, &#39;correlation&#39;, &#39;covariance...
+
+FILE
+    /usr/lib/python3.10/statistics.py
+</pre></div>
+</div>
+</div>
+</div>
+<p>Investigate the mean, median, and mode functions. First, import all 3 of these functions.  Create a long list of mock exam scores. Try these functions out! Print the mean with one decimal place.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statistics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean</span><span class="p">,</span> <span class="n">median</span><span class="p">,</span> <span class="n">mode</span>
+
+<span class="c1">#scores = [100, 99, 82, 99, 94, 66, 100, 98, 97, 100, 85, 100]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The mean is </span><span class="si">{</span><span class="n">mean</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The median is&#39;</span><span class="p">,</span> <span class="n">median</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The mode is&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean is 80.0
+The median is 80
+The mode is 80
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a data set of 3 exam scores for which the mean, median, and mode are all the same.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statistics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean</span><span class="p">,</span> <span class="n">median</span><span class="p">,</span> <span class="n">mode</span>
+
+<span class="c1">#scores = [180, 70, 90]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The mean is </span><span class="si">{</span><span class="n">mean</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The median is&#39;</span><span class="p">,</span> <span class="n">median</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The mode is&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean is 80.0
+The median is 80
+The mode is 80
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use the mode function on the characters in a string.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7</span>
+<span class="n">mode</span><span class="p">(</span><span class="s1">&#39;abcdefabcddd&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;d&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Examine the multimode function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 8</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statistics</span><span class="w"> </span><span class="kn">import</span> <span class="n">multimode</span>
+<span class="n">multimode</span><span class="p">(</span><span class="s1">&#39;abcdefabcddc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;c&#39;, &#39;d&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./2024/F24 Class 10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stormy Attaway (translated by Christine Mulvey and Brian DePasquale)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

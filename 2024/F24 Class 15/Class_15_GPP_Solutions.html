@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>OK, now let’s start looking at some of the ramifications of this. &#8212; EK125</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2024/F24 Class 15/Class_15_GPP_Solutions';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EK125</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction to this jupyter book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../chapter1.html">Part I Introduction to Coding Concepts Using Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter2.html">Chapter 2 Building Blocks for Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter3.html">Chapter 3 Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter4.html">Chapter 4 Loops</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/2024/F24 Class 15/Class_15_GPP_Solutions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>OK, now let’s start looking at some of the ramifications of this.</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">OK, now let’s start looking at some of the ramifications of this.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-copy">Deep copy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shallow-copy">Shallow copy</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">Tuples</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#other-important-assignment-facets-of-assignments">Other important assignment facets of assignments</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Class 15: Group Practice Problems
+These will not be handed in, but please take them seriously and do not use generative AI. These exercises are designed to familiarize you with how code works in Python and will help you learn how to generate your own in the future. Please work in a group of three. Don’t hesitate to ask for help if you need it. Your instructor and TAs will be circulating. Flag us down!</p>
+<p>Today is basically about assignment statements, and how they actually work in Python. This includes how passing arguments to functions works. Also, shortcut assignments and simultaneous assignments will be covered.</p>
+<p>First, let’s do some lambda function since some of you did not get to this on Monday. Execute the following, which defines a lambda function to convert inches to feet, and calls it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1</span>
+<span class="n">convin2ft</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">inch</span><span class="p">:</span> <span class="n">inch</span> <span class="o">/</span> <span class="mi">12</span>
+<span class="n">convin2ft</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create your own lambda function to convert km to m and call it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2</span>
+<span class="n">convkm2m</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">km</span><span class="p">:</span> <span class="n">km</span> <span class="o">*</span> <span class="mi">1000</span>
+<span class="n">convkm2m</span><span class="p">(</span><span class="mf">1.609</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Getting to today’s lesson, as a reminder that when assigning one variable to another they refer to the same location in the processor’s memory. Execute the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a is&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;and b is&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a is&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;and b is&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a is 11 and b is 11
+a is 42 and b is 11
+</pre></div>
+</div>
+</div>
+</div>
+<p>Assignment statements always create a new location. You can see the locations using the <code class="docutils literal notranslate"><span class="pre">id</span></code> function, and you can find out whether variables refer to the same location or not using the <code class="docutils literal notranslate"><span class="pre">is</span></code> operator. Execute the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a is&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;and b is&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The id of a is&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="s1">&#39;and the id of b is&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a is 11 and b is 11
+The id of a is 139487050564144 and the id of b is 139487050564144
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s try the same thing using lists. Execute the following.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5</span>
+<span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">urlist</span> <span class="o">=</span> <span class="n">myList</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;myList is&#39;</span><span class="p">,</span> <span class="n">myList</span><span class="p">,</span> <span class="s1">&#39;and urlist is&#39;</span><span class="p">,</span> <span class="n">urlist</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The id of myList is&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">myList</span><span class="p">),</span> <span class="s1">&#39;and the id of urlist is&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">urlist</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span> <span class="ow">is</span> <span class="n">urlist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>myList is [33, 2, 5] and urlist is [33, 2, 5]
+The id of myList is 139486616340352 and the id of urlist is 139486616340352
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>So, what happens when you assign another list to one of the variables? Execute the following.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6</span>
+<span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">45</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;myList is&#39;</span><span class="p">,</span> <span class="n">myList</span><span class="p">,</span> <span class="s1">&#39;and urlist is&#39;</span><span class="p">,</span> <span class="n">urlist</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The id of myList is&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">myList</span><span class="p">),</span> <span class="s1">&#39;and the id of urlist is&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">urlist</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span> <span class="ow">is</span> <span class="n">urlist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>myList is [45, 9, -2] and urlist is [33, 2, 5]
+The id of myList is 139486616398272 and the id of urlist is 139486616340352
+False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s try something different. The lists will start out the same, but instead of assigning a different list to one of the variables, we’ll modify a list. Execute the following.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7</span>
+<span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">urlist</span> <span class="o">=</span> <span class="n">myList</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;myList is&#39;</span><span class="p">,</span> <span class="n">myList</span><span class="p">,</span> <span class="s1">&#39;and urlist is&#39;</span><span class="p">,</span> <span class="n">urlist</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The id of myList is&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">myList</span><span class="p">),</span> <span class="s1">&#39;and the id of urlist is&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">urlist</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span> <span class="ow">is</span> <span class="n">urlist</span><span class="p">)</span>
+<span class="n">myList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;myList is&#39;</span><span class="p">,</span> <span class="n">myList</span><span class="p">,</span> <span class="s1">&#39;and urlist is&#39;</span><span class="p">,</span> <span class="n">urlist</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The id of myList is&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">myList</span><span class="p">),</span> <span class="s1">&#39;and the id of urlist is&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">urlist</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="ok-now-let-s-start-looking-at-some-of-the-ramifications-of-this">
+<h1>OK, now let’s start looking at some of the ramifications of this.<a class="headerlink" href="#ok-now-let-s-start-looking-at-some-of-the-ramifications-of-this" title="Link to this heading">#</a></h1>
+<p>Let’s imagine that we have a list which we want to reverse, does this create a new object in memory or does it use the prior one? Knowing what you know about assignments and copying, take a second and make a prediction about whether a new copy <strong>is made</strong> or a new copy <strong>is not made</strong>.</p>
+<p>Execute the code below and test your hypothesis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">myList</span><span class="p">),</span> <span class="n">myList</span><span class="p">)</span>
+<span class="n">myList</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">myList</span><span class="p">),</span> <span class="n">myList</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There’s a concept called a <em>deep copy</em> and another one called a <em>shallow copy</em>. A <em>deep copy</em> is when everything in the object is copied over to the new object. The <em>shallow copy</em> is when only the reference to the object is copied. Let’s look at how this works:</p>
+<section id="deep-copy">
+<h2>Deep copy<a class="headerlink" href="#deep-copy" title="Link to this heading">#</a></h2>
+<p>Note after the assignment how changing <code class="docutils literal notranslate"><span class="pre">a</span></code> doesn’t affect <code class="docutils literal notranslate"><span class="pre">b</span></code>. They’re totally separate objects.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="shallow-copy">
+<h2>Shallow copy<a class="headerlink" href="#shallow-copy" title="Link to this heading">#</a></h2>
+<p>Note how the two lists are not at all dependent!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the myList</span>
+<span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create a new variable, `myNewList`, and assign `myList` to it.</span>
+<span class="n">myNewList</span> <span class="o">=</span> <span class="n">myList</span>
+<span class="n">myNewList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+
+<span class="c1"># Print the old list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myList: &quot;</span><span class="p">,</span> <span class="n">myList</span><span class="p">)</span>
+
+<span class="c1"># Check that these two variables, `myList` and `myNewList` are indeed exactly the same!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myNewList</span> <span class="ow">is</span> <span class="n">myList</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Oh, okay, that’s a bit of a kick in the pants. So sometimes you <em>think</em> you’ve made a deep copy, but that’s not always the case. So when objects are mutable, and you change just a single index in the object, you do <strong>not</strong> create a new object.</p>
+<p>Honestly, it’s a bit hard to explain, right now we just need you to understand that it happens.</p>
+<p>BTW, what about if you don’t want this to happen? What if you wanted to make a list, and you wanted to <code class="docutils literal notranslate"><span class="pre">reverse()</span></code> a copy of the list without modifying the original?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the stage:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myList: &quot;</span><span class="p">,</span> <span class="n">myList</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myNewList: &quot;</span><span class="p">,</span> <span class="n">myNewList</span><span class="p">)</span>
+
+<span class="c1"># Act:</span>
+<span class="n">myList</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="c1"># Check results</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myList: &quot;</span><span class="p">,</span> <span class="n">myList</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myNewList: &quot;</span><span class="p">,</span> <span class="n">myNewList</span><span class="p">)</span>
+
+<span class="c1"># Do a DEEP COPY</span>
+<span class="n">myNewList</span> <span class="o">=</span> <span class="n">myList</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Set the stage:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myList: &quot;</span><span class="p">,</span> <span class="n">myList</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myNewList: &quot;</span><span class="p">,</span> <span class="n">myNewList</span><span class="p">)</span>
+
+<span class="c1"># Act:</span>
+<span class="n">myList</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="c1"># Check results</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myList: &quot;</span><span class="p">,</span> <span class="n">myList</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myNewList: &quot;</span><span class="p">,</span> <span class="n">myNewList</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tuples">
+<h1>Tuples<a class="headerlink" href="#tuples" title="Link to this heading">#</a></h1>
+<p>So what about tuples and their immutability?</p>
+<p>Run the below and notice that once again we have a <strong>shallow</strong> copy, but unlike with the list we cannot change the elements. So it doesn’t really matter if we have a shallow or deep copy, as the result is exactly identical.</p>
+<p>Run the below code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">myNewTuple</span> <span class="o">=</span> <span class="n">myTuple</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myTuple is myNewTuple: &quot;</span><span class="p">,</span> <span class="n">myTuple</span> <span class="ow">is</span> <span class="n">myNewTuple</span><span class="p">)</span>
+
+<span class="n">myNewTuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="other-important-assignment-facets-of-assignments">
+<h1>Other important assignment facets of assignments<a class="headerlink" href="#other-important-assignment-facets-of-assignments" title="Link to this heading">#</a></h1>
+<p>In a single line, assign the values 100, 200, and 300 to the variables <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code> using <em>unpacking</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In one single line, shift the order of the variables one to the left, so that <code class="docutils literal notranslate"><span class="pre">a</span></code> takes the value of <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> takes the value of <code class="docutils literal notranslate"><span class="pre">c</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code> takes the value of <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using <em>compound assignment operators</em>, with only one single operator, increment the value of <code class="docutils literal notranslate"><span class="pre">a</span></code> by 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using <em>compound assignment operators</em>, with only one single operator, decrement the value of <code class="docutils literal notranslate"><span class="pre">b</span></code> by 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">b</span> <span class="o">-=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using <em>compound assignment operators</em>, with only one single operator, multiply the value of <code class="docutils literal notranslate"><span class="pre">c</span></code> by 50.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">c</span><span class="o">*=</span><span class="mi">50</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>I bet you can guess what comes next. Create a variable <code class="docutils literal notranslate"><span class="pre">d</span></code>, and using <em>compound assignment operators</em> divide it by 100. Will the resulting <code class="docutils literal notranslate"><span class="pre">d</span></code> be a float or an integer?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">54</span>
+<span class="n">d</span><span class="o">/=</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Do <em>compound assignment operators</em> create new variables in memory or not? Take a second and make a prediction. Then test your prediction using <code class="docutils literal notranslate"><span class="pre">id()</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">=</span> <span class="pre">10</span></code>, <code class="docutils literal notranslate"><span class="pre">print(id(d))</span></code>, <code class="docutils literal notranslate"><span class="pre">d+=1</span></code>, <code class="docutils literal notranslate"><span class="pre">print(id(d))</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+<span class="n">d</span><span class="o">+=</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What about <em>compound assignment operators</em> with strings? Create a string and use  <code class="docutils literal notranslate"><span class="pre">+=</span></code>. Test whether it creates a new variable in memory or alters the old one.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="s1">&#39;fred&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">bob</span><span class="p">),</span> <span class="n">bob</span><span class="p">)</span>
+<span class="n">bob</span> <span class="o">+=</span> <span class="s1">&#39;george&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">bob</span><span class="p">),</span> <span class="n">bob</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What about <em>compound assignment operators</em> with strings? Create a string and use  <code class="docutils literal notranslate"><span class="pre">+*</span></code>. Test whether it creates a new variable in memory or alters the old one.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="s1">&#39;fred&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">bob</span><span class="p">),</span> <span class="n">bob</span><span class="p">)</span>
+<span class="n">bob</span> <span class="o">*=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">bob</span><span class="p">),</span> <span class="n">bob</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, go back through and transform all the <code class="docutils literal notranslate"><span class="pre">compound</span> <span class="pre">assignment</span> <span class="pre">operators</span></code> above problems and turn them into definitions. I.e.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="k">return</span> <span class="n">a</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">increment</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># NOTHING TO BE DONE HERE, ALL CHANGES ARE ABOVE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As always, when you get here, it’s time to start playing around. Test your knowledge, create some problem sets for others. Definitely blend in what you know about definitions.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./2024/F24 Class 15"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">OK, now let’s start looking at some of the ramifications of this.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-copy">Deep copy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shallow-copy">Shallow copy</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">Tuples</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#other-important-assignment-facets-of-assignments">Other important assignment facets of assignments</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stormy Attaway (translated by Christine Mulvey and Brian DePasquale)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

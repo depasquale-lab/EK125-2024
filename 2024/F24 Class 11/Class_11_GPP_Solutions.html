@@ -1,0 +1,817 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; EK125</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2024/F24 Class 11/Class_11_GPP_Solutions';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EK125</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction to this jupyter book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../chapter1.html">Part I Introduction to Coding Concepts Using Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter2.html">Chapter 2 Building Blocks for Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter3.html">Chapter 3 Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter4.html">Chapter 4 Loops</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/2024/F24 Class 11/Class_11_GPP_Solutions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Class 11: Group Practice Problems
+These will not be handed in, but please take them seriously and do not use generative AI. These exercises are designed to familiarize you with how code works in Python and will help you learn how to generate your own in the future. Please work in a group of three. Don’t hesitate to ask for help if you need it. Your instructor and TAs will be circulating. Flag us down!</p>
+<p>We have learned some aspects of working with sequence types. This week we will explore these sequence types as well as grow more experience and familiarity with indexing  and slicing.</p>
+<p>Create a list of characters [‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’, ‘j’]. Use <code class="docutils literal notranslate"><span class="pre">random.choice</span></code> to randomly select a letter from this list. Then, use the index method to find the position of the selected letter in the “listified” string <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">mother</span> <span class="pre">was</span> <span class="pre">a</span> <span class="pre">hamster</span> <span class="pre">and</span> <span class="pre">your</span> <span class="pre">father</span> <span class="pre">smells</span> <span class="pre">of</span> <span class="pre">elderberries</span></code>. If the letter is found, print its index; otherwise, print a message saying the letter is not in the string.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="c1"># Step 1: Create a list of characters</span>
+<span class="n">char_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;j&#39;</span><span class="p">]</span>
+
+<span class="c1"># Step 2: Randomly select a letter from the list</span>
+<span class="n">selected_letter</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">char_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Selected letter: </span><span class="si">{</span><span class="n">selected_letter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step 3: Convert the string to a list of characters</span>
+<span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Your mother was a hamster and your father smells of elderberries.&quot;</span>
+<span class="n">string_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>  <span class="c1"># Convert to lowercase to match char_list</span>
+
+<span class="c1"># Step 4: Find the index of the selected letter</span>
+<span class="k">if</span> <span class="n">selected_letter</span> <span class="ow">in</span> <span class="n">string_list</span><span class="p">:</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">string_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">selected_letter</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The letter &#39;</span><span class="si">{</span><span class="n">selected_letter</span><span class="si">}</span><span class="s2">&#39; is found at index </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The letter &#39;</span><span class="si">{</span><span class="n">selected_letter</span><span class="si">}</span><span class="s2">&#39; is not in the string.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Selected letter: e
+The letter &#39;e&#39; is found at index 9.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to reverse the <code class="docutils literal notranslate"><span class="pre">backwardsText</span></code> list without using the <code class="docutils literal notranslate"><span class="pre">reverse()</span></code> method. Print the reversed list. Compare it to doing the same reversal, but using the <code class="docutils literal notranslate"><span class="pre">reverse()</span></code> method</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#2</span>
+<span class="c1"># Initialize the list</span>
+<span class="n">backwardsText</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Inquisition!&#39;</span><span class="p">,</span> <span class="s1">&#39;Spanish&#39;</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;expects&#39;</span><span class="p">,</span> <span class="s1">&#39;Nobody&#39;</span><span class="p">]</span>
+
+<span class="c1"># Reverse the list using a while loop</span>
+<span class="n">reversed_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">backwardsText</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="k">while</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">reversed_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">backwardsText</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+    <span class="n">index</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="c1"># Print the reversed list using the while loop</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reversed using while loop:&quot;</span><span class="p">,</span> <span class="n">reversed_list</span><span class="p">)</span>
+
+<span class="c1"># Reverse the list using reverse() method</span>
+<span class="n">backwardsText_copy</span> <span class="o">=</span> <span class="n">backwardsText</span><span class="p">[:]</span>  <span class="c1"># Make a copy of the list</span>
+<span class="n">backwardsText_copy</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="c1"># Print the reversed list using reverse() method</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reversed using reverse() method:&quot;</span><span class="p">,</span> <span class="n">backwardsText_copy</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reversed using while loop: [&#39;Nobody&#39;, &#39;expects&#39;, &#39;the&#39;, &#39;Spanish&#39;, &#39;Inquisition!&#39;]
+Reversed using reverse() method: [&#39;Nobody&#39;, &#39;expects&#39;, &#39;the&#39;, &#39;Spanish&#39;, &#39;Inquisition!&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create an empty list. Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to append 5 random integers between 1 and 50 to the list. Then, use <code class="docutils literal notranslate"><span class="pre">random.choice()</span></code> to select a sublist from another list and extend the original list with this sublist. Print the final list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#3</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="c1"># Create an empty list</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Use a while loop to append 5 random integers between 1 and 50 to the list</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+
+<span class="c1"># Another list from which we will choose a sublist</span>
+<span class="n">another_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+
+<span class="c1"># Use random.choice() to select a single element and convert it to a list to extend the original list</span>
+<span class="n">chosen_element</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">another_list</span><span class="p">)</span>
+
+<span class="c1"># Extend the original list with the chosen element</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">chosen_element</span><span class="p">])</span>
+
+<span class="c1"># Print the final list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[50, 6, 27, 29, 17, 20]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to remove all occurrences of a randomly chosen word from the <code class="docutils literal notranslate"><span class="pre">randomStringSequence</span></code> sequence. Then, use <code class="docutils literal notranslate"><span class="pre">pop</span></code> to remove and print the last element of the list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="c1"># Initial sequence</span>
+<span class="n">randomStringSequence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;And&#39;</span><span class="p">,</span> <span class="s1">&#39;now&#39;</span><span class="p">,</span> <span class="s1">&#39;for&#39;</span><span class="p">,</span> <span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="s1">&#39;completely&#39;</span><span class="p">,</span> <span class="s1">&#39;different.&#39;</span><span class="p">]</span>
+
+<span class="c1"># Choose a random word from the sequence</span>
+<span class="n">chosen_word</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">randomStringSequence</span><span class="p">)</span>
+
+<span class="c1"># Use a while loop to remove all occurrences of the chosen word</span>
+<span class="k">while</span> <span class="n">chosen_word</span> <span class="ow">in</span> <span class="n">randomStringSequence</span><span class="p">:</span>
+    <span class="n">randomStringSequence</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">chosen_word</span><span class="p">)</span>
+
+<span class="c1"># Use pop to remove and print the last element of the list</span>
+<span class="n">last_element</span> <span class="o">=</span> <span class="n">randomStringSequence</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+<span class="c1"># Output the final list and the removed last element</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">randomStringSequence</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">last_element</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;And&#39;, &#39;now&#39;, &#39;for&#39;, &#39;something&#39;]
+completely
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a list of 10 random integers between 1 and 100. Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to iterate through the list and remove all even numbers. Print the modified list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="c1"># Create a list of 10 random integers between 1 and 100</span>
+<span class="n">random_integers</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random_integers</span><span class="p">)</span>
+
+<span class="c1"># Use a while loop to iterate through the list and remove all even numbers</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">random_integers</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">random_integers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">random_integers</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">random_integers</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">random_integers</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># Print the modified list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random_integers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[97, 4, 70, 1, 50, 84, 54, 87, 44, 58]
+[97, 70, 1, 50, 84, 54, 87, 44, 58]
+9
+1
+[97, 1, 50, 84, 54, 87, 44, 58]
+8
+1
+[97, 1, 84, 54, 87, 44, 58]
+7
+2
+[97, 1, 54, 87, 44, 58]
+6
+2
+[97, 1, 87, 44, 58]
+5
+2
+[97, 1, 87, 58]
+4
+3
+[97, 1, 87]
+3
+3
+[97, 1, 87]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a list of 5 random integers. Use a while loop to insert a new random integer at a random position in the list until the list has 10 elements. Print the final list</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="c1"># Create a list of 5 random integers</span>
+<span class="n">random_integers</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+
+<span class="c1"># Use a while loop to insert a new random integer at a random position until the list has 10 elements</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">random_integers</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">new_integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">random_position</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">random_integers</span><span class="p">))</span>
+    <span class="n">random_integers</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">random_position</span><span class="p">,</span> <span class="n">new_integer</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">random_integers</span><span class="p">)</span>
+
+<span class="c1"># Print the final list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random_integers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[76, 63, 88, 8, 77, 97]
+[76, 63, 88, 8, 88, 77, 97]
+[76, 63, 88, 8, 88, 53, 77, 97]
+[76, 63, 88, 8, 88, 53, 40, 77, 97]
+[76, 63, 88, 67, 8, 88, 53, 40, 77, 97]
+[76, 63, 88, 67, 8, 88, 53, 40, 77, 97]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create two lists of 5 random integers each. Use a while loop to combine these lists into a single list using the extend method. Print the combined list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="c1"># Create two lists of 5 random integers each</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+
+<span class="c1"># Combine the lists into a single list using a while loop and the extend method</span>
+<span class="n">combined_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Use a while loop to extend the combined list with elements from both lists</span>
+<span class="k">while</span> <span class="n">list1</span> <span class="ow">or</span> <span class="n">list2</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">list1</span><span class="p">:</span>
+        <span class="n">combined_list</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">list1</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)])</span>
+    <span class="k">if</span> <span class="n">list2</span><span class="p">:</span>
+        <span class="n">combined_list</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">list2</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)])</span>
+
+<span class="c1"># Print the combined list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">combined_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[29, 45, 82, 43, 90]
+[61, 72, 26, 3, 92]
+[29, 61, 45, 72, 82, 26, 43, 3, 90, 92]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a list of 10 random integers. Use a while loop to remove all integers greater than 50 from the list. Print the modified list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="c1"># Step 1: Create a list of 10 random integers between 1 and 100</span>
+<span class="n">random_integers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">random_integers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original list:&quot;</span><span class="p">,</span> <span class="n">random_integers</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Use a while loop to remove all integers greater than 50</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">found</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">random_integers</span><span class="p">:</span>  <span class="c1"># Iterate over the original list</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">:</span>
+            <span class="n">random_integers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+            <span class="n">found</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Set flag to True if a number is removed</span>
+            <span class="k">break</span>  <span class="c1"># Exit the loop after removing one element</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span>
+        <span class="k">break</span>  <span class="c1"># Exit the while loop if no numbers were removed</span>
+
+<span class="c1"># Step 3: Print the modified list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Modified list:&quot;</span><span class="p">,</span> <span class="n">random_integers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original list: [20, 29, 24, 87, 37, 79, 50, 92, 23, 63]
+Modified list: [20, 29, 24, 37, 50, 23]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a list of characters <code class="docutils literal notranslate"><span class="pre">['a',</span> <span class="pre">'b',</span> <span class="pre">'c',</span> <span class="pre">'d',</span> <span class="pre">'e']</span></code>. Then, create another list of characters <code class="docutils literal notranslate"><span class="pre">['f',</span> <span class="pre">'g',</span> <span class="pre">'h',</span> <span class="pre">'i',</span> <span class="pre">'j']</span></code>. Use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to <code class="docutils literal notranslate"><span class="pre">append</span></code> each character from the second list to the first list, so that the result is a nested list. Show that the final nested list is <code class="docutils literal notranslate"><span class="pre">['a',</span> <span class="pre">'b',</span> <span class="pre">'c',</span> <span class="pre">'d',</span> <span class="pre">'e',</span> <span class="pre">['f'],</span> <span class="pre">['g'],</span> <span class="pre">['h'],</span> <span class="pre">['i'],</span> <span class="pre">['j']]</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 9</span>
+<span class="c1"># Step 1: Create the first list of characters</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+
+<span class="c1"># Step 2: Create the second list of characters</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;j&#39;</span><span class="p">]</span>
+
+<span class="c1"># Step 3: Use a for loop to append each character from the second list as a nested list</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">list2</span><span class="p">:</span>
+    <span class="n">list1</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">char</span><span class="p">])</span>  <span class="c1"># Append each character as a new list</span>
+
+<span class="c1"># Step 4: Print the final nested list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final nested list:&quot;</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Final nested list: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, [&#39;f&#39;], [&#39;g&#39;], [&#39;h&#39;], [&#39;i&#39;], [&#39;j&#39;]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a list of 20 random integers between 1 and 100. Use a for loop to iterate through the list and clear it if the sum of its elements exceeds 500. Print the list before and after clearing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a list of 10 random integers between 1 and 100. Use a combination of <code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">remove</span></code>, <code class="docutils literal notranslate"><span class="pre">pop</span></code>, and <code class="docutils literal notranslate"><span class="pre">reverse</span></code> to modify the list based on the following rules:</p>
+<ul class="simple">
+<li><p>Append a random integer between 1 and 50.</p></li>
+<li><p>Remove the first element.</p></li>
+<li><p>Pop the last element.</p></li>
+<li><p>Reverse the list.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 11</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the lesson material, attention is drawn to how <code class="docutils literal notranslate"><span class="pre">sort</span></code> and <code class="docutils literal notranslate"><span class="pre">sorted</span></code> have a crucial difference. One modifies the argument, and one returns a new object. Taking the below <code class="docutils literal notranslate"><span class="pre">piDigits</span></code> sequence, demonstrate the difference between <code class="docutils literal notranslate"><span class="pre">sort</span></code> and <code class="docutils literal notranslate"><span class="pre">sorted</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 12</span>
+<span class="n">piDigits</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a list of 10 random integers between 0 and 100. Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to remove all integers greater than 50 from the list. Then, use the sort method to sort the remaining elements into ascending order. Print the sorted list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 13</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Repeat the exact same work as above, but filter out all numbers which are divisible by 3, and use the sort method to sort the remaining elements into descending order. Print the sorted list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 14</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a list of 10 random integers. Use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to 5 times perform a random operation (<code class="docutils literal notranslate"><span class="pre">insert</span></code>, <code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">remove</span></code>, <code class="docutils literal notranslate"><span class="pre">pop</span></code>, <code class="docutils literal notranslate"><span class="pre">reverse</span></code>, or <code class="docutils literal notranslate"><span class="pre">clear</span></code>) on the list at each iteration. Afterwards, use slicing to print the final list in chunks of 4 elements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 15</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now do your thing!!  Write some creative problems and post them on the Creative Problems chat for Class 10. Write some quiz problems for Friday. Quiz each other!</p>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./2024/F24 Class 11"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stormy Attaway (translated by Christine Mulvey and Brian DePasquale)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1073 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chapter 5 Data Structures &#8212; EK125</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter5';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EK125</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction to this jupyter book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">Part I Introduction to Coding Concepts Using Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">Chapter 2 Building Blocks for Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">Chapter 3 Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4.html">Chapter 4 Loops</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/chapter5.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter 5 Data Structures</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">5.1 Strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">5.2 Lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-for-sequence-types">5.3  Methods for Sequence Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-for-all-sequence-types">5.3.1 Methods for All Sequence Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-for-mutable-sequence-types">5.3.2 Methods for Mutable Sequence Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-method">5.3.3 List Method</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#range-and-enumerate">5.4 Range and enumerate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">5.5 Tuples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops-and-vectorized-code">5.6 For Loops and Vectorized Code</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="chapter-5-data-structures">
+<h1>Chapter 5 Data Structures<a class="headerlink" href="#chapter-5-data-structures" title="Link to this heading">#</a></h1>
+<p>This chapter will cover data structures.  Data structures, or structured variables, are used to store more than one value. These are also called compound types. We have already seen two types of data structures, string, which store multiple characters, and lists. Recall that strings and lists are examples of a particular type of data structure called a sequence. With sequences, the values are put in an order and can be indexed using integer indices. Another simple type of sequence data structure, which is used very commonly in Python, is a tuple.  We will also cover more detail on the range function, as well as enumerate.</p>
+<section id="strings">
+<h2>5.1 Strings<a class="headerlink" href="#strings" title="Link to this heading">#</a></h2>
+<p>We have seen that strings in Python are text, and can be stored in either single quotes or double quotes. Strings are an example of a particular kind of data type called a sequence.  Sequences in general are collections of values (for strings, collections of characters) that can be indexed using integers.  For strings, indexing returns the characters in the string.</p>
+<p>We have seen indexing into a string starting at the beginning uses positive integer indices, beginning with 0. Negative indices can be used to index into a string from the end of a string. Using an index of -1 returns the last character in a string, regardless of how long it is.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;o&#39;</span>
+</pre></div>
+</div>
+<p>For this string, with a length of 5, an index of -5 will return the first character.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">&#39;h&#39;</span>
+</pre></div>
+</div>
+<p>So, note that with a string that has a length of 5, the positive indices go from 0 through 4, and the negative indices go from -1 through -5 (in reverse order).</p>
+<p>Strings can also be sliced.  A slice of a string is a subset of the characters in the string. This is also sometimes called a substring. The colon operator is used in a variety of formats to create string slices.  The colon operator specifies the beginning index (which is included in the string that is returned), and the ending index (which is not included).</p>
+<p>The following example returns the characters in indices 0 and 1:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;he&#39;</span>
+</pre></div>
+</div>
+<p>The following example only returns the character in index 2 (which is the second from the end):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span> <span class="o">=</span> <span class="s1">&#39;help&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;l&#39;</span>
+</pre></div>
+</div>
+<p>The starting and/or ending indices can also be omitted. If the starting index is not specified, the default is 0 (the first index), and if the ending index is not specified, the default is the length of the string.</p>
+<p>The following example is equivalent to myword[3:5] so it returns the characters in indices 3 and 4:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="go">&#39;lo&#39;</span>
+</pre></div>
+</div>
+<p>The following example is equivalent to myword[0:1] so it returns the character in index 0:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;h&#39;</span>
+</pre></div>
+</div>
+<p>This means that just using a colon, without specifying any indices, returns a slice consisting of the entire string.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span><span class="p">[:]</span>
+<span class="go">&#39;hello&#39;</span>
+</pre></div>
+</div>
+<p>When indexing into a string, a second colon can be used, and the third value indicates a step. For example, the following specifies a slice of a string beginning at index 3, through index 9 (since 10 is specified), in steps of 2, which means every other character, beginning with the fourth.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mystr</span> <span class="o">=</span> <span class="s1">&#39;helloabcde&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mystr</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="go">lace</span>
+</pre></div>
+</div>
+<p>Using a negative step means indexing into the  string in reverse order, so the first index specified should be larger than the second.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mystr</span> <span class="o">=</span> <span class="s1">&#39;helloabcde&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mystr</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="go">cal</span>
+</pre></div>
+</div>
+<p>Just specifying the step of 2 will return every other character, from the beginning:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mystr</span> <span class="o">=</span> <span class="s1">&#39;helloabcde&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mystr</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;hlobd&#39;</span>
+</pre></div>
+</div>
+<p>Only specifying a step of -1 will reverse a string.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mystr</span> <span class="o">=</span> <span class="s1">&#39;helloabcde&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mystr</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;edcbaolleh&#39;</span>
+</pre></div>
+</div>
+<p>We have seen the concatenation operator +, which concatenates strings together. Notice that concatenating slices obtained by using the same number, first for the ending index (omitting the starting index), and then for the starting index (omitting the ending index), results in the entire string. The following concatenates ‘hel’ with ‘lo’:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myword</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">myword</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="go">&#39;hello&#39;</span>
+</pre></div>
+</div>
+<p>To concatenate a string with itself n times, where n is an integer, the ‘*’ operator is used.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">news</span> <span class="o">=</span> <span class="s1">&#39;cde&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">news</span><span class="o">*</span><span class="mi">3</span>
+<span class="go">&#39;cdecdecde&#39;</span>
+</pre></div>
+</div>
+<p>Two functions, ord and chr, can be used to convert a character to its integer equivalent, and to convert an integer to its character equivalent, respectively. The function ord returns the Unicode code for a character, and chr returns a string consisting of one character:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="go">97</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">chr</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span>
+<span class="go">&#39;a&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="go">98</span>
+</pre></div>
+</div>
+<p>Although the letters of the alphabet are in sequence, there are other characters in the Unicode encoding sequence before the letters start. Also, the upper case letters are together in the encoding sequence, and the lower case letters are together, but there are other characters in between the upper and lower case letters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="go">65</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="go">66</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">)</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+<p>We have seen that the str type has methods, including index.</p>
+<p>Using index, and slicing, we can break a string into pieces. The following indexes into the name to find the location of the space between the first and last names, and then slices up to that location to get just the first name.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">urname</span> <span class="o">=</span> <span class="s1">&#39;monty python&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wherespace</span> <span class="o">=</span> <span class="n">urname</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">firstname</span> <span class="o">=</span> <span class="n">urname</span><span class="p">[:</span><span class="n">wherespace</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">firstname</span>
+<span class="go">&#39;monty&#39;</span>
+</pre></div>
+</div>
+<p>Since the input function returns a string, text processing must be used to split the string into multiple values if multiple inputs are desired.  For example, the following prompts the user for the length and width of a rectangle. It finds the location of the space in between them, and separates the string into the two values. It then converts both to numbers and calculates and prints the area of the rectangle.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;When prompted, enter the length and width of a rectangle&#39;</span><span class="p">)</span>
+<span class="n">lenwid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Separate with a space: &#39;</span><span class="p">)</span>
+<span class="n">wherespace</span> <span class="o">=</span> <span class="n">lenwid</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">len</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lenwid</span><span class="p">[:</span><span class="n">wherespace</span><span class="p">])</span>
+<span class="n">wid</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lenwid</span><span class="p">[</span><span class="n">wherespace</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Area = &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="nb">len</span> <span class="o">*</span> <span class="n">wid</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">When</span> <span class="n">prompted</span><span class="p">,</span> <span class="n">enter</span> <span class="n">the</span> <span class="n">length</span> <span class="ow">and</span> <span class="n">width</span> <span class="n">of</span> <span class="n">a</span> <span class="n">rectangle</span>
+<span class="n">Separate</span> <span class="k">with</span> <span class="n">a</span> <span class="n">space</span><span class="p">:</span> <span class="mf">3.1</span> <span class="mf">4.4</span>
+<span class="n">Area</span> <span class="o">=</span>  <span class="mf">13.64</span>
+</pre></div>
+</div>
+</section>
+<section id="lists">
+<h2>5.2 Lists<a class="headerlink" href="#lists" title="Link to this heading">#</a></h2>
+<p>Lists are sequences of values. Simple lists are created by putting values in square brackets, separated by commas. As we have seen, the values in lists can be different types, although it is more common for them to be the same type.</p>
+<p>The len  function returns the number of elements in a list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">numlist</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>An empty list can be created using square brackets with nothing inside.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">el</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>Since lists are a sequence type, they can be indexed using integers and they can be sliced.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="go">[11, -3]</span>
+</pre></div>
+</div>
+<p>The del statement can delete item(s) from a list.  This will actually modify the list variable.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">numlist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+<span class="go">[4, 33, 11, -3]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">numlist</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+<span class="go">[4, 11, -3]</span>
+</pre></div>
+</div>
+<p>Assigning the empty list to item(s) is another way to delete items (besides using del).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+<span class="go">[33, 11, -3]</span>
+</pre></div>
+</div>
+<p>Since lists are mutable, items can be modified by either indexing or slicing and assigning new value(s).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">numlist</span><span class="p">)</span>
+<span class="go">[4, 99, 33, 11, -3]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">strlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;ciao&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">strlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;howdy&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">strlist</span><span class="p">)</span>
+<span class="go">[&#39;howdy&#39;, &#39;hello&#39;, &#39;ciao&#39;]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">numlist</span><span class="p">)</span>
+<span class="go">[4, 52, 33, 7, 8, 9]</span>
+</pre></div>
+</div>
+<p>Notice that the number of items being replaced does not have to be the same as the number of items replacing them.</p>
+<p>An entire list can be obtained using the slice operator, as in:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="p">[:]</span>
+<span class="go">[4, 52, 33, 11, -3]</span>
+</pre></div>
+</div>
+<p>However, caution should be used with this because in some contexts, this is different from just referring to the list variable. We will see more on this in Section 6.1.</p>
+<p>Lists of characters can be created from strings using the list function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;monty&quot;</span><span class="p">)</span>
+<span class="go">[&#39;m&#39;, &#39;o&#39;, &#39;n&#39;, &#39;t&#39;, &#39;y&#39;]</span>
+</pre></div>
+</div>
+<p>The choice function, which is in the random module, can be used to choose a random item from a list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">choice</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">choice</span><span class="p">(</span><span class="n">numlist</span><span class="p">)</span>
+<span class="go">33</span>
+</pre></div>
+</div>
+<p>The shuffle function randomly organizes the items in a sequence.  For example, the shuffle function is used to modify the order of a list in the following.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">shuffle</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shuffle</span><span class="p">(</span><span class="n">numlist</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+<span class="go">[33, -3, 52, 11, 4]</span>
+</pre></div>
+</div>
+<p>Operators and functions can be used on lists.  For example, lists can be concatenated using the + operator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">newnums</span> <span class="o">=</span> <span class="n">numlist</span> <span class="o">+</span> <span class="p">[</span><span class="mi">25</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">newnums</span><span class="p">)</span>
+<span class="go">[4, 52, 33, 11, -3, 25]</span>
+</pre></div>
+</div>
+<p>The concatenation operator can only concatenate one list to another (not an individual value to a list), which is why the 25 is in square brackets.</p>
+<p>The in operator will determine whether or not a value is in a list, and return True if it is or False if it is not.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">33</span> <span class="ow">in</span> <span class="n">numlist</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Statistical functions can be called to perform operations on lists such as min for the minimum value in a list and max for the maximum value.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">min</span><span class="p">(</span><span class="n">numlist</span><span class="p">)</span>
+<span class="go">-3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">max</span><span class="p">(</span><span class="n">numlist</span><span class="p">)</span>
+<span class="go">52</span>
+</pre></div>
+</div>
+<p>There is also a built-in function sum that will sum the numbers in a list of numbers:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="go">20</span>
+</pre></div>
+</div>
+<p>An error will occur if the list contains values, for example strings, that cannot be added using sum.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">slist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;ciao&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">(</span><span class="n">slist</span><span class="p">)</span>
+
+<span class="go">TypeError: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;</span>
+</pre></div>
+</div>
+<p>Like strings, lists have an index method that will return the index of a specified value. For example, to find the location in the list of the largest value:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">numlist</span><span class="p">))</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+</section>
+<section id="methods-for-sequence-types">
+<h2>5.3  Methods for Sequence Types<a class="headerlink" href="#methods-for-sequence-types" title="Link to this heading">#</a></h2>
+<section id="methods-for-all-sequence-types">
+<h3>5.3.1 Methods for All Sequence Types<a class="headerlink" href="#methods-for-all-sequence-types" title="Link to this heading">#</a></h3>
+<p>There are some methods that can be used for all sequence types, such as lists, tuples, and strings. These will be demonstrated here for lists.</p>
+<p>The count method returns the number of occurrences of an item in a list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mylist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;monty python&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<span class="go">[&#39;m&#39;, &#39;o&#39;, &#39;n&#39;, &#39;t&#39;, &#39;y&#39;, &#39; &#39;, &#39;p&#39;, &#39;y&#39;, &#39;t&#39;, &#39;h&#39;, &#39;o&#39;, &#39;n&#39;]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mylist</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mylist</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>The index method returns the index of the first occurrence of an item within a list, or an error message if it is not found.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mylist</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mylist</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="go">ValueError: &#39;x&#39; is not in list</span>
+</pre></div>
+</div>
+</section>
+<section id="methods-for-mutable-sequence-types">
+<h3>5.3.2 Methods for Mutable Sequence Types<a class="headerlink" href="#methods-for-mutable-sequence-types" title="Link to this heading">#</a></h3>
+<p>There are methods that can be used for all mutable sequence types. They will be demonstrated here using lists.</p>
+<p>The following methods modify the list variable.  The value that is returned is not the list, but the default value None.  These methods will be shown in a series of statements.</p>
+<p>The append method adds one item to the end of a list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">outval</span> <span class="o">=</span> <span class="n">numlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">44</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">numlist</span><span class="p">,</span> <span class="n">outval</span><span class="p">)</span>
+<span class="go">[5, 11, 33, 11, 2, -6, 44] None</span>
+</pre></div>
+</div>
+<p>The insert method inserts an item into the list at the specified index. The following inserts 14 into numlist[2], and moves the rest of the items.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+<span class="go">[5, 11, 14, 33, 11, 2, -6, 44]</span>
+</pre></div>
+</div>
+<p>The extend method is used to concatenate another list to the end of the current list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">17</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+<span class="go">[5, 11, 14, 33, 11, 2, -6, 44, 17, -5]</span>
+</pre></div>
+</div>
+<p>The result of this call to extend is the same as <code class="docutils literal notranslate"><span class="pre">numlist</span> <span class="pre">+=</span> <span class="pre">[17,</span> <span class="pre">-5]</span></code>.</p>
+<p>Note that if append had been used instead of extend, the result would be a nested list ( a list in which the list [17, -5] would be the last element). This is demonstrated with a list of characters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">charlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">charlist</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">charlist</span>
+<span class="go">[&#39;x&#39;, &#39;q&#39;, &#39;s&#39;, &#39;y&#39;, &#39;z&#39;]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">charlist</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">charlist</span>
+<span class="go">[&#39;x&#39;, &#39;q&#39;, &#39;s&#39;, &#39;y&#39;, &#39;z&#39;, [&#39;a&#39;, &#39;b&#39;]]</span>
+</pre></div>
+</div>
+<p>The remove method can be used to remove a specified item from a list. If the item is not in the list, an error message results.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+<span class="go">[5, 11, 14, 33, 11, 2, -6, 44, 17, -5]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+<span class="go">[5, 11, 14, 33, 11, 2, 44, 17, -5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="go">ValueError: list.remove(x): x not in list</span>
+</pre></div>
+</div>
+<p>If there are multiple occurrences of the specified item, only the first will be removed from the list.</p>
+<p>The pop method removes an item from a specified index in a list. Unlike the previous methods, however, it returns a value (not None), which is the item that has been removed. The index can be specified using an integer. If no index is given, the default is -1 (which means the last element in the list).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">delval</span> <span class="o">=</span> <span class="n">numlist</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">delval</span><span class="p">,</span> <span class="s1">&#39;is no longer in &#39;</span><span class="p">,</span> <span class="n">numlist</span><span class="p">)</span>
+<span class="go">33 is no longer in  [5, 11, 14, 11, 2, 44, 17, -5]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">delval</span> <span class="o">=</span> <span class="n">numlist</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">delval</span><span class="p">,</span> <span class="s1">&#39; is no longer in &#39;</span><span class="p">,</span> <span class="n">numlist</span><span class="p">)</span>
+<span class="go">-5  is no longer in  [5, 11, 14, 11, 2, 44, 17]</span>
+</pre></div>
+</div>
+<p>The reverse method reverses all elements in a list; modifying the list and returning None.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+<span class="go">[17, 44, 2, 11, 14, 11, 5]</span>
+</pre></div>
+</div>
+<p>The clear method removes everything from a list, so that it becomes an empty list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+</section>
+<section id="list-method">
+<h3>5.3.3 List Method<a class="headerlink" href="#list-method" title="Link to this heading">#</a></h3>
+<p>In addition to the methods from the previous section, which can be used on any mutable sequence type, the list type includes a method for sorting the list, sort.  The sort method returns None, but sorts the list in place.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+<span class="go">[-6, 2, 5, 11, 11, 33]</span>
+</pre></div>
+</div>
+<p>By default, it sorts in ascending order, (lowest to highest). This can be changed to descending order by setting the reverse flag to True in the function call:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numlist</span>
+
+<span class="go">[33, 11, 11, 5, 2, -6]</span>
+</pre></div>
+</div>
+<p>Note that there is also a built-in function in Python, sorted, which will return a new list that has been sorted, but does not sort the argument list in place.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">origlist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;python&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">newlist</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">origlist</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">origlist</span><span class="p">,</span> <span class="n">newlist</span><span class="p">)</span>
+<span class="go">[&#39;p&#39;, &#39;y&#39;, &#39;t&#39;, &#39;h&#39;, &#39;o&#39;, &#39;n&#39;] [&#39;h&#39;, &#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;t&#39;, &#39;y&#39;]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="range-and-enumerate">
+<h2>5.4 Range and enumerate<a class="headerlink" href="#range-and-enumerate" title="Link to this heading">#</a></h2>
+<p>We have seen that the range function generates a sequence of integers and that when called as range(n), it generates the sequence of integers from 0 through n-1.  The type returned from range is range, although it can be passed to the list function if a list consisting of the individual items is desired.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mr</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mr</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">mr</span><span class="p">))</span>
+<span class="go">range(0, 6) &lt;class &#39;range&#39;&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ml</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mr</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ml</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">ml</span><span class="p">))</span>
+<span class="go">[0, 1, 2, 3, 4, 5] &lt;class &#39;list&#39;&gt;</span>
+</pre></div>
+</div>
+<p>So, again, range does not create a list; it creates an iterator.  An interesting aspect of iterators is that the values are created one at a time; the entire iterator is not created first.</p>
+<p>The built-in function iter will determine whether an argument can be iterated through or not, and if so what type of iterator the argument is. For example, the range variable mr is a range iterator, a list [3, 66] is a list iterator, and an integer is not an iterator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">iter</span><span class="p">(</span><span class="n">mr</span><span class="p">)</span>
+<span class="go">&lt;range_iterator at 0x7f888bb480f0&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">iter</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">66</span><span class="p">])</span>
+<span class="go">&lt;list_iterator at 0x7f888bb48070&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">iter</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+<span class="go">TypeError: &#39;int&#39; object is not iterable</span>
+</pre></div>
+</div>
+<p>By storing the iterator object in a variable, the next function returns the next value in the iterator, e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">imr</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">mr</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">imr</span><span class="p">)</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">imr</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">imr</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>When there are no more values, an error message is thrown if next is called again.</p>
+<p>If two arguments are passed to the range function, they are the first value (instead of the default of 0) and the last (minus 1).  For example, range(3,7) generates the sequence of integers 3, 4, 5, 6.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mr</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ml</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mr</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ml</span><span class="p">)</span>
+<span class="go">[3, 4, 5, 6]</span>
+</pre></div>
+</div>
+<p>An integer “step” value can also be specified as a third argument (instead of the default of 1).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mr</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ml</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mr</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ml</span><span class="p">)</span>
+<span class="go">[3, 5, 7, 9]</span>
+</pre></div>
+</div>
+<p>Step values can also be negative.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ml</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ml</span><span class="p">)</span>
+<span class="go">[10, 8, 6, 4]</span>
+</pre></div>
+</div>
+<p>The range function is frequently used with for loops to specify how many times to execute the action of a loop.  More generally, the form of a for loop is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">itervar</span> <span class="ow">in</span> <span class="n">iterator</span><span class="p">:</span>
+    <span class="n">action</span>
+</pre></div>
+</div>
+<p>The enumerate function can be used to return both an index and an item from a sequence such as a list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">numlist</span><span class="p">):</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Item&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+<span class="n">Item</span> <span class="mi">0</span> <span class="ow">is</span> <span class="mi">4</span>
+<span class="n">Item</span> <span class="mi">1</span> <span class="ow">is</span> <span class="mi">52</span>
+<span class="n">Item</span> <span class="mi">2</span> <span class="ow">is</span> <span class="mi">33</span>
+<span class="n">Item</span> <span class="mi">3</span> <span class="ow">is</span> <span class="mi">11</span>
+<span class="n">Item</span> <span class="mi">4</span> <span class="ow">is</span> <span class="o">-</span><span class="mi">3</span>
+</pre></div>
+</div>
+<p>Notice that this gives us two iterator variables: i, which is the index, and then item, which is the value of that item in the list.</p>
+</section>
+<section id="tuples">
+<h2>5.5 Tuples<a class="headerlink" href="#tuples" title="Link to this heading">#</a></h2>
+<p>Tuples are similar to lists, but are immutable.  Tuples are generally created by putting values in parentheses, separated by commas.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mytup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Functions such as len and indexing/slicing work the same on tuples as on lists.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">mytup</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mytup</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">11</span>
+</pre></div>
+</div>
+<p>Parentheses are not always necessary:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">newtuple</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">19</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">newtuple</span>
+<span class="go">(5, 19)</span>
+</pre></div>
+</div>
+<p>The concatenation operator can be used to join two tuples together.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mytup</span> <span class="o">+</span> <span class="n">newtuple</span>
+<span class="go">(2, 11, 33, 5, 19)</span>
+</pre></div>
+</div>
+<p>An empty tuple is created using parentheses with nothing inside, e.g.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">emptup</span> <span class="o">=</span> <span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">emptup</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>To create a tuple with one entry, the value must be followed by a comma, and both must be in parentheses.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">onetup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">onetup</span>
+<span class="go">(7,)</span>
+</pre></div>
+</div>
+<p>The parentheses and comma here are necessary. If the comma is omitted, the value is just an integer:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">((</span><span class="mi">7</span><span class="p">,)),</span> <span class="nb">type</span><span class="p">((</span><span class="mi">7</span><span class="p">)))</span>
+<span class="go">&lt;class &#39;tuple&#39;&gt; &lt;class &#39;int&#39;&gt;</span>
+</pre></div>
+</div>
+<p>The type of a tuple is tuple, as shown.
+Because of this, indexing into a tuple to get one value is not quite the same as slicing to get one value.  A slice returns another tuple, even if it only has a length of 1:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mytup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mytup</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">(2,)</span>
+</pre></div>
+</div>
+<p>Indexing using 0 returns just the integer 2:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mytup</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>The list function can be used to create a list from a tuple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tl</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mytup</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tl</span>
+<span class="go">[2, 11, 33]</span>
+</pre></div>
+</div>
+<p>The tuple function can be used to create a tuple from another sequence type such as a string or a list:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wordlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;howdy&#39;</span><span class="p">,</span> <span class="s1">&#39;hi&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wordtuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">wordlist</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">chartuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">wordlist</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">wordlist</span><span class="p">,</span> <span class="n">wordtuple</span><span class="p">,</span> <span class="n">chartuple</span><span class="p">)</span>
+<span class="go">[&#39;howdy&#39;, &#39;hi&#39;] (&#39;howdy&#39;, &#39;hi&#39;) (&#39;h&#39;, &#39;o&#39;, &#39;w&#39;, &#39;d&#39;, &#39;y&#39;)</span>
+</pre></div>
+</div>
+<p>Putting values into a tuple is called packing, as in:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mytup</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">33</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mytup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The reverse is called unpacking.  In order to unpack a tuple, it is necessary to know how many values are in the tuple and to have that many variables on the left-hand side of the assignment operator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">mytup</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mytup</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="go">(2, 11, 33) 2 11 33</span>
+</pre></div>
+</div>
+<p>Unpacking is also possible for other sequence types such as lists and strings.</p>
+</section>
+<section id="for-loops-and-vectorized-code">
+<h2>5.6 For Loops and Vectorized Code<a class="headerlink" href="#for-loops-and-vectorized-code" title="Link to this heading">#</a></h2>
+<p>In general, in coding, for loops are used to iterate through the indices of data structures such as Python sequences in order to perform the same operation on every element. In Python, the general form of this is for a sequence seq is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)):</span>
+    <span class="c1"># do something with seq[i]</span>
+</pre></div>
+</div>
+<p>In Python, rather than iterating through the indices of the sequence, it is possible to iterate through the sequence itself, as in:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
+    <span class="c1"># do something with item</span>
+</pre></div>
+</div>
+<p>Vectorizing code essentially means getting rid of loops, and instead using built-in functions and operators.</p>
+<p>This can involve using operators such as the * concatenation operator, functions such as min, max, sum, and sorted, and methods such as count and reverse.</p>
+<p>Another powerful way to vectorize Python code when creating lists is to use list comprehensions.</p>
+<p>Comprehensions do not add any power to the language, but provide a convenient, succinct way to create sequences. A comprehension essentially compresses using a for loop to create and add expressions to a sequence into one line.</p>
+<p>List comprehensions are the most common, but it is also possible to create other comprehensions.</p>
+<p>The simplest general form of a list comprehension is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>which creates a list of the expressions for all values of i.  For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">i</span> <span class="o">**</span> <span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+<span class="go">[0, 1, 8, 27, 64]</span>
+</pre></div>
+</div>
+<p>This creates a list of the cubes of all values of i in the range from 0 to 4 inclusive. Assigning this to a list variable</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cubelist</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">**</span><span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>is equivalent to</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cubelist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">cubelist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Conditionals can be added to the list comprehension to determine which expressions based on the iterator variable to include in the list.  For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cubelisteven</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">**</span><span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>creates a list of cubes of the even integers in the range from 0 to 6 inclusive, and is equivalent to:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cubelisteven</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">cubelisteven</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">5.1 Strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">5.2 Lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-for-sequence-types">5.3  Methods for Sequence Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-for-all-sequence-types">5.3.1 Methods for All Sequence Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-for-mutable-sequence-types">5.3.2 Methods for Mutable Sequence Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-method">5.3.3 List Method</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#range-and-enumerate">5.4 Range and enumerate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">5.5 Tuples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops-and-vectorized-code">5.6 For Loops and Vectorized Code</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stormy Attaway (translated by Christine Mulvey and Brian DePasquale)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

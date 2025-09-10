@@ -1,0 +1,1162 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Function body &#8212; EK125</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter6';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EK125</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction to this jupyter book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">Part I Introduction to Coding Concepts Using Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">Chapter 2 Building Blocks for Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">Chapter 3 Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4.html">Chapter 4 Loops</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/chapter6.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Function body</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Function body</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#main-program">main program</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-c-to-f">Convert C to F</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Chapter 6 More on Programming</p>
+<p>6.1 User-Defined Functions</p>
+<p>We have seen many built-in functions in Python. You can also write your own functions, which are called user-defined functions.  Related user-defined functions can be stored in user-defined modules, which can then be imported into programs for use.</p>
+<p>When we write a function, we write the function definition. The function can then be called, much like built-in functions.</p>
+<p>The general form of a function definition is:</p>
+<p>def functionname(parameters):
+“”” Documentation string. “””</p>
+<section class="tex2jax_ignore mathjax_ignore" id="function-body">
+<h1>Function body<a class="headerlink" href="#function-body" title="Link to this heading">#</a></h1>
+<p>The first line is called the function header. It consists of the reserved word def, the name of the function, parameters (if any) in parentheses, followed by a colon. The rest of the function, which is indented, is the function body. This typically begins with a documentation string (docstring), in triple quotes. The docstring should be sentence(s) describing what the function does, beginning with a capitalized word and ending with a period.  After the docstring there are the statements in the body of the function.  It is common to indent the body of the function 4 spaces.</p>
+<p>The function is called by giving the name of the function, and passing arguments in parentheses that will correspond to the parameters in the function header:</p>
+<p>functionname(arguments)</p>
+<p>Sometimes the arguments in the function call are referred to as actual parameters and the parameters in the function header are referred to as formal parameters.</p>
+<p>Although this is somewhat arbitrary, we will begin with two types of functions:
+Functions that calculate and return a value
+Functions that accomplish a task</p>
+<p>Two main reasons for writing our own functions are:
+To be able to reuse code by calling the function whenever it is needed
+To write modular programs</p>
+<p>If there is code that will be repeated at different times, perhaps using different values, it can be made into a function and then called whenever needed.</p>
+<p>Modular programs are programs that consist of a series of functions that do the actual work. The functions are called by a main program, which can be implemented as either a script or function.</p>
+<p>6.1.1 Functions with Return</p>
+<p>We have seen examples of built-in functions that calculate and return a value, such as the round function.  User-defined functions can also accomplish this using the return statement.</p>
+<p>As an example, we will write a function that returns the area of a square. In order to calculate the area of a square, the function needs the length of each side of the square, so the side length must be passed as an argument to the function. Here is a function definition for a function named sqrarea that accomplishes this:</p>
+<p>def sqrarea(sidelen):
+“””This function calculates the area of a square.”””
+sqar = sidelen**2
+return sqar</p>
+<p>The function can then be called by using the name of the function and passing a number for the length of a side of the square:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>sqrarea(3)
+9</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>In the function call, the side length, 3, was passed to the parameter sidelen in the function. The function then squared this, and returned the result.  We say that when the function is called, control is sent to the function, and the function begins executing. The return statement not only returns the value (in this case, 9), but also sends control out of the function.</p>
+<p>In general a docstring describes what a function does and can be displayed using the help function:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>help(sqrarea)
+Help on function sqrarea in module <strong>main</strong>:</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>sqrarea(sidelen)
+This function calculates the area of a square.</p>
+<p>The variable sqar, which was used in the function body, was not necessary. The return statement could just return an expression:</p>
+<p>def sqrarea(sidelen):
+“””This function calculates the area of a square.”””
+return sidelen**2</p>
+<p>The value returned from the function would normally be stored in a variable, e.g.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>mysquare = sqrarea(3)
+mysquare
+9</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>In this example, one argument was passed to the function.  For a function to calculate the area of a rectangle, both the length and width of the rectangle must be passed to the function, so there will be two parameters in the function header and two arguments passed in the function call:</p>
+<p>def rectarea(rlen, rwid):
+“””This function calculates the area of a rectangle.”””
+return rlen * rwid</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>rectarea(2, 4)
+8</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The values of the arguments are passed to the corresponding parameters in the function, so the first argument, 2, is passed to the first parameter rlen, and the second argument 4 is passed to the second parameter rwid.</p>
+<p>Notice that the return statement returned the result of an expression; an intermediate variable could be used but is not necessary.</p>
+<p>In Python, the return statement can only return one object. If it is desired to have a function return more than one thing, they can be stored in one data structure (such as a tuple or list), and that can be returned.  In the following example, a function calculates and returns both the area and the perimeter of a square, by storing both in a list.</p>
+<p>def sqrarea_perim(sidelen):
+“””Calculates the area and perimeter of a square.”””
+sqar = sidelen**2
+sqperim = 4 * sidelen
+results = [sqar, sqperim]
+return results</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>sqrarea_perim(11)
+[121, 44]</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Using a tuple instead of a list is perhaps easier to understand, and it is easier to use the results.</p>
+<p>def sqrarea_perim(sidelen):
+“””Calculates the area and perimeter of a square.”””
+sqar = sidelen**2
+sqperim = 4 * sidelen
+return sqar, sqperim</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>area, perim = sqrarea_perim(11)
+print(area, perim)
+121 44</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>6.1.2 Functions with no Return</p>
+<p>In many cases functions calculate and return values, but in some cases functions just accomplish a task, such as printing.</p>
+<p>For example, the following function receives as parameters a string and an integer n, and prints the string n times in a row on one line. After that, it moves the cursor down.</p>
+<p>def printstrs(instr, n):
+“””This function prints instr n times.”””
+for i in range(n):
+print(instr,end=’’)
+print()</p>
+<p>Here are two examples of calling the function:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>printstrs(‘x’,3)
+xxx</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>printstrs(“Hi”, 5)
+HiHiHiHiHi</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Notice that the function does not have a return statement, since it is not calculating anything.  However, all functions return something regardless of whether there is a return statement or not. The default value that is returned is a special value None, as we can see by passing a call to the function printstrs to the print function.  In the following example, ‘aa’ and then the newline gets printed by the function, and then the result returned by the function call, None, is printed once the function stops executing and returns control.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>print(printstrs(‘a’,2))
+aa
+None</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The printstrs function prints the line ‘aa’ and returns None. The print function then prints the returned value, None.  This is equivalent to:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>x = printstrs(‘a’,2)
+print(x)</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>It is not always necessary to pass arguments to functions (whether they explicitly return something or not).  For example, we may wish to have a function that just prints a set of instructions.</p>
+<p>def printinstruct():
+“””This function just prints stuff.”””
+print(‘Please sit up’)
+print(‘Do not slouch!’)
+print(‘Chew with your mouth closed’)</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>printinstruct()
+Please sit up
+Do not slouch!
+Chew with your mouth closed</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>A function like this that just prints helps to facilitate modular programs. Of course, the instructions printed by a function would normally refer to actions that the user must take when running a program!</p>
+<p>6.1.3 Scope</p>
+<p>The scope of a variable or object is where that object is valid. For functions, everything that is defined in the function is valid only in that function. We say that variables defined in a function are local to that function, meaning that their scope is the function. Formally, what happens is that every function has its own symbol table, which contains the names of the variables and their values. Once a function is called and control is sent to the function, its symbol table is created. The function’s symbol table only exists while the function is executing.</p>
+<p>For example, for the sqarea function, the symbol table contains the local variable sqar, as well as the parameter sidelen.</p>
+<p>def sqrarea(sidelen):
+“””This function calculates the area of a square.”””
+sqar = sidelen**2
+return sqar</p>
+<p>After the function is called, attempting to reference either sqar or sidelen will result in an error.  This is because after the function stops executing, the symbol table, the variable sqar, and the parameter sidelen no longer exist.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>area = sqrarea(4)
+print(sqar)</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>NameError: name ‘sqar’ is not defined</p>
+<p>6.1.4 Lambda Functions</p>
+<p>Anonymous functions, called lambda functions in Python, are very short one line functions that do not require a formal function definition using def.  Lambda functions are created using the keyword lambda. The general form is:</p>
+<p>lambda argument(s): expression</p>
+<p>The function begins with the reserved word lambda, then argument(s) followed by a colon and then an expression that uses the arguments; the result of the expression is returned.</p>
+<p>If the lambda function is stored in a variable, the variable can be used to call the function. For example,</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>times3 = lambda num: num * 3
+times3(11)
+33</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>One advantage of a lambda function is that it is shorter than a function definition and does not require the header with def or the return statement. A disadvantage is that the “body” of the function is confined to one simple expression.</p>
+<p>6.2 Assignment Statements and Copying</p>
+<p>Assignment statements basically assign a value to a variable. Another way of saying this is that the assignment binds the variable to the value.</p>
+<p>We have seen that variables refer to locations in which values are stored.  What happens when one variable is assigned to another variable, e.g.</p>
+<p>var2 = var1</p>
+<p>is that they both refer to the same location. This has interesting ramifications when modifying variables, especially for mutable types.</p>
+<p>Assigning an expression (not another variable) to a variable in assignment statements creates a new location for the variable to reference, and stores the result of the expression in that location. Assigning another variable, however, does not create a new location; instead, both variables now refer to the same location.</p>
+<p>Consider the following code:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>x = 4
+y = x</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>What happens is that the variable x is created, and it refers to a location in which a 4 is stored. Then, assigning x to y means that y is now also going to refer to the same location as x. We can picture this as follows:</p>
+<p>Then, assume that the following assignment statement is executed:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>x = 5</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>This creates a new location in which a 5 is stored, and x now refers to that new location. The variable y, however, has not been changed. It still refers to the location in which 4 is stored.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>x
+5
+y
+4</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>This may seem like a nuance, but it is very important especially for mutable types.</p>
+<p>In the next section, operators and functions that illustrate how this works will be introduced.</p>
+<p>6.2.1 Variable Identities</p>
+<p>Before we examine assigning one variable to another, let us first revisit assignment statements and how they work. One important piece of information is that every location that a variable references is assigned a unique identity. The value of this identity can be found with the id function.  In some cases the identity is the actual address of the location that the variable refers to. Regardless of whether this is true or not, every variable has a unique identity number. Do not try to make sense of the actual numbers!</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>varname = 11
+print(id(varname))
+140662851902064</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>What actually happens when we assign a value to a variable, and then reassign a different value to that variable? We can print the value of the variable and its identity to see what happens.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>var1 = 5.3
+print(var1, id(var1))
+5.3 140663007004368</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>var1 = 11.11
+print(var1, id(var1))
+11.11 140663007003760</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>We can see that the value changed, but the identity did, also. This means that the second assignment did not actually modify what was stored in the original location referred to by var1, but rather created a new location.</p>
+<p>This happens also if we modify the value of the variable by multiplying the current value by 2.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>var1 = 5.3
+print(var1, id(var1))
+5.3 140663007003280</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>var1 = var1 * 2
+print(var1, id(var1))
+10.6 140663007003888</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Again, the second assignment created a new location and stored the result of the expression on the right (var1 * 2) in that location, and var1 now refers to the new location.</p>
+<p>Let’s now see what happens when we assign one number variable to another.  We can see the locations using the id function. However, when comparing two identities, it is simpler to use the is operator. The is operator can be used to determine whether two variables refer to the same location, or in other words, whether their identities are the same or not.  The expression a is b results in True if a and b refer to the same location (have the same identities) or False if not.</p>
+<p>radius = 3
+rad = radius
+print(radius, id(radius))
+print(rad, id(rad))
+if rad is radius:
+print(‘They are the same’)
+else:
+print(‘They are not the same’)
+print()
+radius = 5
+print(radius, id(radius))
+print(rad, id(rad))
+if rad is radius:
+print(‘They are the same’)
+else:
+print(‘They are not the same’)
+3 140437299009904
+3 140437299009904
+They are the same</p>
+<p>5 140437299009968
+3 140437299009904
+They are not the same</p>
+<p>We can see that after the initial assignment rad = radius the two variable names referred to the same location. However, the assignment radius = 5 then created a new location, a new identifier, for the variable radius to refer to.</p>
+<p>There is also an is not operator.  The expression
+a is not b
+is equivalent to
+not (a is b)
+but is easier to read and understand.</p>
+<p>The same behavior can be seen for other simple types like Boolean, and for immutable types such as strings and tuples, as shown in the following simplified examples:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>relate = 6 &lt; 10
+isit = relate
+print(relate, isit)
+isit = 6 &gt; 10
+print(relate, isit)
+True True
+True False</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>word = “hello”
+greetword = word
+print(word, greetword)
+word = “hi”
+print(word, greetword)
+hello hello
+hi hello</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>tupone = (5, 11, ‘x’)
+tuptwo = tupone
+print(tupone, tuptwo)
+tupone = (4.4, 39)
+print(tupone, tuptwo)
+(5, 11, ‘x’) (5, 11, ‘x’)
+(4.4, 39) (5, 11, ‘x’)</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>For lists, assigning  a new list to one of the list variables results in the same behavior that has been seen with other types.</p>
+<p>listone = [5, 11, ‘x’]
+listtwo = listone
+print(listone, listtwo)
+if listtwo is listone:
+print(‘They are the same’)
+else:
+print(‘They are not the same’)
+print()
+listone = [‘q’, ‘?’, 0]
+print(listone, listtwo)
+if listtwo is listone:
+print(‘They are the same’)
+else:
+print(‘They are not the same’)
+[5, 11, ‘x’] [5, 11, ‘x’]
+They are the same</p>
+<p>[‘q’, ‘?’, 0] [5, 11, ‘x’]
+They are not the same</p>
+<p>This is because again, all assignments create a new location for the variable to refer to.  However, lists are different in that they are mutable. This means that the contents of a list can be modified. Changing the contents of a list variable is different from assigning a brand new list!</p>
+<p>listone = [5, 11, ‘x’]
+listtwo = listone
+print(listone, listtwo)
+if listtwo is listone:
+print(‘They are the same’)
+else:
+print(‘They are not the same’)
+print()
+listone[1] = 27
+print(listone, listtwo)
+if listtwo is listone:
+print(‘They are the same’)
+else:
+print(‘They are not the same’)
+[5, 11, ‘x’] [5, 11, ‘x’]
+They are the same</p>
+<p>[5, 27, ‘x’] [5, 27, ‘x’]
+They are the same</p>
+<p>This means that the two list variables refer to the same location, and the contents of one of the items in the list was modified – but no new lists were created, so the variables still referred to the same location at the end of the code.  This same behavior will occur any time a list is modified.</p>
+<p>We have seen that in Python, for the types that we have covered so far, assigning one variable to another creates an alternate reference to the same location.</p>
+<p>Beware of list slices, however! Slicing a list using just the colon is different from using the variable name.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>listone = [5, 11, ‘x’]
+listtwo = listone
+listthree = listone[:]
+print(listone, listtwo, listthree)
+print(id(listone), id(listtwo), id(listthree))
+[5, 11, ‘x’] [5, 11, ‘x’] [5, 11, ‘x’]
+140663007067328 140663007067328 140663007088192</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>We can see here that the variables listone and listtwo refer to the same location, but by using the slice operator and assigning the result to listthree, the listthree variable refers to a separate location.  This does not happen with strings or tuples, however, because they are immutable.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>strone = “hi”
+strtwo = strone
+strthree = strone[:]
+print(strone, strtwo, strthree)
+print(id(strone), id(strtwo), id(strthree))
+hi hi hi
+140662877875888 140662877875888 140662877875888</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>6.2.2 Shortcut Assignments</p>
+<p>Python has what are called shortcut assignment operators.  These add no power to the language, but save a little typing.</p>
+<p>For example, the statement num += 1 is equivalent to the statement num = num + 1.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>num = 4
+num += 1
+num
+5</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>This also works for concatenation, e.g.:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>str = ‘hi’
+str += ‘x’
+str
+‘hix’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The shortcut is that instead of typing the name of the variable twice, once on the left and once on the right of the assignment operator =, we put the + to the left of the assignment operator and then only have to type the name of the variable once.</p>
+<p>This also works for other operators, e.g. using *= to multiply:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>inumb = 3
+inumb *= 2
+inumb
+6</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>This takes the current value of the variable inumb, multiplies by 2, and stores the result in a new location pointed to by the variable inumb.</p>
+<p>Note that for mutable types, shortcut assignments modify the contents of the variable rather than creating a new variable.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>list = [1, 5, 33]
+print(list, id(list))
+[1, 5, 33] 140437475761920</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>list += [14]
+print(list, id(list))
+[1, 5, 33, 14] 140437475761920</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>list = list + [29]
+print(list, id(list))
+[1, 5, 33, 14, 29] 140437475751424</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>6.2.3 Simultaneous Assignments</p>
+<p>We have seen the simultaneous assignment statement, in which there are multiple variables on the left of the assignment operator, and an equal number of expressions on the right. For example, the following code initializes the variables mysum and mycount to have the value 0.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>mysum, myproduct = 0, 1</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Simultaneous assignments can be used to exchange the values of two variables. The following code does not produce the desired result, since the assignment a = b will assign 10 to the variable a, and the original value of a (which was 3) is lost.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>a = 3
+b = 10
+print(a,b)
+a = b
+b = a
+print(a,b)
+3 10
+10 10</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Generally in programming it is necessary to use a temporary variable for this.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>a = 3
+b = 10
+print(a, b)
+temp = a
+a = b
+b = temp
+print(a,b)
+3 10
+10 3</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>By storing the original value of a in the variable temp, the value is not lost and can then be assigned to b.</p>
+<p>However, in Python this can be accomplished using the simultaneous assignment, since the assignments can be thought of as simultaneous and not sequential.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>a, b = 3, 10
+print(a,b)
+a,b = b,a
+print(a,b)
+3 10
+10 3</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>6.2.4 Passing Arguments to Functions</p>
+<p>In Python, arguments are passed to functions using a methodology that is sometimes referred to as call-by-assignment.  That is, passing arguments to function parameters in Python works in the same way as assigning one variable to another variable. Passing an argument to a function parameter results in the function parameter referring to the same location as the argument.</p>
+<p>The following example illustrates this for an argument which is an immutable type, in this case a number.</p>
+<p>def testcall(mynum):
+“”” Tests results of a function call with a number argument. “””
+print(‘Fn: ‘, mynum, id(mynum))
+mynum = 14
+print(‘Fn: ‘, mynum, id(mynum))</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>num = 5
+print(num, id(num))
+print(‘Now function is called’)
+testcall(num)
+print(‘Function has ended’)
+print(num, id(num))
+5 140503077231024
+Now function is called
+Fn:  5 140503077231024
+Fn:  14 140503077231312
+Function has ended
+5 140503077231024</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>In this example, the integer 5 was assigned to a variable num, and the value that num refers to and its id were printed. Then, the function was called. This causes the parameter mynum in the function to refer to the same location that num refers to. This can be seen from the result of the first print statement in the function. Then, a new value, 14, was assigned to mynum which means that mynum now refers to a new location in which the 14 is stored. The function ends at that point, and we can see that after the function has finished executing, the variable num has not changed.</p>
+<p>Similar results will be obtained for other immutable parameter types, such as strings or tuples.</p>
+<p>Now let’s try basically the same example, but using a list instead of a number. Since assignment statements always create a new location, the result is similar to the result when the argument is a number.</p>
+<p>def testcalllist(mylist):
+“”” Tests results of a fn call with a list argument. “””
+print(‘Fn: ‘, mylist, id(mylist))
+mylist = [33, 5, 11]
+print(‘Fn: ‘, mylist, id(mylist))</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>listarg = [44, 2, -99]
+print(listarg, id(listarg))
+print(‘Now function is called’)
+testcalllist(listarg)
+print(‘Function has ended’)
+print(listarg, id(listarg))</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>[44, 2, -99] 140503223213248
+Now function is called
+Fn:  [44, 2, -99] 140503223213248
+Fn:  [33, 5, 11] 140503223315136
+Function has ended
+[44, 2, -99] 140503223213248</p>
+<p>However, if the list parameter is modified within the function (instead of assigning a new list), the list argument that was passed to the function will change.</p>
+<p>def testcalllistchg(mylist):
+“”” Tests results of a fn call with a list argument. “””
+print(‘Fn: ‘, mylist, id(mylist))
+mylist.append(8)
+print(‘Fn: ‘, mylist, id(mylist))</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>listarg = [44, 2, -99]
+print(listarg, id(listarg))
+print(‘Now function is called’)
+testcalllistchg(listarg)
+print(‘Function has ended’)
+print(listarg, id(listarg))</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>[44, 2, -99] 140503223251712
+Now function is called
+Fn:  [44, 2, -99] 140503223251712
+Fn:  [44, 2, -99, 8] 140503223251712
+Function has ended
+[44, 2, -99, 8] 140503223251712</p>
+<p>In many cases, having the function modify the list variable is not a desired outcome. To protect the list from being changed, a slice consisting of the entire list can be passed instead of just the list variable:</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>listarg = [44, 2, -99]
+print(listarg, id(listarg))
+print(‘Now function is called’)
+testcalllistchg(listarg[:])
+print(‘Function has ended’)
+print(listarg, id(listarg))</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>[44, 2, -99] 140503223187200
+Now function is called
+Fn:  [44, 2, -99] 140503223252480
+Fn:  [44, 2, -99, 8] 140503223252480
+Function has ended
+[44, 2, -99] 140503223187200</p>
+<p>6.3 Modular Programs</p>
+<p>In general in programming, a modular program is one in which the program is broken down into separate tasks, and each task is implemented as a function. This facilitates the top-down design approach of taking a problem, breaking it down into pieces, and implementing each as a function.  The program then consists basically of calling the functions to complete each of the tasks.</p>
+<p>A basic algorithm for many programs is:
+Get input(s)
+Calculate result(s), using the input(s)
+Print and/or display the result(s)</p>
+<p>So, a simple outline of many programs would be to have:
+Function(s) to get the input(s)
+Function(s) to calculate result(s) using the input(s)
+Function(s) to display the result(s)</p>
+<p>As an example, we will write a program that will prompt the user for the cost of an item in a store, and then calculate and print the total cost with a tax of 3%.  The program will call 3 functions:
+A function to prompt for and return the cost
+A function to calculate the total cost including the tax
+A function to print the total cost</p>
+<p>Here are the function definitions.</p>
+<p>def getcost():
+“”” Prompts for item cost. “””
+cost = float(input(‘Enter the item cost: ‘))
+return cost</p>
+<p>def calctax(cost):
+“”” Calculates and returns cost plus tax. “””
+tax = cost * .03
+return cost + tax</p>
+<p>def printtotcost(totcost):
+“”” Prints cost plus tax. “””
+print(f’The total cost is ${totcost:.2f}’)</p>
+<p>The functions could be called from a script, which is frequently called a main program. The program consists of calls to the functions.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="main-program">
+<h1>main program<a class="headerlink" href="#main-program" title="Link to this heading">#</a></h1>
+<p>cost = getcost()
+totalcost = calctax(cost)
+printtotcost(totalcost)</p>
+<p>The output might look like this:</p>
+<p>Enter the item cost: 11.11
+The total cost is $11.44</p>
+<p>Of course, to be more complete, the getcost function would error-check to make sure that the user enters a valid cost.</p>
+<p>Sometimes the main program is implemented as a function rather than a script.</p>
+<p>6.3.1 Function Stubs</p>
+<p>When writing a program that consists of a script calling multiple functions, the best practice is not to write the entire program and then execute it to see the results. Frequently, there are errors. When an error is encountered in a particular function, the problem may be in that function, or it might be the result of an incorrect argument passed to the function, that was obtained from another function. A more effective method for constructing the program is to use function stubs, which are place-holders for the actual functions.</p>
+<p>The approach is:
+Sketch out the algorithm
+Decide what the functions are going to do
+Write the script, consisting of the calls to the functions (including the arguments that will get passed back and forth)
+Write function stubs for the individual functions
+Change each function stub to the actual function, one at a time</p>
+<p>This methodical method of writing a program helps cut down on mistakes, and makes it easier to find bugs when they occur.</p>
+<p>Function stubs should mimic what the function is eventually going to do, including using the arguments and returning the correct type(s).</p>
+<p>For example, let’s say we are going to write a program that will prompt the user for a temperature in degrees Celsius, convert that to Fahrenheit, and print the results.</p>
+<p>We might have functions to:
+Prompt the user for degrees C, error-checking to make sure it’s valid, and return the result
+Receive the degrees C and from that calculate and return degrees F
+Print both degrees C and degrees F in a nice sentence format</p>
+<p>The script for the main program might look like this:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="convert-c-to-f">
+<h1>Convert C to F<a class="headerlink" href="#convert-c-to-f" title="Link to this heading">#</a></h1>
+<p>degC = getdegc()
+degF = c2f(degC)
+printCF(degC, degF)</p>
+<p>Example function stubs might look like this:</p>
+<p>def getdegc():
+“””Prompts user for degrees Celsius.”””
+return 33</p>
+<p>def c2f(degreesc):
+“””Converts degrees C to degrees F”””
+return degreesc + 5</p>
+<p>def printCF(degreesc, degreesf):
+“””Prints degrees C and degrees F”””
+print(degreesc, degreesf)</p>
+<p>The idea is to execute the program with the function stubs and make sure that values are being passed back and forth correctly. Eventually, after prompting the user and error-checking, the getdegc function will return a positive number. So, for now, we just return a positive number. Eventually, once we figure out the conversion, the c2f function will convert C to F. For now, we’ll just add 5 so we know that this function is correctly receiving the degrees C and using this number to calculate and return degrees F. Then, the printCF function will eventually print in a nice sentence format, but for now it will just print the values.</p>
+<p>The headers for the functions should not change. Putting the actual doc strings in the function stubs is a good idea.</p>
+<p>Then, once that is working, modify the stubs one at a time. For example, you might start by modifying the getdegc function to prompt the user. Then, modify that function to include the error-checking.  Going about this systematically really does cut down on errors and makes it easier to find them.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Function body</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#main-program">main program</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-c-to-f">Convert C to F</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stormy Attaway (translated by Christine Mulvey and Brian DePasquale)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

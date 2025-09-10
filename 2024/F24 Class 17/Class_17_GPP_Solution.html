@@ -1,0 +1,932 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; EK125</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2024/F24 Class 17/Class_17_GPP_Solution';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EK125</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction to this jupyter book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../chapter1.html">Part I Introduction to Coding Concepts Using Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter2.html">Chapter 2 Building Blocks for Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter3.html">Chapter 3 Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter4.html">Chapter 4 Loops</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/2024/F24 Class 17/Class_17_GPP_Solution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Class 17 Group Practice Problems</p>
+<p>These will not be handed in, but please take them seriously and do not use generative AI. Please work in your group of three. Don’t hesitate to ask for help if you need it. Your instructor and TA’s will be circulating. Flag us down!</p>
+<p>Name:</p>
+<p>Partners:</p>
+<p>Today we continue with string/text processing, and will be practicing many new string methods.</p>
+<p>Let’s start with the case conversion methods. Create a long sentence in a string. Print the result of using the <strong>capitalize</strong>, <strong>title</strong>, and <strong>swapcase</strong> methods with your string. Do not change the original variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1</span>
+
+<span class="n">mysentence</span> <span class="o">=</span> <span class="s2">&quot;This should be fun!&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mysentence</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mysentence</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mysentence</span><span class="o">.</span><span class="n">swapcase</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This should be fun!
+This Should Be Fun!
+tHIS SHOULD BE FUN!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since strings are immutable, none of these methods change the string. In order to change the string variable, you have to assign the expression to the same variable name. This time, create a sentence in a string, call the <strong>title</strong> method, and store the result back in your original string variable (so, you are not exactly changing the string variable, but assigning a new value to it).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2</span>
+
+<span class="n">mysentence</span> <span class="o">=</span> <span class="s2">&quot;This should be fun!&quot;</span>
+<span class="n">mysentence</span> <span class="o">=</span> <span class="n">mysentence</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mysentence</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This Should Be Fun!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s explore the spacing methods. Create a string that includes a lot of blank spaces, in the beginning, after the last word, and in between words. Try the <strong>strip</strong>, <strong>lstrip</strong>, and <strong>rstrip</strong> methods and do not change the original variable. Use the <strong>repr</strong> function in <strong>print</strong>, so you can see the quotes (and where the string begins and ends).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3</span>
+
+<span class="n">mysentence</span> <span class="o">=</span> <span class="s2">&quot;     This   should be  fun!     &quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">mysentence</span><span class="o">.</span><span class="n">strip</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">mysentence</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">mysentence</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This   should be  fun!&#39;
+&#39;This   should be  fun!     &#39;
+&#39;     This   should be  fun!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default, these methods strip blank spaces. By passing a string to any of these methods, any character in that string will be stripped instead of spaces. Use this to remove the x’s, y’x, and z’s using <strong>strip</strong>, <strong>lstrip</strong>, and <strong>rstrip</strong>. Fill in the rest of the code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4</span>
+
+<span class="n">mysentence</span> <span class="o">=</span> <span class="s2">&quot;xyzxxThis   should be  fun!abcxyz&quot;</span>
+
+<span class="c1"># You fill in the rest</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">mysentence</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;xyz&quot;</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">mysentence</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;xyz&quot;</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">mysentence</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;xyz&quot;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This   should be  fun!abc&#39;
+&#39;This   should be  fun!abcxyz&#39;
+&#39;xyzxxThis   should be  fun!abc&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are several methods that will pad strings with blanks (or specified characters) in order to center, left justify, or right justify within a specified width (<strong>center</strong>, <strong>ljust</strong>, <strong>rjust</strong>). Prompt the user for their name. Center the name within a width of 10. Center the name within a width of 11. Left justify the name in a width of 8. Right justify in a width of 7. Use the default fill character, and make sure that you can see the quotes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5</span>
+
+<span class="n">myname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your name: &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">myname</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">myname</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">11</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">myname</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">8</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">myname</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">7</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please enter your name: Annie
+&#39;  Annie   &#39;
+&#39;   Annie   &#39;
+&#39;Annie   &#39;
+&#39;  Annie&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Specify a fill character of ‘-’ by just passing it as a second argument to any of the justification methods.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6</span>
+
+<span class="n">myname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your name: &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">myname</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please enter your name: Joe
+&#39;---Joe----&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use the <strong>zfill</strong> method to pad a string that contains a number with leading 0’s. The width is passed to the method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7</span>
+
+<span class="n">mynumber</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a number: &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">mynumber</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">15</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please enter a number: 123456
+&#39;000000000123456&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>What happens if the width that you specify is less than the number of digits in the number? Try it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 8</span>
+
+<span class="n">mynumber</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a number: &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">mynumber</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please enter a number: 1234
+&#39;1234&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <strong>join</strong> method concatenates together all of the strings in an iterable. The way it is called looks a little funky; it is called using a string that is the separator between the strings in the iterable, and the iterable is passed to the method. Execute the following example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 9</span>
+
+<span class="n">strtup</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Monty&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="s2">&quot;awesome&quot;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">strtup</span><span class="p">)</span>
+<span class="n">result</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Monty Python is awesome&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Modify that code so that the separator is a dash (‘-‘).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10</span>
+
+<span class="n">strtup</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Monty&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="s2">&quot;awesome&quot;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">strtup</span><span class="p">)</span>
+<span class="n">result</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Monty-Python-is-awesome&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are methods that will split strings into separate pieces. The <strong>split</strong> method by default splits using a space as the delimiter and returns a list. Create a sentence variable and split it into a list of words.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 11</span>
+
+<span class="n">mysentence</span> <span class="o">=</span> <span class="s2">&quot;This should be fun!&quot;</span>
+<span class="n">mysentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;This&#39;, &#39;should&#39;, &#39;be&#39;, &#39;fun!&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Specify a different delimiter by passing it to the method. Make sure that your delimiter is what separates the words!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 12</span>
+
+<span class="n">mysentence</span> <span class="o">=</span> <span class="s2">&quot;This-should-be-fun!&quot;</span>
+<span class="n">mysentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;This&#39;, &#39;should&#39;, &#39;be&#39;, &#39;fun!&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the delimiter is not a space, it is assumed that consecutive delimiters in the string are there to represent empty strings. Execute the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 13</span>
+
+<span class="n">mysentence</span> <span class="o">=</span> <span class="s2">&quot;This-should---be--fun!&quot;</span>
+<span class="n">mysentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;This&#39;, &#39;should&#39;, &#39;&#39;, &#39;&#39;, &#39;be&#39;, &#39;&#39;, &#39;fun!&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default all possible splits are done, regardless of the delimiter. The <strong>maxsplit</strong> argument can be used by passing maxsplit=n where n is a positive integer to the method, to make only up to n splits.  Create your own code to test this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 14</span>
+
+<span class="n">mysentence</span> <span class="o">=</span> <span class="s2">&quot;Monty Python is awesome!&quot;</span>
+<span class="n">mysentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Monty&#39;, &#39;Python&#39;, &#39;is awesome!&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <strong>rsplit</strong> method works just like split except it splits from the right, not from the left. When would this matter? Fill in your answer here:</p>
+<p>Matters only if <strong>maxsplit</strong> is specified (and it’s smaller than the number of possible splits).</p>
+<p>The <strong>splitlines</strong> method splits lines in a string, using \n as the delimiter, and returns a list of strings. Write code to try this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 15</span>
+
+<span class="n">mysentences</span> <span class="o">=</span> <span class="s2">&quot;Hi there.</span><span class="se">\n</span><span class="s2">How is it going?</span><span class="se">\n</span><span class="s2">Let&#39;s go!&quot;</span>
+<span class="n">sentlist</span> <span class="o">=</span> <span class="n">mysentences</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="n">sentlist</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Hi there.&#39;, &#39;How is it going?&#39;, &quot;Let&#39;s go!&quot;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are two methods that break strings into 3 pieces and return a tuple: <strong>partition</strong> and <strong>rpartition</strong>. You pass a separator, and <strong>partition</strong> splits the string at the first occurrence of the separator and returns the string to the left, the separator, and the string to the right. The <strong>rpartition</strong> method splits from the last occurrence of the separator. Create a string that stores a person’s name (first, middle, and last). Use <strong>partition</strong> and/or <strong>rpartition</strong> to break the string into first, middle, and last names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 16</span>
+
+<span class="n">urname</span> <span class="o">=</span> <span class="s2">&quot;Xavier Q. Zimner&quot;</span>
+<span class="n">first</span><span class="p">,</span> <span class="n">blank</span><span class="p">,</span> <span class="n">midlast</span> <span class="o">=</span> <span class="n">urname</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="n">middle</span><span class="p">,</span> <span class="n">blank</span><span class="p">,</span> <span class="n">last</span> <span class="o">=</span> <span class="n">midlast</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">middle</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">last</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Xavier
+Q.
+Zimner
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are methods that find substrings, and a method that does find and replace. We have seen the <strong>index</strong> method, which returns the index of the first occurrence of the beginning of a substring within a string. The problem with index is that if the substring is not found, an error message is thrown. The <strong>find</strong> method works just like index, but instead of throwing an error, it returns a flag of -1 if the substring is not found. Try the <strong>find</strong> method; test it with substrings that are and are not in the string.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 17</span>
+
+<span class="n">mysent</span> <span class="o">=</span> <span class="s2">&quot;Monty Python is awesome!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mysent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mysent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;Java&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+-1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similarly, <strong>rindex</strong> and <strong>rfind</strong> return the index of the last occurrence of the beginning of a string within a string. Try both methods.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 18</span>
+
+<span class="n">mysent</span> <span class="o">=</span> <span class="s2">&quot;Monty! Python! is awesome!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mysent</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;!&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mysent</span><span class="o">.</span><span class="n">rindex</span><span class="p">(</span><span class="s1">&#39;!&#39;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mysent</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">))</span>
+<span class="k">if</span> <span class="s1">&#39;x&#39;</span> <span class="ow">in</span> <span class="n">mysent</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mysent</span><span class="o">.</span><span class="n">rindex</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
+25
+-1
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <strong>replace</strong> methods finds occurrences of a substring within a string, and replaces them with another substring. By default, all are replaced, but a count can also be passed. Create a string that has commas as separators, and then replace all of the commas with blanks. Store the result in the original string variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 19</span>
+
+<span class="n">mysent</span> <span class="o">=</span> <span class="s2">&quot;Monty, Python, is, awesome!&quot;</span>
+<span class="n">mysent</span> <span class="o">=</span> <span class="n">mysent</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="n">mysent</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Monty  Python  is  awesome!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have seen some Boolean “is” methods that work with strings. Others include <strong>isalpha</strong>, which returns True if all characters are letters of the alphabet, <strong>isalnum</strong>, which returns True if all characters are either alphabetic or numeric, and <strong>isdigit</strong>, which returns True if all characters are digits. Write code to test these methods.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 20</span>
+
+<span class="n">teststr</span> <span class="o">=</span> <span class="s1">&#39;x111y332z15&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">teststr</span><span class="o">.</span><span class="n">isalpha</span><span class="p">(),</span> <span class="n">teststr</span><span class="o">.</span><span class="n">isalnum</span><span class="p">(),</span> <span class="n">teststr</span><span class="o">.</span><span class="n">isdigit</span><span class="p">())</span>
+
+<span class="n">teststr</span> <span class="o">=</span> <span class="s1">&#39;abracadabra&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">teststr</span><span class="o">.</span><span class="n">isalpha</span><span class="p">(),</span> <span class="n">teststr</span><span class="o">.</span><span class="n">isalnum</span><span class="p">(),</span> <span class="n">teststr</span><span class="o">.</span><span class="n">isdigit</span><span class="p">())</span>
+
+<span class="n">teststr</span> <span class="o">=</span> <span class="s1">&#39;1234&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">teststr</span><span class="o">.</span><span class="n">isalpha</span><span class="p">(),</span> <span class="n">teststr</span><span class="o">.</span><span class="n">isalnum</span><span class="p">(),</span> <span class="n">teststr</span><span class="o">.</span><span class="n">isdigit</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False True False
+True True False
+False True True
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is a string module that contains some very useful string constants. Execute the following to see them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 21</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">string</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">digits</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+0123456789
+</pre></div>
+</div>
+</div>
+</div>
+<p>Whew! That was a lot of methods. Now that you’ve played around with them, let’s get to work!</p>
+<p>It turns out that the <strong>title</strong> method is a little funky. Execute the following code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 22</span>
+
+<span class="n">mysentence</span> <span class="o">=</span> <span class="s2">&quot;Let&#39;s rock &#39;n roll!&quot;</span>
+<span class="n">mysentence</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Let&#39;S Rock &#39;N Roll!&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>I don’t know about you, but if I had written the <strong>title</strong> method, it would not have capitalized the s in “Let’s”.  So, do all string methods treat “Let’s” as two separate words? Execute the following code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 23</span>
+
+<span class="n">mysentence</span> <span class="o">=</span> <span class="s2">&quot;Let&#39;s rock &#39;n roll!&quot;</span>
+<span class="n">mysentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&quot;Let&#39;s&quot;, &#39;rock&#39;, &quot;&#39;n&quot;, &#39;roll!&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yay. Thankfully, not. This is not a problem, because you can code!  Write a function that will receive a sentence, capitalize all of the words, and return the resulting string. For the above, it would return Let’s Rock ‘n Roll!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 24</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">bettertitle</span><span class="p">(</span><span class="n">sentence</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns a better title! &quot;&quot;&quot;</span>
+    <span class="n">sentlist</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">newlist</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentlist</span><span class="p">:</span>
+        <span class="n">newlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">newlist</span><span class="p">)</span>
+
+<span class="n">mysentence</span> <span class="o">=</span> <span class="s2">&quot;Let&#39;s rock &#39;n roll!&quot;</span>
+<span class="n">bettertitle</span><span class="p">(</span><span class="n">mysentence</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Let&#39;s Rock &#39;n Roll!&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>OK, so there’s a <strong>lstrip</strong> method and a <strong>rstrip</strong> method but no midstrip method. YOU to the rescue!  Write a midstrip function that will receive a string and will strip extra blanks from the beginning, ending, and middle of the string and return the result.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 25</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">midstrip</span><span class="p">(</span><span class="n">sentwblanks</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Strips extra blanks from the middle of a string. &quot;&quot;&quot;</span>
+    <span class="k">while</span> <span class="n">sentwblanks</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">sentwblanks</span> <span class="o">=</span> <span class="n">sentwblanks</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="n">news</span> <span class="o">=</span> <span class="n">sentwblanks</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">news</span>
+
+<span class="n">swb</span> <span class="o">=</span> <span class="s2">&quot;   Hello   there  &quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">midstrip</span><span class="p">(</span><span class="n">swb</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello there
+</pre></div>
+</div>
+</div>
+</div>
+<p>Time to do your own thing!  Write some creative problems. Quiz each other. Post your best creative problems to the Creative GPP chat for Class 17.</p>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./2024/F24 Class 17"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stormy Attaway (translated by Christine Mulvey and Brian DePasquale)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,842 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; EK125</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2024/F24 Class 4/Class4GroupPracticeProblemsSolutions';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EK125</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction to this jupyter book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../chapter1.html">Part I Introduction to Coding Concepts Using Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter2.html">Chapter 2 Building Blocks for Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter3.html">Chapter 3 Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter4.html">Chapter 4 Loops</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/2024/F24 Class 4/Class4GroupPracticeProblemsSolutions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><strong>Class 4: Group Practice Problems</strong></p>
+<p>These will not be handed in, but please take them seriously and do not use generative AI.  These exercises are designed to familiarize you with how code works in Python and will help you learn how to generate your own in the future.  Please work in a group of three.  Don’t hesitate to ask for help if you need it.  Your instructor and TAs will be circulating.  Flag us down!</p>
+<p>Name:</p>
+<p>Partners:</p>
+<p>In the last class modules, objects and methods, random numbers, and the help utility.  Today we will cover some of the building blocs of programming: ways to execute code, comments, user input, formatting output, and debugging.</p>
+<p>In Python, lines of code can be executed individually, in code cells, and in scripts.</p>
+<p>When using an interpreter, single lines of code can be entered at the prompt and are executed immediately.  The results are shown after the input.</p>
+<p>In a notebook setting like this one, multiple lines of code can be entered and run at once.</p>
+<p>For longer programs, it is useful to use an editor to type scripts in and save as .py files.</p>
+<p>When using interactive modes like notebooks and interpreters, the results of expressions are shown.  When using scripts, however, if you want the result of an expression shown to the user, it must be explicitly printed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a comment in python.  It is ignored completely.</span>
+
+<span class="c1"># my_num = 27</span>
+<span class="c1"># my_num</span>
+
+<span class="c1"># Good commenting is an extremely important part of coding practice.</span>
+<span class="c1"># The better you are at commenting what you are doing in your code the better</span>
+<span class="c1"># you will be at it in the long run.  Ask us how we know.</span>
+
+<span class="c1">#Run this cell to see what is executed.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;What is executed?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is executed?
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’re not kidding.  Comments are very useful.  When someone else (or future you) looks at your code, they can figure out quickly what is happening.</p>
+<p>You can also use comments to plan code in advance.  Try using comments to “pseudocode” your algorithm by writing out the steps in comments before trying to write your code at all.</p>
+<p>Here’s a real world example from EK131.  Next semester you’ll need to read a temperature from a sensor that gives you a reading in mV.  You need to convert that signal back to degrees.  The sensor you’ll use has an offset voltage of 0.5V and an output voltage scaling of 10mV/degree C.  You will need to write code to do this calculation.  Here it is below.  Run it to see the temperature in degrees C.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">reading</span> <span class="o">=</span> <span class="mf">0.89</span> <span class="c1"># in Volts</span>
+<span class="c1"># Sensor characteristics: offset 0.5V, scale 10mv/degC</span>
+<span class="n">tempC</span> <span class="o">=</span> <span class="p">(</span><span class="n">reading</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">/</span><span class="mf">0.01</span>
+<span class="n">tempC</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>39.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is the comment for the conversion to degrees Farenheit.  Fill in the code then run it to see what the temperature is in degrees C.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># degrees in Farenheit equals 9/5 degrees in Celcius plus an offset of 32.</span>
+<span class="n">tempF</span><span class="o">=</span><span class="mf">9.0</span><span class="o">*</span><span class="n">tempC</span><span class="o">/</span><span class="mf">5.0</span><span class="o">+</span><span class="mf">32.0</span>
+<span class="n">tempF</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>102.2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Think of your own example of a calculation where context would be necessary to understand the calculation.  Code up your calculation using descriptive variable names and include information about any units or constants in comments.  Run your code to make sure it works.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># answers will vary</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To build an interactive program, it is often necessary to solicit user input.  In Python, this is accomplished with the <strong>input</strong> function.</p>
+<p>In order for the user to know what to enter, the code must <strong>prompt</strong> them.  The input functon contains the prompt.  The user input is always a string which should be stored in a variable.</p>
+<p>Pretend you’re Sir Lancelot here and you’ve come upon the Bridge of Death. You must answer three questions.  Respond appropriately.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">string1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your quest? &#39;</span><span class="p">)</span>
+<span class="n">string2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What... is your favourite color? &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Go on.  Off you go.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your quest? To Find the Holy Grail
+What... is your favourite color? Blue
+Go on.  Off you go.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ok, that’s fun, but what if you don’t want your input to be a string?  What if you want to do a calculation with a number, say?  Remember typecasting from last time?  Let’s figure out how many chocolate chips we need for a batch of cookies.  Fill in the code called for by the comments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Prompt the user for their ideal number of chips per cookie</span>
+<span class="n">string3</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How many chips are in an ideal chocolate chip cookie?&#39;</span><span class="p">)</span>
+
+<span class="c1">#Assume there are 36 cookies per batch and 49 chocolate chips weigh 1 oz.  Determine how many oz of chips you need for your recipe.</span>
+<span class="c1">#First convert the input string into a number by typecasting it</span>
+<span class="n">num_chips</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">string3</span><span class="p">)</span>
+<span class="c1">#Then do the rest of the math.</span>
+<span class="n">total_chips</span><span class="o">=</span><span class="n">num_chips</span><span class="o">*</span><span class="mi">36</span><span class="o">/</span><span class="mi">49</span>
+<span class="c1">#Print the answer out in a full sentence.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You need&#39;</span><span class="p">,</span> <span class="n">total_chips</span><span class="p">,</span> <span class="s1">&#39;to make a batch of chocolate chip cookies&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>How many chips are in an ideal chocolate chip cookie?15
+You need 11.020408163265307 to make a batch of chocolate chip cookies
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ve used the <strong>print</strong> function to display text and numbers and types.  Let’s explore some of its features.  An empty print function just prints a newline.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You could insert a new line into a string using <strong>\n</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;See what </span><span class="se">\n</span><span class="s1">this does?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>See what 
+this does?
+</pre></div>
+</div>
+</div>
+</div>
+<p>What if I don’t want to end a print statement with a newline?  I can change that to another character using the <strong>end</strong> keyword.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;See what </span><span class="se">\n</span><span class="s1">this does&#39;</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;@&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>See what 
+this does@?
+</pre></div>
+</div>
+</div>
+</div>
+<p>Try ending a print statement with a space and a period.  What would the code above do then?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;See what </span><span class="se">\n</span><span class="s1">this does&#39;</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; .&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>See what 
+this does .?
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use the special character <strong>'</strong> to print a single quote in a string that is defined using single quotes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Why can</span><span class="se">\&#39;</span><span class="s1">t I do this?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Why can&#39;t I do this?
+Why can&#39;t I do this?
+</pre></div>
+</div>
+</div>
+</div>
+<p>Bet you can guess what the special character is for using a double quote in a string created with double quotes is.  Try it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">Can I add a quotation here</span><span class="se">\&quot;</span><span class="s2">, Ben asked.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Can I add a quotation here&quot;, Ben asked.
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also use formatted strings to substitute the value of an expression into a string.  To do this we’ll add an ‘f’ or ‘F’ before the string and use curly braces around the name of the expression to insert in our print statement.  The part that makes it a formatted string, are format specifiers.  These we’ll put after a a colon and the expression name.  For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">unexpected1</span> <span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please enter an unexpected thing: &#39;</span><span class="p">)</span>
+<span class="n">unexpected2</span> <span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;And another unexpected thing: &#39;</span><span class="p">)</span>
+<span class="n">unexpected3</span> <span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;And a third, please: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nobody expects the&#39;</span><span class="p">,</span> <span class="n">unexpected1</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Nobody expects the </span><span class="si">{</span><span class="n">unexpected2</span><span class="si">}</span><span class="s1">!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Nobody expects the</span><span class="si">{</span><span class="n">unexpected3</span><span class="si">:</span><span class="s1">25s</span><span class="si">}</span><span class="s1">!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please enter an unexpected thing: fear
+And another unexpected thing: surprise
+And a third, please: ruthless efficiency
+Nobody expects the fear !
+Nobody expects the surprise!
+Nobody expects theruthless efficiency      !
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice in the statements above that if we don’t use formatted strings at all, a space is added between strings when printing.</p>
+<p>Formatted strings let us control the spacing by controlling the width of the field that the value of the expression is placed in.</p>
+<p>Strings, like those above (with a specifier of ‘s’) are left justified in that field.</p>
+<p>Integers (with a specifier of ‘d’), however, are right justified.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mystr</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a three digit number&quot;</span><span class="p">)</span>
+<span class="n">myint</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">mystr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The integer entered is&quot;</span><span class="p">,</span> <span class="n">myint</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The integer entered is </span><span class="si">{</span><span class="n">myint</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The integer entered is </span><span class="si">{</span><span class="n">myint</span><span class="si">:</span><span class="s2">8d</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please enter a three digit number567
+The integer entered is 567 .
+The integer entered is 567.
+The integer entered is      567.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Floats are a little bit more complicated.  They have a spcifier of ‘f’.  Instead of specifying just a field width, floats also require the number of decimal places, so ‘6.3f’ would have a field width of 6 including 3 decimal places and the decimal point.</p>
+<p>Two additional specifiers exist for floats.  ‘g’ specifies a general format and ‘e’ specifies scientific notation</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mystr</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a number with three digits before and three digits following a decimal point&quot;</span><span class="p">)</span>
+<span class="n">myfloat</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">mystr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The float entered is </span><span class="si">{</span><span class="n">myfloat</span><span class="si">:</span><span class="s2">8.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The float entered is </span><span class="si">{</span><span class="n">myfloat</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The float entered is </span><span class="si">{</span><span class="n">myfloat</span><span class="si">:</span><span class="s2">f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The float entered is </span><span class="si">{</span><span class="n">myfloat</span><span class="si">:</span><span class="s2">g</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The float entered is </span><span class="si">{</span><span class="n">myfloat</span><span class="si">:</span><span class="s2">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please enter a number with three digits before and three digits following a decimal point123.456
+The float entered is   123.46
+The float entered is 123.46
+The float entered is 123.456000
+The float entered is 123.456
+The float entered is 1.234560e+02
+</pre></div>
+</div>
+</div>
+</div>
+<p>Any formatted string can also be stored as a variable.  Try storing the string you entered above as a dollar amount.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dollar</span><span class="o">=</span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">myfloat</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">dollar</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>$123.46
+</pre></div>
+</div>
+</div>
+</div>
+<p>You might want to format a string that based on the width of a string that is entered by the user, and therefore, you won’t know how long it is before you start.  Just like you can use { } to substitute the value of the variable containing the string, you can use use { } to substitute a variable for the specifier, too.</p>
+<p>Let’s say I want to be able to print an entered name in the center of a line.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">line</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="o">*</span><span class="mi">50</span>
+<span class="n">name</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please enter your name: &#39;</span><span class="p">)</span>
+<span class="n">name_len</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="c1">#I know my line is 50, to figure out how many spaces go on each side, (50 - name length)/2</span>
+<span class="c1">#This has to be a whole number.</span>
+<span class="n">spaces</span><span class="o">=</span><span class="nb">round</span><span class="p">((</span><span class="mi">50</span><span class="o">-</span><span class="n">name_len</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">#When using a formatted string, the string is left justified.  So, we need a &quot;blank&quot; string &quot;spaces&quot; in length</span>
+<span class="c1">#But, when using print, a space is added between strings, so subtract 1.</span>
+<span class="n">blank</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">blank</span><span class="si">:{</span><span class="n">spaces</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s1">s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please enter your name: Christine
+                    Christine
+__________________________________________________
+</pre></div>
+</div>
+</div>
+</div>
+<p>Try using this method to print a triangle of stars with four levels, like this one.</p>
+<p><img alt="image.png" src="data:image/png;base64,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" /></p>
+<p>Use formatted strings, don’t just manually generate the strings!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">blank</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">blank</span><span class="si">:</span><span class="s1">4s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">blank</span><span class="si">:</span><span class="s1">3s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="mi">3</span><span class="o">*</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">blank</span><span class="si">:</span><span class="s1">2s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="mi">5</span><span class="o">*</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">blank</span><span class="si">:</span><span class="s1">1s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="mi">7</span><span class="o">*</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     *
+    ***
+   *****
+  *******
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we can get information in and out of our programs, we can start writing more complicated code.  As our code gets more complicated, we’ll want to start with an <strong>algorithm</strong>, or a sequence of steps to solve whatever problem we’re interested in.  Once we have those steps worked out, then we can get those translated into code.</p>
+<p>A basic algorithm often looks like this:</p>
+<ol class="arabic simple">
+<li><p>Get the necessary inputs</p></li>
+<li><p>Calculate the results</p></li>
+<li><p>Print or display those results</p></li>
+</ol>
+<p>Let’s say we’re trying to automate the process for estimating how many cans of paint our customers need to buy when painting a room.  Let’s work our way through how this might work.</p>
+<p>We know that one can of paint covers 400 square feet of wall surface.  So we’ll need to know the total surface area of the walls to paint.  Assume a rectangular room with no windows or doors.</p>
+<p>You’ll need to ask the customer for three things (remember units!).</p>
+<p>Start by writing your algorithm in comments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This script calculates the number of gallons of paint required to paint a room</span>
+<span class="c1"># and prints out a sentence with this information to the user</span>
+
+<span class="c1"># Ask the user for: length of floor, width of floor, height of wall in feet</span>
+
+<span class="c1"># Calculate the surface area of the two pairs of walls</span>
+
+<span class="c1"># Find the total surface area by summing these.</span>
+
+<span class="c1"># Find the number of cans of paint necessary by dividing by 400 and rounding up to the nearest integer.</span>
+
+<span class="c1"># Print this information to the user in a complete sentence.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that you have your steps laid out in comments, it should be relatively simple to carry out these steps in code.  Give that a try.  Copy your comments from the cell above and fill in between them.  Do any prompting for input, calculating, formatting output and printing necessary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This script calculates the number of gallons of paint required to paint a room</span>
+<span class="c1"># and prints out a sentence with this information to the user</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="c1"># Ask the user for: length of floor, width of floor, height of wall in feet</span>
+<span class="n">length</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please enter the length of the floor (in ft): &#39;</span><span class="p">)</span>
+<span class="n">width</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please enter the width of the floor (in ft)&#39;</span><span class="p">)</span>
+<span class="n">height</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please enter the height of the walls (in ft)&#39;</span><span class="p">)</span>
+
+<span class="c1"># Calculate the surface area of the two pairs of walls</span>
+<span class="n">wall1</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">length</span><span class="p">)</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+<span class="n">wall2</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">width</span><span class="p">)</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+
+<span class="c1"># Find the total surface area by summing these.</span>
+<span class="n">total_area</span><span class="o">=</span><span class="n">wall1</span><span class="o">+</span><span class="n">wall2</span>
+
+<span class="c1"># Find the number of cans of paint necessary by dividing by 400 and rounding up to the nearest integer.</span>
+<span class="n">cans</span><span class="o">=</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">total_area</span><span class="o">/</span><span class="mi">400</span><span class="p">)</span>
+
+<span class="c1"># Print this information to the user in a complete sentence.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The number of cans of paint required for your project is </span><span class="si">{</span><span class="n">cans</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please enter the length of the floor (in ft): 12
+Please enter the width of the floor (in ft)13
+Please enter the height of the walls (in ft)9
+The number of cans of pain required for your project is 2.
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you have trouble as you’re working and things are not calculating as you expect, try printing out the intermediate values of variables to check your calculations.  Sometimes things aren’t happening the way you think they should…</p>
+<p>Write some of your own problems. Post them and your solutions to the GPP Creative chat for Class 4. Spend time until the class ends writing your own quiz problems. Quiz each other!</p>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./2024/F24 Class 4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stormy Attaway (translated by Christine Mulvey and Brian DePasquale)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
